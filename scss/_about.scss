@@ -1,0 +1,173 @@
+/*#region ----------------- About */
+.about-camino {
+  margin: 120px 0;
+  //   overflow: hidden;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 40%;
+    height: 400px;
+    background-image: url(../images/bg/wave-dots.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .image-content {
+    .img-inner {
+      position: relative;
+      width: 90%;
+      margin-left: auto;
+      &::before {
+        content: "";
+        position: absolute;
+        left: -40px;
+        top: -40px;
+        width: 200px;
+        height: 150px;
+        border: 5px solid $primary;
+        z-index: -1;
+        border-radius: 40px 0 0 0;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        right: -40px;
+        bottom: -40px;
+        width: 200px;
+        height: 150px;
+        border: 5px solid $secondary;
+        z-index: -1;
+        border-radius: 40px 0 0 0;
+      }
+    }
+    img {
+      width: 100%;
+      border-radius: 40px 0 0 0;
+    }
+    .btn-action {
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+      .btn-play {
+        width: 60px;
+        height: 60px;
+        background-color: rgba($color: $primary, $alpha: 1);
+        color: white;
+        border-radius: 50%;
+        @include displayFlex(flex, center, center);
+        font-size: 24px;
+        &::after {
+          content: "";
+          opacity: 0;
+          @include displayFlex(flex, center, center);
+          flex-direction: row;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background: $primary;
+          border-radius: 100%;
+          animation-name: ripple;
+          animation-duration: 3s;
+          animation-delay: 0s;
+          animation-iteration-count: infinite;
+          animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+          z-index: -1;
+        }
+      }
+    }
+  }
+  .text-content {
+    padding-right: 40px;
+    .list {
+      ul {
+        li {
+          display: grid;
+          grid-template-columns: 48px auto;
+          align-items: center;
+          margin: 20px 0;
+          .icon {
+            @include displayFlex(flex, center, center);
+            width: 48px;
+            height: 48px;
+            font-size: 24px;
+            background-color: white;
+            box-shadow: $boxshadow;
+            border-radius: 10px;
+            color: $primary;
+          }
+          .desc {
+            padding-right: 15px;
+            line-height: 27px;
+            font-size: 16px;
+            color: $textDark;
+            text-align: justify;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-camino {
+    margin: 80px 0;
+    .text-content {
+      padding: 0 0 40px 0;
+    }
+    .image-content {
+      .img-inner {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .about-camino {
+    .image-content {
+      .img-inner {
+        &::before {
+          left: -30px;
+          top: -30px;
+          width: 160px;
+          height: 120px;
+          border-width: 4px;
+        }
+        &::after {
+          right: -30px;
+          bottom: -30px;
+          width: 160px;
+          height: 120px;
+          border-width: 4px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .about-camino {
+    .image-content {
+      .img-inner {
+        &::before {
+          left: -20px;
+          top: -20px;
+          width: 120px;
+          height: 100px;
+          border-width: 4px;
+        }
+        &::after {
+          right: -20px;
+          bottom: -20px;
+          width: 120px;
+          height: 100px;
+          border-width: 4px;
+        }
+      }
+    }
+  }
+}
+/*#endregion -------------- About */

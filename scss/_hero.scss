@@ -1,0 +1,140 @@
+/*#region ----------------- Hero */
+.hero-home-section {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 150px;
+  padding-bottom: 50px;
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bg/hero-home-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    z-index: -1;
+  }
+  .section-inner {
+  }
+  .image-content {
+    .img-inner {
+      width: 400px;
+      margin: 0 auto;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .text-content {
+    margin-top: 80px;
+    h1 {
+      color: white;
+      margin-bottom: 15px;
+      span {
+        color: $primary;
+        margin-left: 10px;
+      }
+    }
+    p {
+      color: white;
+      text-align: justify;
+    }
+    .btns-group {
+      margin-top: 30px;
+    }
+  }
+  .status {
+    margin-top: 80px;
+    padding-left: 50px;
+    ul {
+      display: grid;
+      grid-template-columns: 33.33% 33.33% 33.33%;
+      column-gap: 20px;
+      align-items: center;
+      li {
+        background-color: white;
+        box-shadow: $boxshadow;
+        padding: 20px 10px;
+        text-align: center;
+        border-radius: 25px;
+        .thumb {
+          width: 80px;
+          border-radius: 50%;
+          margin: 0 auto;
+        }
+        .info {
+          margin-top: 10px;
+          .number {
+            margin-bottom: 5px;
+          }
+          .name {
+            font-size: 14px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-home-section {
+    .text-content {
+      margin: 0 0 30px 0;
+      h1 {
+        font-size: 2.2rem !important;
+      }
+    }
+    .image-content {
+      margin-top: 20px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .hero-home-section {
+    .text-content {
+      h1 {
+        font-size: 2rem !important;
+      }
+    }
+    .status {
+      margin-top: 50px;
+      padding-left: 20px;
+      ul {
+        column-gap: 10px;
+        li {
+          .thumb {
+            width: 60px;
+            // height: 60px;
+          }
+          .info {
+            .number {
+              font-size: 1.3rem !important;
+            }
+            .name {
+              font-size: 13px !important;
+            }
+          }
+        }
+      }
+    }
+    .image-content {
+      .img-inner {
+        width: 350px;
+      }
+    }
+  }
+}
+@media (max-width: 640px) {
+  .hero-home-section {
+    .image-content {
+      .img-inner {
+        width: 70%;
+      }
+    }
+  }
+}
+
+/*#endregion -------------- Hero */

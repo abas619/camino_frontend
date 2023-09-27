@@ -1,0 +1,119 @@
+/*#region ----------------- Comments */
+.comments-section {
+  background: linear-gradient(180deg, rgba(26, 137, 201, 0.1), white);
+  padding: 160px 0 80px 0;
+  position: relative;
+  overflow: hidden;
+  //   z-index: ;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 125px;
+    background-image: url(../images/bg/wave-shape.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    z-index: 0;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 500px;
+    background-image: url(../images/bg/communication.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    z-index: -1;
+    opacity: 0.2;
+  }
+  .page-title {
+    position: relative;
+    z-index: 50;
+  }
+  .section-inner {
+    width: 700px;
+    margin: 3rem auto 0 auto;
+  }
+}
+.swiper-comments {
+  .swiper-wrapper {
+    padding-bottom: 50px;
+  }
+  .swiper-pagination {
+    bottom: 0;
+  }
+}
+.card-comment {
+  //   padding: 20px;
+  .card-inner {
+    background-color: #c7e3f2;
+    border-radius: 100px;
+    padding: 80px 60px 40px 60px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      bottom: 8px;
+      width: calc(100% - 35px);
+      height: calc(100% - 35px);
+      background-color: white;
+      border-radius: 90px;
+    }
+  }
+  .decs,
+  .user-info {
+    position: relative;
+    z-index: 10;
+  }
+  .decs {
+    p {
+      font-size: 16px;
+      color: $textDark;
+      text-align: center;
+    }
+  }
+  .user-info {
+    text-align: center;
+    margin-top: 30px;
+    .thumb {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 10px auto;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 5px solid $secondary;
+      }
+    }
+    .name {
+      color: $textDark;
+      font-size: 16px !important;
+      margin-bottom: 6px;
+    }
+    .job {
+      color: $textGrey;
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .comments-section {
+    &::before {
+      height: 85px;
+    }
+    .section-inner {
+      width: 100%;
+    }
+  }
+}
+/*#endregion -------------- Comments */

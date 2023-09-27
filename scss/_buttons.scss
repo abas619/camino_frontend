@@ -1,0 +1,111 @@
+/*#region ----------------- Buttons */
+.btn {
+  font-size: 16px;
+  padding: 0.7rem 1.2rem;
+  border-radius: 80px;
+  border: none;
+  min-width: 120px;
+  box-shadow: none;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  &:hover,
+  &:focus {
+    box-shadow: none !important;
+  }
+  .fi {
+    font-size: 22px;
+    line-height: 0;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 0;
+    height: 0;
+    background-color: rgba($color: white, $alpha: 0.4);
+    border-radius: 50%;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+  }
+  &:disabled {
+    background-color: $background !important;
+    border: 1px solid $textSilver !important;
+    color: $textGrey;
+  }
+}
+.icon-right {
+  padding-right: 3rem;
+  .fi {
+    position: absolute;
+    right: 14px;
+    top: 11px;
+  }
+}
+.icon-left {
+  padding-left: 3rem;
+  .fi {
+    position: absolute;
+    left: 14px;
+    top: 11px;
+  }
+}
+
+.btn-primary {
+  background: $primary;
+  color: white;
+  &:hover,
+  &:focus {
+    background: darken($color: $primary, $amount: 10) !important;
+    &::before {
+      width: 400px;
+      height: 400px;
+      opacity: 0;
+    }
+  }
+}
+.btn-secondary {
+  background: $secondary;
+  color: white;
+  &:hover,
+  &:focus {
+    background: darken($color: $secondary, $amount: 8);
+    &::before {
+      width: 400px;
+      height: 400px;
+      opacity: 0;
+    }
+  }
+}
+.btn-primary-outline {
+  background: transparent;
+  color: $secondary;
+  border: 2px solid $secondary;
+  &:hover,
+  &:focus {
+    background: $secondary;
+    color: white;
+  }
+  &.color-red {
+    border-color: $error;
+    color: $error;
+    &:hover,
+    &:focus {
+      background-color: rgba($color: $error, $alpha: 0.1);
+    }
+  }
+}
+.btn-secondary-outline {
+  background: transparent;
+  color: $primary;
+  border: 2px solid $primary;
+  &:hover,
+  &:focus {
+    background-color: $primary;
+    color: white;
+  }
+}
+/*#endregion -------------- Buttons */

@@ -1,0 +1,33 @@
+/*#region ----------------- Page Title */
+.page-title {
+  margin: 1rem 0;
+  .title-inner {
+    width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &.w-full {
+    .title-inner {
+      width: 100%;
+      text-align: right;
+    }
+  }
+  h2 {
+    color: $textDark;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 16px;
+    color: $textGrey;
+  }
+}
+
+@media (max-width: 1024px) {
+  .page-title {
+    .title-inner {
+      width: 100%;
+    }
+  }
+}
+
+/*#endregion -------------- Page Title */

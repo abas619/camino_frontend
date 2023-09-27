@@ -1,0 +1,151 @@
+/*#region ----------------- Footer */
+.footer {
+  //   background: $gradientAccent;
+  //   padding: 0 0 80px 0;
+  margin-top: 50px;
+  position: relative;
+  //   overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bg/footer-shape.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top;
+    z-index: -1;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50px;
+    top: -80px;
+    width: 140px;
+    height: 208px;
+    background-image: url(../images/shape-squre-dots.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: -1;
+  }
+  .footer-inner {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50px;
+      width: 180px;
+      height: 80px;
+      background-image: url(../images/dots.svg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      opacity: 0.2;
+    }
+  }
+  .information {
+    position: relative;
+    margin-top: 40px;
+  }
+  .logo {
+    text-align: center;
+    a {
+      display: inline-block;
+      width: 220px;
+      margin: 0 auto;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .desc {
+    margin-top: 12px;
+    p {
+      color: rgba($color: white, $alpha: 0.8);
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+  .newsletter {
+    width: 600px;
+    margin: 0 auto;
+    .news-inner {
+      background-color: white;
+      border-radius: 30px 90px;
+      box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      padding: 40px 30px;
+      h5 {
+        font-size: 20px;
+        font-weight: 800;
+        color: $textDark;
+        margin-bottom: 10px;
+      }
+      p {
+        color: $textGrey;
+        font-size: 14px;
+      }
+    }
+    .inputgroup {
+      position: relative;
+      margin-top: 15px;
+      .input {
+        width: 100%;
+        height: 44px;
+        background-color: $background_light;
+        border-radius: 50px;
+        padding: 5px 15px 5px 130px;
+        font-size: 14px;
+        font-weight: 400;
+        color: $textDark;
+        border: none;
+      }
+      .btn {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+      }
+    }
+  }
+  .social-icons {
+    ul {
+      @include displayFlex(flex, center, center);
+      flex-wrap: wrap;
+      li {
+        margin: 5px;
+        a {
+          @include displayFlex(flex, center, center);
+          width: 44px;
+          height: 44px;
+          font-size: 24px;
+          border-radius: 50%;
+          background-color: $primary;
+          color: white;
+          &:hover {
+            background-color: $secondary;
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    border-top: 1px solid rgba($color: white, $alpha: 0.15);
+    margin-top: 2rem;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    .newsletter {
+      width: 100%;
+    }
+  }
+}
+/*#endregion -------------- Footer */
