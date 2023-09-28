@@ -55,4 +55,117 @@
   }
 }
 
+.teacher-info {
+  background-color: $background_light;
+  border-radius: 10px;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 60px auto;
+  align-items: center;
+  .thumb {
+    width: 60px;
+    height: 60px;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+  .info {
+    padding-right: 15px;
+    h6 {
+      font-size: 14px !important;
+      color: $textDark;
+    }
+    p {
+      margin-bottom: 0;
+      font-size: 13px;
+      color: $textGrey;
+    }
+  }
+}
+
+.card-bookmark {
+  display: grid;
+  grid-template-columns: 35px auto;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid $borderColor;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 5px;
+  .icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    position: relative;
+    border: 2px solid $borderColor;
+    &::before {
+      content: "\f284";
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+      font-family: $iconFontRegular;
+      font-size: 14px;
+      color: white;
+      display: none;
+    }
+  }
+  .date-list {
+    @include displayFlex(flex, center, flex-start);
+    flex-wrap: wrap;
+    li {
+      flex: 1 0 50%;
+      width: 50%;
+      font-size: 13px;
+      font-weight: 400;
+      color: $textGrey;
+      margin: 2px 0;
+      &:first-child {
+        flex: 1 0 100%;
+        width: 100%;
+      }
+      span {
+        color: $textDark;
+      }
+    }
+  }
+  &.active {
+    border-color: $secondary;
+    .icon {
+      background-color: $secondary;
+      border-color: $secondary;
+      &::before {
+        display: block;
+      }
+    }
+  }
+}
+
+.bookmark-content-section {
+  display: none;
+  &.active {
+    display: block;
+  }
+  .info-list {
+    background-color: $background_light;
+    padding: 15px;
+    border-radius: 8px;
+    li {
+      font-size: 14px;
+      color: $textGrey;
+      margin-bottom: 12px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      span {
+        color: $textDark;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
 /*#endregion -------------- Teacher */

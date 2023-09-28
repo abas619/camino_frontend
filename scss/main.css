@@ -50,28 +50,28 @@ p {
 }
 
 h1 {
-  font-size: 2.5rem !important;
+  font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 2rem !important;
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.75rem !important;
+  font-size: 1.75rem;
 }
 
 h4 {
-  font-size: 1.5rem !important;
+  font-size: 1.5rem;
 }
 
 h5 {
-  font-size: 1.25rem !important;
+  font-size: 1.25rem;
 }
 
 h6 {
-  font-size: 1.125rem !important;
-  font-weight: 600 !important;
+  font-size: 1.125rem;
+  font-weight: 600;
 }
 
 p {
@@ -147,6 +147,10 @@ input[type=number] {
 .fi {
   display: inline-block !important;
   line-height: 0 !important;
+}
+
+.fixed-position {
+  overflow: hidden;
 }
 
 /*#endregion -------------- General */
@@ -1037,6 +1041,123 @@ input[type=number] {
   transform: translateY(-5px);
 }
 
+.teacher-info {
+  background-color: #f2f2f3;
+  border-radius: 10px;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 60px auto;
+  align-items: center;
+}
+.teacher-info .thumb {
+  width: 60px;
+  height: 60px;
+}
+.teacher-info .thumb img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.teacher-info .info {
+  padding-right: 15px;
+}
+.teacher-info .info h6 {
+  font-size: 14px !important;
+  color: #3c3c3c;
+}
+.teacher-info .info p {
+  margin-bottom: 0;
+  font-size: 13px;
+  color: #636063;
+}
+
+.card-bookmark {
+  display: grid;
+  grid-template-columns: 35px auto;
+  align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  border: 1px solid #d2d2d2;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+.card-bookmark .icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  position: relative;
+  border: 2px solid #d2d2d2;
+}
+.card-bookmark .icon::before {
+  content: "\f284";
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  font-family: uicons-regular-rounded;
+  font-size: 14px;
+  color: white;
+  display: none;
+}
+.card-bookmark .date-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.card-bookmark .date-list li {
+  flex: 1 0 50%;
+  width: 50%;
+  font-size: 13px;
+  font-weight: 400;
+  color: #636063;
+  margin: 2px 0;
+}
+.card-bookmark .date-list li:first-child {
+  flex: 1 0 100%;
+  width: 100%;
+}
+.card-bookmark .date-list li span {
+  color: #3c3c3c;
+}
+.card-bookmark.active {
+  border-color: #1a8ac9;
+}
+.card-bookmark.active .icon {
+  background-color: #1a8ac9;
+  border-color: #1a8ac9;
+}
+.card-bookmark.active .icon::before {
+  display: block;
+}
+
+.bookmark-content-section {
+  display: none;
+}
+.bookmark-content-section.active {
+  display: block;
+}
+.bookmark-content-section .info-list {
+  background-color: #f2f2f3;
+  padding: 15px;
+  border-radius: 8px;
+}
+.bookmark-content-section .info-list li {
+  font-size: 14px;
+  color: #636063;
+  margin-bottom: 12px;
+}
+.bookmark-content-section .info-list li:last-child {
+  margin-bottom: 0;
+}
+.bookmark-content-section .info-list li span {
+  color: #3c3c3c;
+  margin-right: 5px;
+}
+
 /*#endregion -------------- Teacher */
 /*#region ----------------- Comments */
 .comments-section {
@@ -1074,7 +1195,6 @@ input[type=number] {
 }
 .comments-section .page-title {
   position: relative;
-  z-index: 50;
 }
 .comments-section .section-inner {
   width: 700px;
@@ -1297,3 +1417,6 @@ input[type=number] {
   }
 }
 /*#endregion -------------- Footer */
+.modal-header h2 {
+  font-size: 20px !important;
+}
