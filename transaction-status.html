@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fa" class="no-js" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffb200" />
+    <meta name="msapplication-navbutton-color" content="#ffb200">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ffb200">
+    <title>کامینو | خانه</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind.config.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="scss/main.css" />
+
+    <!-- Font Icons -->
+    <link href="css/all.rounded.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/aos/aos.css" rel="stylesheet" type="text/css" />
+
+    <!-- Favicon -->
+    <!-- <link rel="icon" href="images/small-icon.png" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/logo-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/logo-114x114.png" /> -->
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="navbar bg-transparent">
+        <div class="container mx-auto">
+            <div class="sidebar-content">
+                <div id="sidebar-menu">
+                    <div class="sidebar-header">
+                        <div class="sidebar-logo">
+                            <a href="index.html" onclick="closeSidebar(this)">
+                                <img src="images/logo-white.svg" class="sidebarlogo" alt="logo">
+                            </a>
+                        </div>
+                        <div class="sidebar-close">
+                            <button class="btn-close-menu"><i class="fi fi-rr-cross"></i></button>
+                        </div>
+                    </div>
+                    <ul class="category-list">
+                        <li class="item" onclick="closeSidebar(this)"><a href="#">صفحه اصلی</a></li>
+                        <li class="item" onclick="closeSidebar(this)"><a href="#">بلاگ</a></li>
+                        <li class="item" onclick="closeSidebar(this)"><a href="#">نمونه‌ کارها</a></li>
+                        <li class="item" onclick="closeSidebar(this)"><a href="#">معرفی پزشکان</a></li>
+                        <li class="item" onclick="closeSidebar(this)"><a href="#">تماس با ما</a></li>
+                    </ul>
+                    <div class="socials-icon">
+                        <ul>
+                            <li onclick="closeSidebar(this)"><a href="#"><i class="fi fi-brands-instagram"></i></a></li>
+                            <li onclick="closeSidebar(this)"><a href="#"><i class="fi fi-brands-whatsapp"></i></a></li>
+                            <li onclick="closeSidebar(this)"><a href="#"><i class="fi fi-rr-envelope"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="overlay-back"></div>
+            </div>
+            <div class="navbar-inner">
+                <button class="btn-mobile-menu"><i class="fi fi-rr-menu-burger"></i></button>
+                <div class="nav-logo">
+                    <a href="index.html"></a>
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#">خانه</a></li>
+                        <li><a href="#">اساتید</a></li>
+                        <li><a href="#">نظرات</a></li>
+                        <li><a href="#">ارتباط با ما</a></li>
+                        <li><a href="#">بیشتر بدانید</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container mx-auto">
+            <div class="header-inner">
+                <h2>وضعیت خرید</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="transaction-status">
+        <div class="container mx-auto">
+            <div class="section-inner">
+                <div class="status-header success">
+                    <div class="icon"></div>
+                    <h5>پرداخت موفق</h5>
+                </div>
+                <ul class="info-list">
+                    <li>
+                        <span class="name">نام استاد</span>
+                        <span class="desc">استاد وحید یالانچی</span>
+                    </li>
+                    <li>
+                        <span class="name">شماره تراکنش</span>
+                        <span class="desc">4689200135</span>
+                    </li>
+                    <li>
+                        <span class="name">تاریخ خرید</span>
+                        <span class="desc">1/12/2055 - 12:30</span>
+                    </li>
+                    <li>
+                        <span class="name">وضعیت پرداخت</span>
+                        <span class="desc text-green-500">موفق</span>
+                    </li>
+                    <li>
+                        <span class="name">نمیدونم چی</span>
+                        <span class="desc text-red-500">بسیار عالی</span>
+                    </li>
+                </ul>
+                <div class="btns-action flex align-center justify-center pb-4">
+                    <a href="index.html" class="btn btn-primary">بازگشت به صفحه اصلی</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container mx-auto">
+            <div class="newsletter">
+                <div class="news-inner">
+                    <h5>با ما در تماس باشید</h5>
+                    <p>می توانید با وارد کردن ایمیل خود در اینجا در جریان آخرین اخبار و اتفاقات سایت باشید
+                    </p>
+                    <div class="inputgroup">
+                        <input type="email" class="input" placeholder="youremail@mail.com">
+                        <button type="submit" class="btn btn-secondary">ثبت</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-inner">
+                <div class="flex flex-row flex-wrap items-center justify-center">
+                    <div class="w-full basis-4/4 md:basis-3/5">
+                        <div class="information">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="images/logo-white.svg" alt="logo">
+                                </a>
+                            </div>
+                            <div class="desc">
+                                <p>کامینو شامل معرفی اساتید متخصص در همه حوزه‌ها می‌باشد. این وب‌سایت با بهره‌گیری از
+                                    دانش و تجربه اساتید متخصص دررشته‌های
+                                    مختلف، تلاش می‌کند تا دریافت خدمات را برای مراجعان آسان نماید و ارتباط مطمئنی را
+                                    مابین استاد و مراجعین برقرار نماید</p>
+                            </div>
+                        </div>
+                        <div class="social-icons">
+                            <ul>
+                                <li><a href="#"><i class="fi fi-brands-instagram"></i></a></li>
+                                <li><a href="#"><i class="fi fi-brands-whatsapp"></i></a></li>
+                                <li><a href="#"><i class="fi fi-brands-telegram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- <div class="basis-1/4 md:basis-2/5">
+
+                    </div> -->
+                </div>
+            </div>
+            <div class="copyright">
+                <span>کلیه حقوق مادی و معنوی این سایت متعلق به کامینو می باشد</span>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="plugins/swiperjs/swiper-initial.js"></script>
+    <script src="plugins/aos/aos.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

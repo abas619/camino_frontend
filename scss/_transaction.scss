@@ -1,0 +1,101 @@
+/*#region ----------------- Transaction */
+.transaction-status {
+  position: relative;
+  top: -90px;
+  .section-inner {
+    width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 20px;
+    border: 5px solid rgba($color: $secondary, $alpha: 0.1);
+    box-shadow: $boxshadow;
+    padding: 10px;
+  }
+  .status-header {
+    border: 2px solid rgba($color: $textGrey, $alpha: 0.4);
+    background-color: $textGrey;
+    border-radius: 15px;
+    padding: 10px;
+    .icon {
+      position: relative;
+      width: 48px;
+      height: 48px;
+      margin: 0 auto;
+      background-color: $textGrey;
+      border-radius: 50%;
+      @include displayFlex(flex, center, center);
+      &::before {
+        content: "\f284";
+        font-family: $iconFontRegular;
+        font-size: 24px;
+        color: white;
+      }
+    }
+    h5 {
+      margin-bottom: 0;
+      margin-top: 10px;
+      text-align: center;
+    }
+    &.success {
+      border-color: rgba($color: $success, $alpha: 0.4);
+      background-color: rgba($color: $success, $alpha: 0.1);
+      .icon {
+        background-color: $success;
+        &::before {
+          content: "\f284";
+        }
+      }
+      h5 {
+        color: $success;
+      }
+    }
+    &.error {
+      border-color: rgba($color: $error, $alpha: 0.4);
+      background-color: rgba($color: $error, $alpha: 0.1);
+      .icon {
+        background-color: $error;
+        &::before {
+          content: "\f323";
+        }
+      }
+      h5 {
+        color: $error;
+      }
+    }
+    &.unknow {
+      border-color: rgba($color: $primary, $alpha: 0.4);
+      background-color: rgba($color: $primary, $alpha: 0.1);
+      .icon {
+        background-color: $primary;
+        &::before {
+          content: "\f456";
+        }
+      }
+      h5 {
+        color: $primary;
+      }
+    }
+  }
+  .info-list {
+    margin-top: 10px;
+    padding: 20px;
+    li {
+      @include displayFlex(flex, center, space-between);
+      margin-bottom: 12px;
+      font-size: 16px;
+      font-weight: 400;
+      .name {
+        color: $textGrey;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .transaction-status {
+    .section-inner {
+      width: 100%;
+    }
+  }
+}
+/*#endregion -------------- Transaction */

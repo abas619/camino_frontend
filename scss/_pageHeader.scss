@@ -1,0 +1,37 @@
+/*#region ----------------- Page Header */
+.page-header {
+  background-image: url(../images/bg/page-header-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+  padding: 150px 0;
+  .header-inner {
+    text-align: center;
+    h2 {
+      color: white;
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .page-header {
+    padding: 140px 0;
+    .header-inner {
+      h2 {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .page-header {
+    .header-inner {
+      h2 {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+/*#endregion -------------- Page Header */

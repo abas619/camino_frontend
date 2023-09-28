@@ -13,6 +13,7 @@
     }
   }
   h2 {
+    font-size: 2rem !important;
     color: $textDark;
     margin-bottom: 10px;
   }
@@ -26,6 +27,16 @@
   .page-title {
     .title-inner {
       width: 100%;
+    }
+    h2 {
+      font-size: 1.8rem !important;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .page-title {
+    h2 {
+      font-size: 1.6rem !important;
     }
   }
 }

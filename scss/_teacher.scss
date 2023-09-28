@@ -150,18 +150,19 @@
     display: block;
   }
   .info-list {
-    background-color: $background_light;
+    // background-color: $background_light;
+    border: 2px dashed $borderColor;
     padding: 15px;
     border-radius: 8px;
     li {
       font-size: 14px;
-      color: $textGrey;
+      color: $textDark;
       margin-bottom: 12px;
       &:last-child {
         margin-bottom: 0;
       }
       span {
-        color: $textDark;
+        color: $textGrey;
         margin-right: 5px;
       }
     }

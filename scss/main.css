@@ -707,6 +707,7 @@ input[type=number] {
   margin-top: 80px;
 }
 .hero-home-section .text-content h1 {
+  font-size: 2.4rem !important;
   color: white;
   margin-bottom: 15px;
 }
@@ -738,6 +739,7 @@ input[type=number] {
   padding: 20px 10px;
   text-align: center;
   border-radius: 25px;
+  border: 5px solid rgba(26, 138, 201, 0.12);
 }
 .hero-home-section .status ul li .thumb {
   width: 80px;
@@ -810,6 +812,7 @@ input[type=number] {
   text-align: right;
 }
 .page-title h2 {
+  font-size: 2rem !important;
   color: #3c3c3c;
   margin-bottom: 10px;
 }
@@ -821,6 +824,14 @@ input[type=number] {
 @media (max-width: 1024px) {
   .page-title .title-inner {
     width: 100%;
+  }
+  .page-title h2 {
+    font-size: 1.8rem !important;
+  }
+}
+@media (max-width: 768px) {
+  .page-title h2 {
+    font-size: 1.6rem !important;
   }
 }
 /*#endregion -------------- Page Title */
@@ -1141,20 +1152,20 @@ input[type=number] {
   display: block;
 }
 .bookmark-content-section .info-list {
-  background-color: #f2f2f3;
+  border: 2px dashed #d2d2d2;
   padding: 15px;
   border-radius: 8px;
 }
 .bookmark-content-section .info-list li {
   font-size: 14px;
-  color: #636063;
+  color: #3c3c3c;
   margin-bottom: 12px;
 }
 .bookmark-content-section .info-list li:last-child {
   margin-bottom: 0;
 }
 .bookmark-content-section .info-list li span {
-  color: #3c3c3c;
+  color: #636063;
   margin-right: 5px;
 }
 
@@ -1209,20 +1220,11 @@ input[type=number] {
 }
 
 .card-comment .card-inner {
-  background-color: #c7e3f2;
   border-radius: 100px;
+  background-color: white;
   padding: 80px 60px 40px 60px;
   position: relative;
-}
-.card-comment .card-inner::before {
-  content: "";
-  position: absolute;
-  left: 8px;
-  bottom: 8px;
-  width: calc(100% - 35px);
-  height: calc(100% - 35px);
-  background-color: white;
-  border-radius: 90px;
+  border: 5px solid rgba(26, 138, 201, 0.15);
 }
 .card-comment .decs,
 .card-comment .user-info {
@@ -1378,6 +1380,7 @@ input[type=number] {
   left: 0;
   top: 0;
   height: 100%;
+  background-color: #1a8ac9;
 }
 .footer .social-icons ul {
   display: flex;
@@ -1420,3 +1423,137 @@ input[type=number] {
 .modal-header h2 {
   font-size: 20px !important;
 }
+
+/*#region ----------------- Page Header */
+.page-header {
+  background-image: url(../images/bg/page-header-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+  padding: 150px 0;
+}
+.page-header .header-inner {
+  text-align: center;
+}
+.page-header .header-inner h2 {
+  color: white;
+  font-size: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .page-header {
+    padding: 140px 0;
+  }
+  .page-header .header-inner h2 {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .page-header .header-inner h2 {
+    font-size: 1.6rem;
+  }
+}
+/*#endregion -------------- Page Header */
+/*#region ----------------- Transaction */
+.transaction-status {
+  position: relative;
+  top: -90px;
+}
+.transaction-status .section-inner {
+  width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 20px;
+  border: 5px solid rgba(26, 138, 201, 0.1);
+  box-shadow: 0px 4px 25px rgba(5, 5, 5, 0.08);
+  padding: 10px;
+}
+.transaction-status .status-header {
+  border: 2px solid rgba(99, 96, 99, 0.4);
+  background-color: #636063;
+  border-radius: 15px;
+  padding: 10px;
+}
+.transaction-status .status-header .icon {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  background-color: #636063;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.transaction-status .status-header .icon::before {
+  content: "\f284";
+  font-family: uicons-regular-rounded;
+  font-size: 24px;
+  color: white;
+}
+.transaction-status .status-header h5 {
+  margin-bottom: 0;
+  margin-top: 10px;
+  text-align: center;
+}
+.transaction-status .status-header.success {
+  border-color: rgba(0, 189, 121, 0.4);
+  background-color: rgba(0, 189, 121, 0.1);
+}
+.transaction-status .status-header.success .icon {
+  background-color: #00bd79;
+}
+.transaction-status .status-header.success .icon::before {
+  content: "\f284";
+}
+.transaction-status .status-header.success h5 {
+  color: #00bd79;
+}
+.transaction-status .status-header.error {
+  border-color: rgba(255, 51, 51, 0.4);
+  background-color: rgba(255, 51, 51, 0.1);
+}
+.transaction-status .status-header.error .icon {
+  background-color: #ff3333;
+}
+.transaction-status .status-header.error .icon::before {
+  content: "\f323";
+}
+.transaction-status .status-header.error h5 {
+  color: #ff3333;
+}
+.transaction-status .status-header.unknow {
+  border-color: rgba(253, 166, 33, 0.4);
+  background-color: rgba(253, 166, 33, 0.1);
+}
+.transaction-status .status-header.unknow .icon {
+  background-color: #fda621;
+}
+.transaction-status .status-header.unknow .icon::before {
+  content: "\f456";
+}
+.transaction-status .status-header.unknow h5 {
+  color: #fda621;
+}
+.transaction-status .info-list {
+  margin-top: 10px;
+  padding: 20px;
+}
+.transaction-status .info-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.transaction-status .info-list li .name {
+  color: #636063;
+}
+
+@media (max-width: 768px) {
+  .transaction-status .section-inner {
+    width: 100%;
+  }
+}
+/*#endregion -------------- Transaction */

@@ -89,7 +89,7 @@ if (document.querySelector(".card-bookmark") != null) {
 }
 
 // جابجایی مراحل انتخاب استاد
-let currentSectionIndex = 1;
+let currentSectionIndex = 0;
 if (document.querySelector(".bookmark-content-section") != null) {
   const BookmarkAllSections = document.querySelectorAll(
     ".bookmark-content-section"
@@ -117,11 +117,18 @@ function showSection(index) {
   const BookmarkAllSections = document.querySelectorAll(
     ".bookmark-content-section"
   );
+  var btnNextBookmark = document.getElementById("btn-next-bookmark");
 
   if (index == 0) {
     btnPrevBookmark.style.display = "none";
   } else {
     btnPrevBookmark.style.display = "block";
+  }
+
+  if (BookmarkAllSections.length - 1 === currentSectionIndex) {
+    btnNextBookmark.innerHTML = "پرداخت";
+  } else {
+    btnNextBookmark.innerHTML = "ادامه";
   }
 
   BookmarkAllSections.forEach((section, i) => {
