@@ -10,6 +10,7 @@
   position: relative;
   transition: all 0.3s ease-in-out;
   display: inline-block;
+  text-align: center;
   &:hover,
   &:focus {
     box-shadow: none !important;
@@ -64,6 +65,19 @@
       width: 400px;
       height: 400px;
       opacity: 0;
+    }
+  }
+  &.bg-white {
+    background-color: white;
+    color: $primary;
+    &:hover,
+    &:focus {
+      background: #feecd1 !important;
+      &::before {
+        width: 400px;
+        height: 400px;
+        opacity: 0;
+      }
     }
   }
 }

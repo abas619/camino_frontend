@@ -9,14 +9,13 @@
     <meta name="msapplication-navbutton-color" content="#ffb200">
     <meta name="apple-mobile-web-app-status-bar-style" content="#ffb200">
     <title>کامینو | خانه</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind.js"></script>
     <script src="js/tailwind.config.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="plugins/swiperjs/swiper-bundle.min.css" />
     <link rel="stylesheet" href="scss/main.css" />
 
     <!-- Font Icons -->
     <link href="css/all.rounded.css" rel="stylesheet" type="text/css" />
-    <link href="plugins/aos/aos.css" rel="stylesheet" type="text/css" />
 
     <!-- Favicon -->
     <!-- <link rel="icon" href="images/small-icon.png" />
@@ -74,6 +73,30 @@
                         <li><a href="#">ارتباط با ما</a></li>
                         <li><a href="#">بیشتر بدانید</a></li>
                     </ul>
+                </div>
+                <div class="nav-actions">
+                    <!-- <div class="login">
+                        <a href="login.html" class="btn btn-primary bg-white icon-right">
+                            <i class="fi fi-rr-sign-in-alt"></i>
+                            <span>ورود/ثبت نام</span>
+                        </a>
+                    </div> -->
+                    <div class="sign">
+                        <button class="btn btn-primary icon-right">
+                            <i class="fi fi-rr-user"></i>
+                            <span>نام کاربر</span>
+                        </button>
+                        <div class="user-menu">
+                            <ul>
+                                <li><a href="#"><i class="fi fi-rr-user"></i>حساب کاربری</a></li>
+                                <li><a href="#"><i class="fi fi-rr-comments-question"></i>جلسات مشاوره</a></li>
+                                <li><a href="#"><i class="fi fi-rr-bookmark"></i>رزرو‌ها</a></li>
+                                <li><a href="#"><i class="fi fi-rr-comment-alt"></i>پیام‌های دریافتی</a></li>
+                                <hr>
+                                <li><a href="#"><i class="fi fi-rr-sign-out-alt"></i>خروج</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -399,9 +422,6 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- <div class="basis-1/4 md:basis-2/5">
-
-                    </div> -->
                 </div>
             </div>
             <div class="copyright">
@@ -409,8 +429,6 @@
             </div>
         </div>
     </footer>
-
-
 
     <!-- Modal Teacher -->
     <div id="dialog"
@@ -526,11 +544,9 @@
     </div>
 
 
-
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="plugins/swiperjs/swiper-bundle.min.js"></script>
     <script src="plugins/swiperjs/swiper-initial.js"></script>
-    <script src="plugins/aos/aos.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 

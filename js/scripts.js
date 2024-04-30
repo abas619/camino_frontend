@@ -1,5 +1,3 @@
-AOS.init();
-
 var body = document.querySelector("body");
 
 if (document.querySelector(".btn-mobile-menu") != null) {
@@ -109,9 +107,8 @@ if (document.querySelector(".bookmark-content-section") != null) {
     );
     showSection(currentSectionIndex);
   });
+  showSection(currentSectionIndex);
 }
-
-showSection(currentSectionIndex);
 
 function showSection(index) {
   const BookmarkAllSections = document.querySelectorAll(
@@ -138,4 +135,29 @@ function showSection(index) {
       section.classList.remove("active");
     }
   });
+}
+
+// برای لاگین
+if (document.querySelector(".login-section") != null) {
+  var modalSignContent = document.querySelectorAll(".login-section");
+  var currentTab = 2;
+  showModalSignContent(currentTab);
+}
+
+function showModalSignContent(num) {
+  for (i = 0; i < modalSignContent.length; i++) {
+    modalSignContent[i].classList.remove("active");
+  }
+  modalSignContent[num].classList.add("active");
+}
+
+// برای نمایش فرم‌های ثبت نام در لاگین
+function showForm(formNumber) {
+  if (formNumber === 1) {
+    document.getElementById("register-form-1").style.display = "block";
+    document.getElementById("register-form-2").style.display = "none";
+  } else if (formNumber === 2) {
+    document.getElementById("register-form-1").style.display = "none";
+    document.getElementById("register-form-2").style.display = "block";
+  }
 }

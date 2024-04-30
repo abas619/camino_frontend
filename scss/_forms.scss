@@ -1,60 +1,35 @@
 /*#region ----------------- Forms */
 .inputgroup {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
   width: 100%;
   label {
-    position: absolute;
-    top: calc(50% - 27px);
-    right: 16px;
-    opacity: 0;
-    transition: all 0.3s ease;
-    padding: 0 5px;
-    font-size: 13px;
-    font-weight: 500;
-    background-color: #fff;
-    visibility: hidden;
+    font-size: 14px;
+    font-weight: 400;
     color: $textGrey;
+    margin-bottom: 0.5rem;
+    display: block;
   }
   .input {
     width: 100%;
-    margin-left: auto;
-    display: flex;
     font-size: 16px;
-    font-weight: 600;
-    padding: 5px 20px 5px 15px;
-    height: 50px;
+    font-weight: 500;
+    padding: 5px 50px 5px 15px;
+    height: 44px;
     border: 1px solid $borderColor;
-    border-radius: 8px;
+    border-radius: 10px;
     background: white;
     box-sizing: border-box;
-    transition: all 0.3s linear;
+    transition: all 0.3s ease-in-out;
     color: $textDark;
     text-align: right;
-    &:not(:placeholder-shown) {
-      box-shadow: none;
-      border-color: red;
-    }
-    &:not(:placeholder-shown) {
-      + label {
-        -webkit-transform: translateY(-10px);
-        transform: translateY(-10px);
-        opacity: 1;
-        visibility: visible;
-      }
-    }
-    &:valid:not(:placeholder-shown) {
-      border-color: $textGrey;
-    }
-    &:valid:not(:placeholder-shown) + label {
-      color: $primary;
-    }
-    &:not(:valid):not(:focus) + label + .icon {
-      animation: shake-shake 0.3s;
-    }
     &:disabled {
       border-color: $textSilver;
       background-color: rgba($color: #000000, $alpha: 0.02);
+    }
+    &:hover,
+    &:focus {
+      border-color: $primary;
     }
   }
   &.type-code {
@@ -66,61 +41,44 @@
       color: $textGrey;
     }
   }
-  .text-input {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 50px;
-    height: 50px;
-    display: block;
-    border-radius: 8px;
-    @include displayFlex(flex, center, center);
-    background-color: rgba($color: #000000, $alpha: 0.05);
+  &.simple {
+    .input {
+      padding: 5px 15px;
+    }
   }
-  .alert {
+  .alert-msg {
     font-size: 13px;
     font-weight: 500;
     text-align: right;
-    padding: 0;
-    margin: 1rem 0;
-    &.error {
-      color: $error;
-    }
-    &.success {
-      color: $success;
-    }
+    margin: 0.5rem 0;
   }
   .icon {
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 50px;
-    height: 50px;
+    right: 0;
+    top: 30px;
+    width: 44px;
+    height: 44px;
     @include displayFlex(flex, center, center);
-    font-size: 24px;
+    font-size: 22px;
     color: $textSilver;
   }
 }
 
 .select-group {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
   width: 100%;
   label {
-    font-size: 13px;
-    font-weight: 500;
-    background-color: #fff;
-    color: $textGrey;
-    padding: 0 5px;
-    right: 25px;
-    top: calc(50% - 36px);
-    position: absolute;
-    color: $textGrey;
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 0.5rem;
   }
-  .form-select {
-    height: 50px;
-    border-color: $borderColor;
-    border-radius: 8px;
+  .select {
+    width: 100%;
+    height: 44px;
+    border: 1px solid $borderColor;
+    border-radius: 10px;
     transition: all 0.3s linear;
     color: $textDark;
     text-align: right;
@@ -129,6 +87,7 @@
     padding-right: 20px;
     padding-left: 30px;
     background-position: left 0.75rem center;
+    background-color: white;
     &:hover,
     &:focus {
       border-color: $primary;
@@ -201,43 +160,103 @@
   }
 }
 
-.form-switch {
-  padding-right: 3.2em;
-  min-height: 2em;
+.form-check {
+  @include displayFlex(flex, center, flex-start);
+  margin: 0 0 10px 25px;
   .form-check-input {
-    height: 1.5em;
-    width: 2.4rem;
-    margin-right: -3.3em;
-  }
-}
-
-.radios-group {
-  margin-top: 10px;
-  .label {
-    font-size: 14px;
-    font-weight: 500;
-    background-color: #fff;
-    color: $textDark;
-    margin-bottom: 5px;
-  }
-  .radio-inner {
-    @include displayFlex(flex, center, flex-start);
-    flex-wrap: wrap;
-    margin-top: 10px;
-  }
-  .form-check {
-    margin: 0 0 10px 30px;
+    appearance: none;
+    width: 1.2em;
+    height: 1.2em;
+    border: 0.1em solid $borderColor;
+    position: relative;
+    border-radius: 5px;
+    background-color: white;
     cursor: pointer;
-    .form-check-input,
-    .form-check-label {
-      cursor: pointer;
-    }
-    .form-check-input {
-      background-color: $background;
+    &[type="checkbox"] {
+      &::before {
+        content: "\f312";
+        font-family: $iconFontRegular;
+        font-size: 12px;
+        position: absolute;
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
+        opacity: 0;
+        transition: all 0.15s ease-in-out;
+      }
       &:checked {
         background-color: $primary;
+        border-color: $primary;
+        &::before {
+          opacity: 1;
+          color: white;
+          transform: translate(50%, -50%);
+        }
+      }
+    }
+    &[type="radio"] {
+      border-radius: 50%;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 0;
+        height: 0;
+        background-color: white;
+        border-radius: 50%;
+        opacity: 0;
+        transition: all 0.15s ease-in-out;
+      }
+      &:checked {
+        border-color: $primary;
+        &::before {
+          opacity: 1;
+          width: 0.5em;
+          height: 0.5em;
+        }
       }
     }
   }
+  .form-check-label {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    color: $textDark;
+    margin-right: 10px;
+    &.big-font {
+      font-size: 16px;
+    }
+  }
 }
+// .radios-group {
+//   margin-top: 10px;
+//   .label {
+//     font-size: 14px;
+//     font-weight: 500;
+//     background-color: #fff;
+//     color: $textDark;
+//     margin-bottom: 5px;
+//   }
+//   .radio-inner {
+//     @include displayFlex(flex, center, flex-start);
+//     flex-wrap: wrap;
+//     margin-top: 10px;
+//   }
+//   .form-check {
+//     margin: 0 0 10px 30px;
+//     cursor: pointer;
+//     .form-check-input,
+//     .form-check-label {
+//       cursor: pointer;
+//     }
+//     .form-check-input {
+//       background-color: $background;
+//       &:checked {
+//         background-color: $primary;
+//       }
+//     }
+//   }
+// }
 /*#endregion -------------- Forms */

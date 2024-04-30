@@ -1,10 +1,17 @@
 tailwind.config = {
   theme: {
-    extend: {
-      //   colors: {
-      //     clifford: "#da373d",
-      //   },
-    },
+    extend: {},
+    // colors: {
+    //   primary: "#fda621",
+    //   secondary: "#1a8ac9",
+    //   accent: "#080067",
+    //   textDark: "#3c3c3c",
+    //   textGrey: "#636063",
+    //   textSilver: "#9e9e9e",
+    //   borderColor: "#d2d2d2",
+    //   background: "#fff",
+    //   background_light: "#f2f2f3",
+    // },
     container: {
       screens: {
         sm: "640px",

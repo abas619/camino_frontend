@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fa" class="no-js" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffb200" />
+    <meta name="msapplication-navbutton-color" content="#ffb200">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ffb200">
+    <title>کامینو | خانه</title>
+    <script src="js/tailwind.js"></script>
+    <script src="js/tailwind.config.js"></script>
+    <link rel="stylesheet" href="plugins/swiperjs/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="scss/main.css" />
+
+    <!-- Font Icons -->
+    <link href="css/all.rounded.css" rel="stylesheet" type="text/css" />
+
+    <!-- Favicon -->
+    <!-- <link rel="icon" href="images/small-icon.png" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/logo-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/logo-114x114.png" /> -->
+
+</head>
+
+<body>
+
+    <div class="wrapper-login">
+        <div class="inner flex items-center justify-center flex-col">
+            <div class="bg-white p-5 rounded-xl md:w-[550px] w-full mx-auto shadow-myShadow1">
+
+                <div class="logo w-[180px] mx-auto mb-5">
+                    <a href="index.html" class="block">
+                        <img src="images/logo-color.svg" alt="">
+                    </a>
+                </div>
+
+                <div class="login-section">
+                    <div class="form-content">
+                        <div class="input-group relative mb-3 group">
+                            <label class="block text-textGrey text-[14px] font-base mb-2">
+                                شماره همراه (بدون صفر)
+                            </label>
+                            <input type="text" placeholder="شماره همراه خود را وارد کنید"
+                                class="w-full h-10 bg-white rounded-lg text-[16px] text-textDark p-3 pr-[40px] border border-borderColor hover:border-primary focus:border-primary">
+                            <div class="text-sm text-red-500 mt-2 pr-1">شماره همراه را صحیح وارد کنید</div>
+                            <div
+                                class="icon w-10 h-10 absolute top-[30px] right-0 flex items-center justify-center text-[20px] text-textSilver">
+                                <i class="fi fi-rr-phone-call"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-5">
+                        <button class="btn btn-primary icon-right"
+                            onclick="showModalSignContent(1),startTimer('1',10)"><i
+                                class="fi fi-rr-check"></i>ادامه</button>
+                    </div>
+                </div>
+
+                <div class="login-section">
+                    <div class="form-content">
+                        <div class="input-group relative mb-3 group">
+                            <label class="block text-textGrey text-[14px] font-base mb-2">
+                                کد پیامک شده را وارد کنید
+                            </label>
+                            <input type="text" placeholder="- - - -"
+                                class="w-full h-10 bg-white rounded-lg text-[16px] text-textDark p-3 border border-borderColor hover:border-primary focus:border-primary text-center">
+                        </div>
+                    </div>
+                    <div class="links-content">
+                        <div class="resend-number">
+                            <div class="showCountdown">
+                                <span id="timer1">01:00</span>
+                            </div>
+                            <div class="btn-resend-sms btn-resend_1" onclick="startTimer('1',10)">
+                                <span>ارسال مجدد</span>
+                            </div>
+                        </div>
+                        <div class="change-number">
+                            <button class="btn-change-number" onclick="showModalSignContent(0)"><i
+                                    class="fi fi-rr-pencil"></i>تغییر
+                                شماره همراه</button>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center mt-5">
+                        <a href="#" class="btn btn-primary-outline icon-right mx-1" onclick="showModalSignContent(0)"><i
+                                class="fi fi-rr-arrow-right"></i>بازگشت</a>
+                        <button class="btn btn-primary icon-right mx-1"><i class="fi fi-rr-check"></i>ورود</button>
+                    </div>
+                </div>
+                <div class="login-section active">
+                    <div class="form-content">
+                        <h6 class="mb-2">نوع نمیدونم چی را انتخاب کنید</h6>
+                        <div class="radio-group-select">
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input" type="radio" name="radio-sending" id="radio-sending-01"
+                                    onclick="showForm(1)" checked>
+                                <label class="form-check-label" for="radio-sending-01">
+                                    دانشجو
+                                </label>
+                            </div>
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input" type="radio" name="radio-sending" id="radio-sending-02"
+                                    onclick="showForm(2)">
+                                <label class="form-check-label" for="radio-sending-02">
+                                    استاد
+                                </label>
+                            </div>
+                        </div>
+                        <div id="register-form-1" class="active">
+                            <div class="flex items-start justify-start flex-wrap">
+                                <div class="sm:w-1/2 w-full px-2">
+                                    <div class="inputgroup">
+                                        <label>نام</label>
+                                        <input type="text" placeholder="" class="input">
+                                        <div class="icon"><i class="fi fi-rr-user"></i></div>
+                                        <div class="alert-msg text-red-500">شماره اشتباه است</div>
+                                    </div>
+                                </div>
+                                <div class="sm:w-1/2 w-full px-2">
+                                    <div class="inputgroup">
+                                        <label>نام خانوادگی</label>
+                                        <input type="text" placeholder="" class="input">
+                                        <div class="icon"><i class="fi fi-rr-user"></i></div>
+                                        <!-- <div class="alert-msg text-green-500">شماره اشتباه است</div> -->
+                                    </div>
+                                </div>
+                                <div class="sm:w-1/2 w-full px-2">
+                                    <div class="inputgroup">
+                                        <label>شماره همراه</label>
+                                        <input type="number" placeholder="مثال : 09127442012" class="input">
+                                        <div class="icon"><i class="fi fi-rr-phone-call"></i></div>
+                                        <!-- <div class="alert-msg text-red-500">شماره اشتباه است</div> -->
+                                    </div>
+                                </div>
+                                <div class="sm:w-1/2 w-full px-2">
+                                    <div class="select-group">
+                                        <label>جنسیت</label>
+                                        <select class="select">
+                                            <option value="0">مرد</option>
+                                            <option value="1">زن</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="w-full px-2">
+                                    <div class="inputgroup">
+                                        <label>رشته تحصیلی</label>
+                                        <input type="text" placeholder="مثال : کارشناسی" class="input">
+                                        <div class="icon"><i class="fi fi-rr-graduation-cap"></i></div>
+                                        <!-- <div class="alert-msg text-green-500">شماره اشتباه است</div> -->
+                                    </div>
+                                </div>
+                                <div class="w-full px-2">
+                                    <div class="inputgroup">
+                                        <label>رمز عبور</label>
+                                        <input type="password" placeholder="" class="input">
+                                        <div class="icon"><i class="fi fi-rr-lock"></i></div>
+                                        <!-- <div class="alert-msg text-green-500">شماره اشتباه است</div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="register-form-2">
+                            <div class="flex items-start justify-start flex-wrap">
+                                <div class="sm:w-1/2 w-full px-2">
+                                    <div class="inputgroup">
+                                        <label>نام</label>
+                                        <input type="text" placeholder="" class="input">
+                                        <div class="icon"><i class="fi fi-rr-user"></i></div>
+                                        <div class="alert-msg text-red-500">شماره اشتباه است</div>
+                                    </div>
+                                </div>
+                                <div class="sm:w-1/2 w-full px-2">
+                                    <div class="inputgroup">
+                                        <label>نام خانوادگی</label>
+                                        <input type="text" placeholder="" class="input">
+                                        <div class="icon"><i class="fi fi-rr-user"></i></div>
+                                        <!-- <div class="alert-msg text-green-500">شماره اشتباه است</div> -->
+                                    </div>
+                                </div>
+                                <div class="sm:w-1/2 w-full px-2">
+                                    <div class="inputgroup">
+                                        <label>شماره همراه</label>
+                                        <input type="number" placeholder="مثال : 09127442012" class="input">
+                                        <div class="icon"><i class="fi fi-rr-phone-call"></i></div>
+                                        <!-- <div class="alert-msg text-red-500">شماره اشتباه است</div> -->
+                                    </div>
+                                </div>
+                                <div class="sm:w-1/2 w-full px-2">
+                                    <div class="select-group">
+                                        <label>جنسیت</label>
+                                        <select class="select">
+                                            <option value="0">مرد</option>
+                                            <option value="1">زن</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="sm:w-1/2 w-full px-2">
+                                    <div class="inputgroup">
+                                        <label>آخرین مدرک تحصیلی</label>
+                                        <input type="text" placeholder="مثال : کارشناسی" class="input">
+                                        <div class="icon"><i class="fi fi-rr-graduation-cap"></i></div>
+                                        <!-- <div class="alert-msg text-green-500">شماره اشتباه است</div> -->
+                                    </div>
+                                </div>
+                                <div class="sm:w-1/2 w-full px-2">
+                                    <div class="inputgroup">
+                                        <label>مدرک استادی</label>
+                                        <input type="text" placeholder="مثال : استاد برجسته" class="input">
+                                        <div class="icon"><i class="fi fi-rr-diploma"></i></div>
+                                        <!-- <div class="alert-msg text-green-500">شماره اشتباه است</div> -->
+                                    </div>
+                                </div>
+                                <div class="sm:w-1/2 w-full px-2">
+                                    <div class="inputgroup">
+                                        <label>رشته تحصیلی</label>
+                                        <input type="text" placeholder="مثال : نرم افزار" class="input">
+                                        <div class="icon"><i class="fi fi-rr-graduation-cap"></i></div>
+                                        <!-- <div class="alert-msg text-green-500">شماره اشتباه است</div> -->
+                                    </div>
+                                </div>
+                                <div class="sm:w-1/2 w-full px-2">
+                                    <div class="inputgroup">
+                                        <label>ایمیل</label>
+                                        <input type="email" placeholder="" class="input">
+                                        <div class="icon"><i class="fi fi-rr-envelope"></i></div>
+                                        <!-- <div class="alert-msg text-green-500">شماره اشتباه است</div> -->
+                                    </div>
+                                </div>
+                                <div class="w-full px-2">
+                                    <div class="inputgroup">
+                                        <label>رمز عبور</label>
+                                        <input type="password" placeholder="" class="input">
+                                        <div class="icon"><i class="fi fi-rr-lock"></i></div>
+                                        <!-- <div class="alert-msg text-green-500">شماره اشتباه است</div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="flex items-center justify-center mt-5">
+                        <button class="btn btn-primary icon-right mx-1"><i class="fi fi-rr-check"></i>ثبت نام</button>
+                    </div>
+                </div>
+
+                <!-- Loading -->
+                <div class="modal-loader fix-height">
+                    <div class="load-content"></div>
+                    <h6 class="mt-3">چند لحظه صبر کنید</h6>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="plugins/swiperjs/swiper-bundle.min.js"></script>
+    <script src="plugins/swiperjs/swiper-initial.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/timer.js"></script>
+</body>
+
+</html>

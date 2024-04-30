@@ -14,7 +14,7 @@
   .navbar-inner {
     padding: 20px 0;
     display: grid;
-    grid-template-columns: 160px auto;
+    grid-template-columns: 160px 1fr auto;
     align-items: center;
     position: relative;
   }
@@ -55,16 +55,69 @@
       }
     }
   }
+  .nav-actions {
+    .login {
+      text-align: left;
+    }
+    .sign {
+      position: relative;
+      .btn {
+        min-width: unset;
+        padding-left: 2rem;
+        &::after {
+          content: "\f25d";
+          position: absolute;
+          left: 10px;
+          top: 11px;
+          font-size: 16px;
+          font-family: $iconFontRegular;
+        }
+      }
+      &:hover {
+        .user-menu {
+          display: block;
+        }
+      }
+    }
+    .user-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 200px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 5px 30px rgba($color: #000000, $alpha: 0.2);
+      display: none;
+      ul {
+        padding: 8px 0;
+        li {
+          a {
+            font-size: 16px;
+            font-weight: 400;
+            color: $textDark;
+            display: flex;
+            padding: 6px 10px;
+            .fi {
+              margin-left: 10px;
+              font-size: 18px;
+              position: relative;
+              top: 3px;
+              color: $textSilver;
+            }
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
   .btn-mobile-menu {
-    position: absolute;
-    right: 0;
-    top: 20px;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     @include displayFlex(flex, center, center);
     padding: 2px;
     border-radius: 5px;
-    // background-color: rgba($color: white, $alpha: 0.3);
     color: $textGrey;
     font-size: 24px;
     display: none;
@@ -86,8 +139,7 @@
     .navbar-inner {
       padding: 10px 0;
       display: grid;
-      grid-template-columns: 100%;
-      // grid-template-columns: 90px auto 90px;
+      grid-template-columns: 80px auto 80px;
     }
     .nav-links {
       display: none;
@@ -101,8 +153,47 @@
         }
       }
     }
+    .nav-actions {
+      .login {
+        text-align: left;
+        .btn {
+          width: 44px;
+          height: 44px;
+          padding: 5px;
+          min-width: unset;
+          background-color: transparent;
+          color: $textDark;
+          span {
+            display: none;
+          }
+          &:hover {
+            color: white;
+          }
+        }
+      }
+      .sign {
+        text-align: left;
+        .btn {
+          width: 54px;
+          height: 44px;
+          padding: 5px;
+          min-width: unset;
+          background-color: transparent;
+          color: $textDark;
+          span {
+            display: none;
+          }
+          &::after {
+            left: 0;
+          }
+          &:hover {
+            background-color: transparent !important;
+          }
+        }
+      }
+    }
     .btn-mobile-menu {
-      display: block;
+      display: flex;
     }
   }
 }
