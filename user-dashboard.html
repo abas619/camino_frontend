@@ -28,7 +28,7 @@
 <body>
 
     <!-- Header -->
-    <header class="navbar bg-transparent">
+    <header class="navbar">
         <div class="container mx-auto">
             <div class="sidebar-content">
                 <div id="sidebar-menu">
@@ -102,128 +102,133 @@
         </div>
     </header>
 
-    <!-- Page Header -->
-    <div class="page-header">
+    <!-- User Dashboard -->
+    <div class="user-dashboard-section">
         <div class="container mx-auto">
-            <div class="header-inner">
-                <h2>لیست اساتید</h2>
+            <div class="grid-layout">
+                <div class="grid-user-menu">
+                    <div class="grid-inner">
+                        <!-- close Userprofile -->
+                        <button type="button" class="btn-closeprofileMenu"><i class="fi fi-rr-cross"></i></button>
+                        <!-- User Image -->
+                        <div class="user-image">
+                            <div class="img-inner">
+                                <img src="images/default-user.svg" alt="user-name">
+                            </div>
+                            <div class="user-name">
+                                <h6 class="font-extrabold text-textDark mb-2">وحید حسینی اصل</h6>
+                                <p class="mb-0 text-sm">کمپین : <span class="text-primary">فعال است</span></p>
+                            </div>
+                        </div>
+                        <!-- User Menu -->
+                        <div class="user-menu">
+                            <ul class="menu-list">
+                                <li class="menu-item active"><a href="user-dashboard.html" class="btn-collape"><i
+                                            class="fi fi-rr-apps"></i>داشبورد</a></li>
+                                <li class="menu-item"><a href="user-orders.html" class="btn-collape"><i
+                                            class="fi fi-rr-receipt"></i>جلسات رزرو شده</a></li>
+                                <li class="menu-item"><a href="user-bookmarks.html" class="btn-collape"><i
+                                            class="fi fi-rr-heart"></i>
+                                        سوابق رزرو
+                                    </a>
+                                </li>
+                                <li class="menu-item"><a href="user-address.html" class="btn-collape"><i
+                                            class="fi fi-rr-marker"></i>تراکنش‌ها</a>
+                                </li>
+                                <li class="menu-item"><a href="user-profile.html" class="btn-collape"><i
+                                            class="fi fi-rr-user"></i>اطلاعات
+                                        کاربر</a></li>
+                                <li class="menu-item">
+                                    <a href="#" class="btn-collape" data-modal-name="modal-logout">
+                                        <i class="fi fi-rr-sign-out-alt"></i>
+                                        خروج از حساب کاربری
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="overlay-userMenu"></div>
+                </div>
+                <div class="grid-main">
+                    <div class="grid-inner">
+                        <div class="main-title">
+                            <div class="title-inner">
+                                <button type="button" class="btn-usermenu"><i
+                                        class="fi fi-rr-menu-dots-vertical"></i></button>
+                                <div class="icon">
+                                    <i class="fi fi-rr-apps"></i>
+                                </div>
+                                <h3>داشبورد</h3>
+                            </div>
+                        </div>
+                        <div class="main-body">
+                            <div class="user-status">
+                                <div class="card-status">
+                                    <div class="card-inner">
+                                        <div class="thumb">
+                                            <img src="images/shapes/order-waiting.svg" alt="img-name">
+                                        </div>
+                                        <div class="info">
+                                            <h6>سفارش‌های در حال بررسی</h6>
+                                            <h3>10</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-status">
+                                    <div class="card-inner">
+                                        <div class="thumb">
+                                            <img src="images/shapes/order-success.svg" alt="img-name">
+                                        </div>
+                                        <div class="info">
+                                            <h6>سفارش‌های تحویل شده</h6>
+                                            <h3>5</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-status">
+                                    <div class="card-inner">
+                                        <div class="thumb">
+                                            <img src="images/shapes/order-error.svg" alt="img-name">
+                                        </div>
+                                        <div class="info">
+                                            <h6>سفارش‌های لغو شده</h6>
+                                            <h3>63</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ثبت سفارش -->
+                            <div class="register-recipe-group">
+                                <div class="card-register-recipe">
+                                    <a href="#" class="card-inner">
+                                        <div class="thumb">
+                                            <i class="fi fi-rr-box"></i>
+                                        </div>
+                                        <div class="info">
+                                            <h5>ثبت سفارش جدید</h5>
+                                            <p>برای مشاهده همه محصولات کلیک کنید</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="card-register-recipe">
+                                    <a href="#" class="card-inner">
+                                        <div class="thumb">
+                                            <i class="fi fi-rr-receipt"></i>
+                                        </div>
+                                        <div class="info">
+                                            <h5>وضعیت آخرین سفارش</h5>
+                                            <p>جهت مشاهده آخرین وضعیت سفارش کلیک کنید</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="teachers-list-section">
-        <div class="container mx-auto">
-            <div class="search-content">
-                <div class="flex items-end justify-start flex-wrap">
-                    <div class="lg:w-2/5 sm:w-1/2 w-full px-2">
-                        <div class="inputgroup simple m-0">
-                            <label>جستجو</label>
-                            <input type="text" placeholder="عبارت یا کلمه مورد نظر" class="input">
-                        </div>
-                    </div>
-                    <div class="lg:w-1/5 sm:w-1/2 w-full px-2">
-                        <div class="select-group m-0">
-                            <label>مرتب سازی بر اساس</label>
-                            <select class="select">
-                                <option value="0">بیشترین امتیاز</option>
-                                <option value="1">جدیدترین</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="lg:w-1/5 sm:w-1/2 w-full px-2">
-                        <div class="select-group m-0">
-                            <label>انتخاب گروه</label>
-                            <select class="select">
-                                <option value="0">کوچ</option>
-                                <option value="1">برنامه ریزی و آمار</option>
-                                <option value="1">دروس عمومی</option>
-                                <option value="1">دروس تخفصصی</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="lg:w-1/5 sm:w-1/2 w-full px-2">
-                        <button class="btn btn-primary w-full">اعمال فیلتر</button>
-                    </div>
-                </div>
-            </div>
-            <div class="section-inner">
-                <div class="flex items-end justify-start flex-wrap">
-                    <div class="lg:w-1/2 w-full px-2">
-                        <div class="card-teacher-row">
-                            <div class="card-inner">
-                                <div class="thumb">
-                                    <img src="https://via.placeholder.com/200x200/ccc.png" alt="img-name">
-                                </div>
-                                <div class="info">
-                                    <h5 class="name">وحید حسینی</h5>
-                                    <p class="desc">کوچ موشن گرافیک</p>
-                                    <div class="btns-action">
-                                        <div class="rate">4.3<i class="fi fi-sr-star"></i> <span>(از 53 نظر)</span>
-                                        </div>
-                                        <a href="teacher-details.html" class="btn btn-secondary">رزرو استاد</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lg:w-1/2 w-full px-2">
-                        <div class="card-teacher-row">
-                            <div class="card-inner">
-                                <div class="thumb">
-                                    <img src="https://via.placeholder.com/200x200/ccc.png" alt="img-name">
-                                </div>
-                                <div class="info">
-                                    <h5 class="name">وحید حسینی</h5>
-                                    <p class="desc">کوچ موشن گرافیک</p>
-                                    <div class="btns-action">
-                                        <div class="rate">4.3<i class="fi fi-sr-star"></i> <span>(از 53 نظر)</span>
-                                        </div>
-                                        <a href="teacher-details.html" class="btn btn-secondary">رزرو استاد</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lg:w-1/2 w-full px-2">
-                        <div class="card-teacher-row">
-                            <div class="card-inner">
-                                <div class="thumb">
-                                    <img src="https://via.placeholder.com/200x200/ccc.png" alt="img-name">
-                                </div>
-                                <div class="info">
-                                    <h5 class="name">وحید حسینی</h5>
-                                    <p class="desc">کوچ موشن گرافیک</p>
-                                    <div class="btns-action">
-                                        <div class="rate">4.3<i class="fi fi-sr-star"></i> <span>(از 53 نظر)</span>
-                                        </div>
-                                        <a href="teacher-details.html" class="btn btn-secondary">رزرو استاد</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lg:w-1/2 w-full px-2">
-                        <div class="card-teacher-row">
-                            <div class="card-inner">
-                                <div class="thumb">
-                                    <img src="https://via.placeholder.com/200x200/ccc.png" alt="img-name">
-                                </div>
-                                <div class="info">
-                                    <h5 class="name">وحید حسینی</h5>
-                                    <p class="desc">کوچ موشن گرافیک</p>
-                                    <div class="btns-action">
-                                        <div class="rate">4.3<i class="fi fi-sr-star"></i> <span>(از 53 نظر)</span>
-                                        </div>
-                                        <a href="teacher-details.html" class="btn btn-secondary">رزرو استاد</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer class="footer">

@@ -161,3 +161,26 @@ function showForm(formNumber) {
     document.getElementById("register-form-2").style.display = "block";
   }
 }
+
+// For Spy Scroll
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".nav-link");
+  function scrollToSection(event) {
+    event.preventDefault();
+    const targetId = this.getAttribute("href");
+    const targetSection = document.querySelector(targetId);
+    if (targetSection) {
+      window.scrollTo({
+        top: targetSection.offsetTop,
+        behavior: "smooth",
+      });
+      links.forEach((link) => {
+        link.classList.remove("active");
+      });
+      this.classList.add("active");
+    }
+  }
+  links.forEach((link) => {
+    link.addEventListener("click", scrollToSection);
+  });
+});

@@ -1,0 +1,1113 @@
+/*#region ----------------- User Profile */
+.user-dashboard-section {
+  margin: 200px 0 100px 0;
+  .grid-layout {
+    display: grid;
+    grid-template-columns: 320px auto;
+  }
+  .grid-user-menu {
+    transition: all 0.3s ease-in-out;
+    .grid-inner {
+      border-radius: 20px;
+      position: sticky;
+      top: 120px;
+      background-color: white;
+      box-shadow: $boxshadow;
+    }
+  }
+  .grid-main {
+    padding-right: 20px;
+    .grid-inner {
+      border-radius: 20px;
+      background-color: white;
+      box-shadow: $boxshadow;
+    }
+  }
+  .user-image {
+    padding: 25px 15px;
+    display: grid;
+    grid-template-columns: 70px auto;
+    align-items: center;
+    .img-inner {
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid $borderColor;
+      img {
+        width: 100%;
+      }
+    }
+    .user-name {
+      padding-right: 12px;
+      font-size: 16px;
+      font-weight: 500;
+      color: $textGrey;
+    }
+  }
+  .user-menu {
+    padding: 0 0 20px 0;
+    position: relative;
+    .btn-collape,
+    .sub-btn-collape {
+      font-size: 16px;
+      font-weight: 400;
+      color: $textGrey;
+      @include displayFlex(flex, center, flex-start);
+      padding: 12px 30px;
+      position: relative;
+      width: 100%;
+      transition: all 0.2s ease-in;
+      .fi {
+        font-size: 20px;
+        margin-left: 10px;
+        color: $textSilver;
+        transition: all 0.2s ease-in;
+      }
+      &.dropdown {
+        &::before {
+          content: "\f10d";
+          font-family: $iconFontRegular;
+          position: absolute;
+          top: 10px;
+          left: 5px;
+          font-size: 12px;
+          color: $textSilver;
+          transform: rotate(0deg);
+        }
+      }
+      &.collapsed {
+        &.dropdown {
+          &::before {
+            transform: rotate(90deg);
+          }
+        }
+      }
+      &:hover {
+        color: $primary !important;
+        .fi {
+          color: $primary;
+        }
+      }
+    }
+    .btn-collape {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 5px;
+        height: 100%;
+        border-radius: 5px 0 0 5px;
+        background-color: transparent;
+        transform: translateY(-50%);
+      }
+    }
+    .sub-menu-list {
+      background-color: rgba($color: $textGrey, $alpha: 0.1);
+      padding: 10px 20px 10px 10px;
+      border-radius: 10px;
+      .btn-collape {
+        color: $textGrey;
+      }
+    }
+    .menu-item {
+      position: relative;
+      &.active {
+        .btn-collape {
+          color: $primary !important;
+          background-color: rgba($color: $primary, $alpha: 0.1);
+          font-weight: 400;
+          &::before {
+            background-color: $primary;
+          }
+          .fi {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+  .main-title {
+    @include displayFlex(flex, center, space-between);
+    padding: 20px;
+    position: relative;
+    margin-top: 0;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 1px;
+    }
+    .title-inner {
+      display: grid;
+      grid-template-columns: 40px auto;
+      align-items: center;
+    }
+    .icon {
+      width: 40px;
+      height: 40px;
+      background: $primary;
+      border-radius: 50%;
+      @include displayFlex(flex, center, center);
+      color: white;
+      font-size: 18px;
+    }
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 0;
+      margin-right: 20px;
+      text-align: right;
+    }
+  }
+  .main-body {
+    padding: 10px 20px 40px 20px;
+  }
+  .btns-action-main {
+    @include displayFlex(flex, center, center);
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin-top: 2rem;
+    .btn {
+      margin: 5px;
+    }
+  }
+}
+.btn-usermenu {
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  background-color: rgba($color: $primary, $alpha: 0.1);
+  border: 1px solid $primary;
+  border-radius: 10px;
+  font-size: 13px;
+  color: $primary;
+  @include displayFlex(none, center, center);
+  font-size: 20px;
+}
+.btn-closeprofileMenu {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  color: $textGrey;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  @include displayFlex(none, center, center);
+  font-size: 18px;
+  border-radius: 50%;
+  //   background: rgba($color: $primary, $alpha: 0.1);
+  color: $textSilver;
+  &:hover {
+    color: $textGrey;
+  }
+}
+.overlay-userMenu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1998;
+  opacity: 0;
+  transition: all 0.3s;
+  &.active {
+    display: block;
+    opacity: 1;
+  }
+}
+.hello-msg {
+  border-right: 5px solid $secondary;
+  padding-right: 20px;
+  h5 {
+    font-size: 16px;
+    margin-bottom: 2px;
+    color: $textDark;
+  }
+  p {
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: $textGrey;
+  }
+}
+
+.register-recipe-group {
+  @include displayFlex(flex, center, center);
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+.card-register-recipe {
+  flex: 0 0 50%;
+  width: 50%;
+  &:first-child {
+    padding-left: 10px;
+    .card-inner {
+      background: $primary;
+    }
+    &:hover {
+      .card-inner {
+        box-shadow: 0 6px 30px rgba($color: $primary, $alpha: 0.4);
+      }
+    }
+  }
+  &:last-child {
+    padding-right: 10px;
+    .card-inner {
+      background: $secondary;
+    }
+    &:hover {
+      .card-inner {
+        box-shadow: 0 6px 30px rgba($color: $secondary, $alpha: 0.4);
+      }
+    }
+  }
+  .card-inner {
+    padding: 20px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 80px auto;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+  .thumb {
+    width: 80px;
+    height: 80px;
+    background-color: rgba($color: white, $alpha: 0.2);
+    border-radius: 15px;
+    font-size: 35px;
+    @include displayFlex(flex, center, center);
+    color: white;
+  }
+  .info {
+    padding: 0 10px 0 40px;
+    h5 {
+      font-size: 18px;
+      margin-bottom: 0;
+      color: white;
+      @include textTruncate(1);
+    }
+    p {
+      margin-bottom: 0;
+      font-size: 14px;
+      color: rgba($color: white, $alpha: 0.8);
+      @include textTruncate(1);
+    }
+  }
+}
+
+.user-status {
+  @include displayFlex(flex, center, center);
+  flex-wrap: wrap;
+  .card-status {
+    flex: 1 0 33.33%;
+    width: 33.33%;
+  }
+}
+
+.card-status {
+  padding: 5px 10px;
+  &:first-child {
+    padding-right: 0;
+  }
+  &:last-child {
+    padding-left: 0;
+  }
+  .card-inner {
+    border-radius: 15px;
+    border: 1px solid $borderColor;
+    padding: 20px 10px 10px 10px;
+  }
+  .thumb {
+    width: 80px;
+    margin: 0 auto;
+    img {
+      width: 100%;
+    }
+  }
+  .info {
+    margin-top: 20px;
+    text-align: center;
+    h6 {
+      color: $textGrey;
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 5px;
+      @include textTruncate(1);
+    }
+    h3 {
+      color: $textDark;
+      margin-bottom: 0;
+      font-size: 24px;
+    }
+  }
+}
+
+.choose-code-meli {
+  .code-inner {
+    @include displayFlex(flex, center, space-between);
+  }
+  .select-group {
+    flex: 0 0 50%;
+    width: 50%;
+    margin-bottom: 0;
+  }
+  .btns-action {
+    flex: 0 0 50%;
+    width: 50%;
+    @include displayFlex(flex, center, flex-end);
+    .btn {
+      margin-right: 10px;
+    }
+  }
+}
+
+.recipes-list {
+  margin-top: 1rem;
+  .filters {
+    @include displayFlex(flex, center, space-between);
+    h5 {
+      margin-bottom: 0;
+      font-size: 18px;
+    }
+  }
+  .sort {
+    width: 300px;
+    .select-group {
+      margin-bottom: 0;
+    }
+  }
+  .list-inner {
+    margin-top: 1.5rem;
+  }
+}
+
+.card-order {
+  margin-bottom: 12px;
+  .card-inner {
+    display: grid;
+    grid-template-columns: 80px auto 180px;
+    background-color: #fff;
+    border-radius: 15px;
+    border: 1px solid $borderColor;
+  }
+  .number {
+    @include displayFlex(flex, flex-start, center);
+    span {
+      background: $primary;
+      width: 45px;
+      font-size: 15px;
+      font-weight: 600;
+      color: white;
+      display: inline-block;
+      text-align: center;
+      padding: 15px 5px 10px 5px;
+      border-radius: 0 0 8px 8px;
+    }
+  }
+  .info {
+    padding: 15px;
+    ul {
+      @include displayFlex(flex, center, flex-start);
+      flex-wrap: wrap;
+      li {
+        flex: 1 0 50%;
+        width: 50%;
+        margin: 5px 0;
+        font-size: 14px;
+        font-weight: 400;
+        color: $textGrey;
+        .fi {
+          font-size: 16px;
+          position: relative;
+          top: 3px;
+          color: $textSilver;
+          margin-left: 5px;
+        }
+        span {
+          color: $textDark;
+          &.waiting {
+            background-color: rgba($color: $secondary, $alpha: 0.1);
+            color: $secondary;
+            padding: 4px 10px;
+            font-weight: 600;
+            border-radius: 10px;
+            border: 1px solid $secondary;
+          }
+          &.payment {
+            background-color: rgba($color: $info, $alpha: 0.1);
+            color: $info;
+            padding: 4px 10px;
+            font-weight: 600;
+            border-radius: 10px;
+            border: 1px solid $info;
+          }
+          &.error {
+            background-color: rgba($color: $error, $alpha: 0.1);
+            color: $error;
+            padding: 4px 10px;
+            font-weight: 600;
+            border-radius: 10px;
+            border: 1px solid $error;
+          }
+          &.success {
+            background-color: rgba($color: $success, $alpha: 0.1);
+            color: $success;
+            padding: 4px 10px;
+            font-weight: 600;
+            border-radius: 10px;
+            border: 1px solid $success;
+          }
+        }
+      }
+    }
+  }
+  .btns-action {
+    @include displayFlex(flex, center, center);
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 15px;
+    border-right: 1px solid $borderColor;
+    .btn {
+      padding: 0.5rem;
+      font-size: 14px;
+      font-weight: 600;
+      min-width: unset;
+      width: 100%;
+      margin: 3px 0;
+    }
+  }
+}
+
+.drugs-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.card-drug {
+  margin-bottom: 5px;
+  .card-inner {
+    border: 1px solid $borderColor;
+    background-color: white;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 40px auto 300px;
+  }
+  .number {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: $textGrey;
+    padding: 8px;
+  }
+  .name {
+    padding: 8px 8px 8px 12px;
+    h6 {
+      &.fa {
+        font-size: 14px;
+        font-weight: 600;
+        color: $textDark;
+        margin-bottom: 5px;
+      }
+      &.en {
+        font-size: 13px;
+        font-weight: 400;
+        color: $textGrey;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .info {
+    border-right: 1px solid $borderColor;
+    padding: 8px 12px 8px 8px;
+    p {
+      margin-bottom: 0;
+      color: $textGrey;
+      font-size: 14px;
+      font-weight: 400;
+      span {
+        color: $textDark;
+        font-weight: 600;
+      }
+    }
+  }
+  .box {
+    border-right: 1px solid $borderColor;
+    padding: 8px 12px 8px 8px;
+  }
+  &.more-details {
+    .card-inner {
+      grid-template-columns: 40px auto 100px 300px;
+    }
+  }
+}
+
+.factore-details {
+  border: 1px solid $borderColor;
+  padding: 20px;
+  border-radius: 15px;
+  ul {
+    @include displayFlex(flex, center, flex-start);
+    flex-wrap: wrap;
+    li {
+      flex: 1 0 50%;
+      width: 50%;
+      margin: 6px 0;
+      font-size: 15px;
+      font-weight: 400;
+      color: $textGrey;
+      span {
+        color: $textDark;
+        margin-left: 5px;
+        font-weight: 500;
+        &.waiting {
+          background-color: rgba($color: $secondary, $alpha: 0.1);
+          color: $secondary;
+          padding: 4px 10px;
+          font-weight: 600;
+          border-radius: 10px;
+          border: 1px solid $secondary;
+        }
+        &.payment {
+          background-color: rgba($color: $info, $alpha: 0.1);
+          color: $info;
+          padding: 4px 10px;
+          font-weight: 600;
+          border-radius: 10px;
+          border: 1px solid $info;
+        }
+        &.error {
+          background-color: rgba($color: $error, $alpha: 0.1);
+          color: $error;
+          padding: 4px 10px;
+          font-weight: 600;
+          border-radius: 10px;
+          border: 1px solid $error;
+        }
+        &.success {
+          background-color: rgba($color: $success, $alpha: 0.1);
+          color: $success;
+          padding: 4px 10px;
+          font-weight: 600;
+          border-radius: 10px;
+          border: 1px solid $success;
+        }
+      }
+    }
+  }
+  &.have-border {
+    padding: 25px;
+    border: 1px solid $borderColor;
+    border-radius: 20px;
+    background-color: white;
+  }
+}
+
+.notepad {
+  margin-top: 2rem;
+  .notepad-inner {
+    border: 1px solid $borderColor;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .empty-notepad {
+    text-align: center;
+    padding: 10px 0 0 0;
+    .fi {
+      font-size: 34px;
+      color: $textSilver;
+    }
+    h6 {
+      color: $textGrey;
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+}
+
+.card-address {
+  margin-bottom: 10px;
+  user-select: none;
+  position: relative;
+  .card-inner {
+    display: grid;
+    grid-template-columns: 40px auto;
+    border: 2px solid $borderColor;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: white;
+    background-color: white;
+    border: 1px solid $borderColor;
+    @include displayFlex(flex, center, center);
+    margin-top: 5px;
+  }
+  .info-list {
+    li {
+      font-size: 14px;
+      color: $textDark;
+      margin: 4px 0;
+      span {
+        color: $textGrey;
+        margin-left: 5px;
+      }
+      .fi {
+        margin-left: 5px;
+        font-size: 16px;
+        color: $textSilver;
+        position: relative;
+        top: 3px;
+      }
+    }
+  }
+  .dropdown {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+  &.active {
+    .card-inner {
+      border-color: $primary;
+    }
+    .icon {
+      background: $primary;
+      border: none;
+    }
+    .dropdown {
+      .btn-card-menu {
+        background-color: rgba($color: $primary, $alpha: 0.15);
+        color: $primary;
+      }
+    }
+  }
+}
+
+.card-picture {
+  margin-bottom: 20px;
+  .card-inner {
+    border-radius: 15px;
+    border: 1px solid $borderColor;
+    background-color: white;
+    padding: 5px;
+    position: relative;
+  }
+  .thumb {
+    @include imgContainer(250px, 12px);
+  }
+  .info {
+    margin-top: 10px;
+    padding: 0 5px;
+    h5 {
+      font-size: 14px;
+      color: $textDark;
+      margin-bottom: 5px;
+      @include textTruncate(1);
+    }
+    p {
+      font-size: 13px;
+      color: $textGrey;
+      span {
+        color: $textDark;
+      }
+    }
+  }
+  .btn-delete {
+    width: 34px;
+    height: 34px;
+    background-color: rgba($color: white, $alpha: 0.2);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 2px;
+    @include displayFlex(flex, center, center);
+    &:hover {
+      background-color: $error;
+    }
+  }
+}
+
+.fileupload-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  .btns-group {
+    .btn-action {
+      margin-right: 8px;
+    }
+  }
+}
+
+.file-upload-content {
+  background-color: $background_light;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  border-radius: 10rem;
+  .file-upload-btn {
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    font-size: 14px;
+    background-color: $primary;
+    color: white;
+    border-radius: 10rem;
+  }
+  .file-upload-name {
+    padding-right: 10px;
+    font-size: 13px;
+    color: $textGrey;
+    @include textTruncate(1);
+  }
+}
+
+@media (max-width: 1535px) {
+  .card-picture {
+    .thumb {
+      height: 200px;
+    }
+  }
+}
+@media (max-width: 1280px) {
+  .user-dashboard-section {
+    .grid-layout {
+      grid-template-columns: 280px auto;
+    }
+    .products-list {
+      .card-course,
+      .card-teacher {
+        flex: 0 0 50%;
+        width: 50%;
+      }
+    }
+  }
+  .card-register-recipe {
+    .card-inner {
+      grid-template-columns: 60px auto;
+      padding: 15px;
+    }
+    .thumb {
+      width: 60px;
+      height: 60px;
+      font-size: 30px;
+    }
+    .info {
+      padding-left: 30px;
+      h5 {
+        font-size: 16px;
+      }
+    }
+  }
+  .card-status {
+    .thumb {
+      width: 80px;
+    }
+    .info {
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .card-order {
+    .info {
+      ul {
+        li {
+          flex: 1 0 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .user-dashboard-section {
+    margin-top: 160px;
+    .grid-layout {
+      grid-template-columns: 100%;
+    }
+    .grid-user-menu {
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 300px;
+      height: 100vh;
+      z-index: 1999;
+      .grid-inner {
+        position: relative;
+        top: 0;
+        z-index: 2000;
+        height: 100%;
+        overflow-y: auto;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+        border-radius: 15px 0 0 15px;
+        border: none;
+      }
+      &.active {
+        right: 0;
+      }
+    }
+    .grid-main {
+      padding: 0;
+    }
+    .main-title {
+      border-radius: 10px 10px 0 0;
+      padding: 10px 10px 10px 15px;
+      .icon {
+        display: none;
+      }
+    }
+    .main-body {
+      border-top: none;
+      border-radius: 0 0 10px 10px;
+      padding: 15px 10px;
+    }
+  }
+  .btn-closeprofileMenu,
+  .btn-usermenu {
+    display: flex;
+  }
+  .notification-center {
+    padding: 20px;
+  }
+  .card-drug {
+    .card-inner {
+      grid-template-columns: 40px auto;
+      grid-template-areas: "number name" "recipes recipes";
+    }
+    .number {
+      grid-area: number;
+    }
+    .name {
+      grid-area: name;
+    }
+    .info {
+      grid-area: recipes;
+      border-right: none;
+      border-top: 1px solid $borderColor;
+      padding-right: 40px;
+      margin-top: 2px;
+      padding-top: 10px;
+      background-color: $background;
+      border-radius: 0 0 10px 10px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .user-dashboard-section {
+    .products-list {
+      .card-course {
+        flex: 0 0 50%;
+        width: 50%;
+      }
+    }
+  }
+  .card-status {
+    .thumb {
+      width: 70px;
+    }
+    .info {
+      h6 {
+        font-size: 13px;
+      }
+      h3 {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  .factore-details {
+    ul li {
+      flex: 1 0 100%;
+      width: 100%;
+      font-size: 14px;
+    }
+  }
+
+  .choose-code-meli {
+    .select-group {
+      flex: 0 0 40%;
+      width: 40%;
+    }
+    .btns-action {
+      flex: 0 0 60%;
+      width: 60%;
+    }
+  }
+  .card-order {
+    .card-inner {
+      grid-template-columns: 80px auto;
+      grid-template-areas: "number info" "btnAction btnAction";
+    }
+    .number {
+      grid-area: number;
+    }
+    .info {
+      grid-area: info;
+      padding: 10px;
+    }
+    .btns-action {
+      grid-area: btnAction;
+      padding: 10px;
+      border-right: none;
+      border-top: 1px solid $borderColor;
+      justify-content: flex-end;
+      align-items: flex-end;
+      flex-direction: row;
+      .btn {
+        width: unset;
+        padding: 0.5rem 1rem;
+        margin: 0 5px 0 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .user-dashboard-section {
+    .main-title {
+      margin-bottom: 0;
+      .buttons-group {
+        .btn {
+          padding: 5px !important;
+          border-radius: 50%;
+          width: 42px;
+          height: 42px;
+          @include displayFlex(flex, center, center);
+          &::after {
+            display: none;
+          }
+          .fi {
+            font-size: 24px;
+            margin: 0;
+            position: unset;
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .register-recipe-group {
+    margin: 1rem 0;
+    .card-register-recipe {
+      flex: 1 0 100%;
+      width: 100%;
+      padding: 8px 0;
+    }
+  }
+  .user-status {
+    .card-status {
+      flex: 1 0 50%;
+      width: 50%;
+      padding-bottom: 10px;
+      &:nth-child(2) {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+  .card-status {
+    .thumb {
+      width: 60px;
+    }
+    .info {
+      h6 {
+        font-size: 12px;
+      }
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .choose-code-meli {
+    .code-inner {
+      flex-wrap: wrap;
+    }
+    .select-group,
+    .btns-action {
+      flex: 0 0 100%;
+      width: 100%;
+    }
+    .btns-action {
+      margin-top: 1rem;
+    }
+  }
+
+  .recipes-list {
+    margin-top: 2rem;
+    .filters {
+      flex-wrap: wrap;
+    }
+    h5,
+    .sort {
+      flex: 0 0 100%;
+      width: 100%;
+    }
+    .sort {
+      margin-top: 1rem;
+    }
+  }
+  .card-order {
+    .card-inner {
+      grid-template-columns: 50px auto;
+    }
+    .number {
+      span {
+        width: 35px;
+        margin-right: auto;
+        font-size: 13px;
+      }
+    }
+    .info {
+      grid-area: info;
+      padding: 15px 15px 8px 8px;
+      ul {
+        li {
+          flex: 1 0 100%;
+          width: 100%;
+          font-size: 13px;
+          margin: 0 0 5px 0;
+          .fi {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .btns-action {
+      padding: 8px;
+      .btn {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .user-dashboard-section .grid-user-menu {
+    width: 100%;
+    right: -400px;
+    .grid-inner {
+      border-radius: 0;
+    }
+  }
+}
+/*#endregion -------------- User Profile */

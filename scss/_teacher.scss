@@ -238,7 +238,234 @@
   }
 }
 
+.teacher-header {
+  background-color: rgba($color: #000000, $alpha: 0.3);
+  padding: 8rem 0 2rem 0;
+  background-image: url(../images/bg/3ccc.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  border-radius: 0 0 0 150px;
+  .image-content {
+    .img-inner {
+      width: 300px;
+      margin: 0 auto;
+      border: 3px solid rgba($color: white, $alpha: 0.5);
+      border-radius: 20px;
+      padding: 5px;
+      img {
+        width: 100%;
+        border-radius: 16px;
+      }
+    }
+  }
+  .text-content {
+    h2 {
+      font-size: 24px;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 15px;
+    }
+    h3 {
+      font-size: 18px;
+      font-weight: 400;
+      color: rgba($color: white, $alpha: 0.8);
+    }
+    .info {
+      ul {
+        @include displayFlex(flex, center, flex-start);
+        flex-wrap: wrap;
+        li {
+          margin: 10px 0 10px 30px;
+          font-size: 14px;
+          @include displayFlex(flex, center, flex-start);
+          color: white;
+          .fi {
+            margin-left: 5px;
+            font-weight: 16px;
+          }
+          span {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    .btns-action {
+      margin-top: 20px;
+    }
+  }
+}
+
+.teacher-information {
+  margin: 60px 0 100px 0;
+  .section-inner {
+    display: grid;
+    grid-template-columns: auto 350px;
+  }
+  .main {
+    padding-left: 30px;
+  }
+  .side {
+    .inner {
+      position: sticky;
+      top: 50px;
+      background-color: white;
+      box-shadow: $boxshadow;
+      padding: 30px;
+      border-radius: 20px;
+    }
+    .side-spyscroll {
+      li {
+        a {
+          display: block;
+          padding: 8px 20px 8px 5px;
+          font-size: 16px;
+          font-weight: 400;
+          color: $textDark;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 16px;
+            right: 0;
+            width: 10px;
+            height: 10px;
+            background-color: rgba($color: #000000, $alpha: 0.1);
+            border-radius: 50%;
+          }
+          &.active {
+            color: $primary;
+            font-weight: 800;
+            &::before {
+              background-color: $primary;
+            }
+          }
+        }
+      }
+    }
+    .btns-action {
+      margin-top: 20px;
+      .btn {
+        width: 100%;
+      }
+    }
+    .tags {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid $borderColor;
+      ul {
+        @include displayFlex(flex, center, flex-start);
+        flex-wrap: wrap;
+        li {
+          font-size: 14px;
+          background-color: $background_light;
+          padding: 5px 10px;
+          margin: 5px 0 5px 5px;
+          border-radius: 50px;
+        }
+      }
+    }
+  }
+  .section {
+    margin-bottom: 30px;
+    border: 1px solid $borderColor;
+    border-radius: 20px;
+    padding: 30px;
+    h2 {
+      font-size: 24px;
+      color: $textDark;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      color: $textGrey;
+      text-align: justify;
+    }
+    ul,
+    ol {
+      padding-right: 30px;
+      margin: 20px 0;
+      li {
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: $textGrey;
+      }
+    }
+    ul {
+      list-style: disc;
+    }
+    ol {
+      list-style: decimal;
+    }
+  }
+}
+
 @media (max-width: 1024px) {
+  .teacher-header {
+    border-radius: 0 0 0 110px;
+    .image-content {
+      .img-inner {
+        width: 200px;
+      }
+    }
+    .text-content {
+      margin-bottom: 30px;
+      h2,
+      h3 {
+        text-align: center;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      h3 {
+        font-size: 18px;
+        font-weight: 400;
+      }
+      .info {
+        ul {
+          justify-content: center;
+          li {
+            margin: 10px;
+          }
+        }
+      }
+      .btns-action {
+        text-align: center;
+      }
+    }
+  }
+  .teacher-information {
+    margin: 40px 0 100px 0;
+    .section-inner {
+      grid-template-columns: 100%;
+    }
+    .main {
+      padding-left: 0;
+    }
+    .side {
+      .inner {
+        padding: 20px;
+      }
+      .side-spyscroll {
+        display: none;
+      }
+      .btns-action {
+        margin-top: 0;
+      }
+    }
+    .section {
+      padding: 20px;
+      margin-bottom: 20px;
+      h2 {
+        font-size: 20px;
+      }
+      p,
+      ul li,
+      ol li {
+        font-size: 14px;
+      }
+    }
+  }
 }
 @media (max-width: 640px) {
   .teachers-list-section .search-content {
@@ -270,6 +497,14 @@
         padding: 0.5rem 1rem;
         min-width: auto;
         font-size: 14px;
+      }
+    }
+  }
+  .teacher-header {
+    border-radius: 0 0 0 80px;
+    .image-content {
+      .img-inner {
+        width: 150px;
       }
     }
   }
