@@ -140,7 +140,7 @@ function showSection(index) {
 // برای لاگین
 if (document.querySelector(".login-section") != null) {
   var modalSignContent = document.querySelectorAll(".login-section");
-  var currentTab = 2;
+  var currentTab = 0;
   showModalSignContent(currentTab);
 }
 

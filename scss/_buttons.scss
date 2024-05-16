@@ -39,7 +39,7 @@
   }
 }
 .icon-right {
-  padding-right: 3rem;
+  padding-right: 3rem !important;
   .fi {
     position: absolute;
     right: 14px;
@@ -47,7 +47,7 @@
   }
 }
 .icon-left {
-  padding-left: 3rem;
+  padding-left: 3rem !important;
   .fi {
     position: absolute;
     left: 14px;
@@ -96,11 +96,12 @@
 }
 .btn-primary-outline {
   background: transparent;
-  color: $secondary;
-  border: 2px solid $secondary;
+  color: $primary;
+  border: 2px solid $primary;
+  padding: 0.58rem 1.2rem;
   &:hover,
   &:focus {
-    background: $secondary;
+    background: $primary;
     color: white;
   }
   &.color-red {
@@ -114,11 +115,12 @@
 }
 .btn-secondary-outline {
   background: transparent;
-  color: $primary;
-  border: 2px solid $primary;
+  color: $secondary;
+  border: 2px solid $secondary;
+  padding: 0.58rem 1.2rem;
   &:hover,
   &:focus {
-    background-color: $primary;
+    background-color: $secondary;
     color: white;
   }
 }

@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#ffb200" />
     <meta name="msapplication-navbutton-color" content="#ffb200">
     <meta name="apple-mobile-web-app-status-bar-style" content="#ffb200">
-    <title>کامینو | لیست اساتید</title>
+    <title>کامینو | سوابق تراکنش</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/tailwind.config.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -105,6 +105,13 @@
     <!-- User Dashboard -->
     <div class="user-dashboard-section">
         <div class="container mx-auto">
+            <div class="btn-usermenu">
+                <span class="icon"><i class="fi fi-rr-user"></i></span>
+                <span class="text">
+                    <h4>منوی کاربر</h4>
+                    <p>برای باز شدن منو کلیک کنید</p>
+                </span>
+            </div>
             <div class="grid-layout">
                 <div class="grid-user-menu">
                     <div class="grid-inner">
@@ -113,27 +120,24 @@
                         <!-- User Image -->
                         <div class="user-image">
                             <div class="img-inner">
-                                <img src="images/default-user.svg" alt="user-name">
+                                <img src="images/none.jpg" alt="user-name">
                             </div>
                             <div class="user-name">
                                 <h6 class="font-extrabold text-textDark mb-2">وحید حسینی اصل</h6>
-                                <p class="mb-0 text-sm">کمپین : <span class="text-primary">فعال است</span></p>
                             </div>
                         </div>
                         <!-- User Menu -->
                         <div class="user-menu">
                             <ul class="menu-list">
-                                <li class="menu-item active"><a href="user-dashboard.html" class="btn-collape"><i
-                                            class="fi fi-rr-apps"></i>داشبورد</a></li>
-                                <li class="menu-item"><a href="user-orders.html" class="btn-collape"><i
-                                            class="fi fi-rr-receipt"></i>جلسات رزرو شده</a></li>
-                                <li class="menu-item"><a href="user-bookmarks.html" class="btn-collape"><i
-                                            class="fi fi-rr-heart"></i>
+                                <li class="menu-item"><a href="user-reservation.html" class="btn-collape"><i
+                                            class="fi fi-rr-bookmark"></i>جلسات رزرو شده</a></li>
+                                <li class="menu-item"><a href="user-reservation-history.html" class="btn-collape"><i
+                                            class="fi fi-rr-book-bookmark"></i>
                                         سوابق رزرو
                                     </a>
                                 </li>
-                                <li class="menu-item"><a href="user-address.html" class="btn-collape"><i
-                                            class="fi fi-rr-marker"></i>تراکنش‌ها</a>
+                                <li class="menu-item active"><a href="user-transactions.html" class="btn-collape"><i
+                                            class="fi fi-rr-receipt"></i>تراکنش‌ها</a>
                                 </li>
                                 <li class="menu-item"><a href="user-profile.html" class="btn-collape"><i
                                             class="fi fi-rr-user"></i>اطلاعات
@@ -153,75 +157,45 @@
                     <div class="grid-inner">
                         <div class="main-title">
                             <div class="title-inner">
-                                <button type="button" class="btn-usermenu"><i
-                                        class="fi fi-rr-menu-dots-vertical"></i></button>
-                                <div class="icon">
-                                    <i class="fi fi-rr-apps"></i>
-                                </div>
-                                <h3>داشبورد</h3>
+                                <h3>تراکنش‌ها</h3>
                             </div>
                         </div>
                         <div class="main-body">
-                            <div class="user-status">
-                                <div class="card-status">
+
+                            <!-- برای صفحات خالی که چیزی رزرو یا ثبت نشده -->
+                            <div class="empty-box">
+                                <div class="thumb">
+                                    <i class="fi fi-rr-receipt"></i>
+                                </div>
+                                <h6>شما سابقه رزرو جلسه نداشته‌اید</h6>
+                            </div>
+
+                            <!-- لیست رزرو‌ها -->
+                            <div class="cards-list">
+                                <div class="card-transaction">
                                     <div class="card-inner">
-                                        <div class="thumb">
-                                            <img src="images/shapes/order-waiting.svg" alt="img-name">
-                                        </div>
-                                        <div class="info">
-                                            <h6>سفارش‌های در حال بررسی</h6>
-                                            <h3>10</h3>
-                                        </div>
+                                        <ul class="list-info">
+                                            <li>شماره تراکنش : <span>480032154</span></li>
+                                            <li>تاریخ و زمان : <span>9/29/2085 - 12:30 ب.ظ</span></li>
+                                            <li>مبلغ تراکنش : <span>560,000 تومان</span></li>
+                                            <li>وضعیت تراکنش : <span class="error">ناموفق</span>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div class="card-status">
+                                <div class="card-transaction">
                                     <div class="card-inner">
-                                        <div class="thumb">
-                                            <img src="images/shapes/order-success.svg" alt="img-name">
-                                        </div>
-                                        <div class="info">
-                                            <h6>سفارش‌های تحویل شده</h6>
-                                            <h3>5</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-status">
-                                    <div class="card-inner">
-                                        <div class="thumb">
-                                            <img src="images/shapes/order-error.svg" alt="img-name">
-                                        </div>
-                                        <div class="info">
-                                            <h6>سفارش‌های لغو شده</h6>
-                                            <h3>63</h3>
-                                        </div>
+                                        <ul class="list-info">
+                                            <li>شماره تراکنش : <span>480032154</span></li>
+                                            <li>تاریخ و زمان : <span>9/29/2085 - 12:30 ب.ظ</span></li>
+                                            <li>مبلغ تراکنش : <span>560,000 تومان</span></li>
+                                            <li>وضعیت تراکنش : <span class="error">ناموفق</span>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                            <!-- ثبت سفارش -->
-                            <div class="register-recipe-group">
-                                <div class="card-register-recipe">
-                                    <a href="#" class="card-inner">
-                                        <div class="thumb">
-                                            <i class="fi fi-rr-box"></i>
-                                        </div>
-                                        <div class="info">
-                                            <h5>ثبت سفارش جدید</h5>
-                                            <p>برای مشاهده همه محصولات کلیک کنید</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="card-register-recipe">
-                                    <a href="#" class="card-inner">
-                                        <div class="thumb">
-                                            <i class="fi fi-rr-receipt"></i>
-                                        </div>
-                                        <div class="info">
-                                            <h5>وضعیت آخرین سفارش</h5>
-                                            <p>جهت مشاهده آخرین وضعیت سفارش کلیک کنید</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -279,11 +253,11 @@
         </div>
     </footer>
 
-
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="plugins/swiperjs/swiper-initial.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/modalScript.js"></script>
 </body>
 
 </html>

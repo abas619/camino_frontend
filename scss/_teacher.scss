@@ -150,10 +150,13 @@
     display: block;
   }
   .info-list {
-    // background-color: $background_light;
     border: 2px dashed $borderColor;
     padding: 15px;
     border-radius: 8px;
+    &.no-border {
+      border: none;
+      padding: 0;
+    }
     li {
       font-size: 14px;
       color: $textDark;
