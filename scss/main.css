@@ -135,12 +135,12 @@ input[type=number] {
 }
 
 ::-moz-selection {
-  background-color: rgb(26, 138, 201);
+  background-color: #1a8ac9;
   color: white;
 }
 
 ::selection {
-  background-color: rgb(26, 138, 201);
+  background-color: #1a8ac9;
   color: white;
 }
 
@@ -238,7 +238,7 @@ input[type=number] {
 }
 
 .btn-secondary {
-  background: rgb(26, 138, 201);
+  background: #1a8ac9;
   color: white;
 }
 .btn-secondary:hover, .btn-secondary:focus {
@@ -270,12 +270,12 @@ input[type=number] {
 
 .btn-secondary-outline {
   background: transparent;
-  color: rgb(26, 138, 201);
-  border: 2px solid rgb(26, 138, 201);
+  color: #1a8ac9;
+  border: 2px solid #1a8ac9;
   padding: 0.58rem 1.2rem;
 }
 .btn-secondary-outline:hover, .btn-secondary-outline:focus {
-  background-color: rgb(26, 138, 201);
+  background-color: #1a8ac9;
   color: white;
 }
 
@@ -488,7 +488,7 @@ input[type=number] {
   text-align: left;
 }
 .navbar .nav-actions .login .btn-primary {
-  background-color: rgb(26, 138, 201) !important;
+  background-color: #1a8ac9 !important;
   color: white;
 }
 .navbar .nav-actions .sign {
@@ -648,7 +648,7 @@ input[type=number] {
   justify-content: space-between;
   padding: 13px 20px;
   border-bottom: 3px solid #fda621;
-  background-color: rgb(26, 138, 201);
+  background-color: #1a8ac9;
 }
 #sidebar-menu .sidebar-header .sidebar-close .btn-close-menu {
   width: 45px;
@@ -723,7 +723,7 @@ input[type=number] {
 #sidebar-menu .category-list .item a .fi {
   position: absolute;
   left: 20px;
-  color: rgb(26, 138, 201);
+  color: #1a8ac9;
 }
 #sidebar-menu .category-list .item a:hover {
   color: #fda621;
@@ -755,8 +755,8 @@ input[type=number] {
   border: 1px solid transparent;
 }
 #sidebar-menu .socials-icon ul li a:hover {
-  border-color: rgb(26, 138, 201);
-  background-color: rgb(26, 138, 201);
+  border-color: #1a8ac9;
+  background-color: #1a8ac9;
   color: white;
 }
 
@@ -992,7 +992,7 @@ input[type=number] {
   bottom: -40px;
   width: 200px;
   height: 150px;
-  border: 5px solid rgb(26, 138, 201);
+  border: 5px solid #1a8ac9;
   z-index: -1;
   border-radius: 40px 0 0 0;
 }
@@ -1253,11 +1253,11 @@ input[type=number] {
   color: #3c3c3c;
 }
 .card-bookmark.active {
-  border-color: rgb(26, 138, 201);
+  border-color: #1a8ac9;
 }
 .card-bookmark.active .icon {
-  background-color: rgb(26, 138, 201);
-  border-color: rgb(26, 138, 201);
+  background-color: #1a8ac9;
+  border-color: #1a8ac9;
 }
 .card-bookmark.active .icon::before {
   display: block;
@@ -1701,7 +1701,7 @@ input[type=number] {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 5px solid rgb(26, 138, 201);
+  border: 5px solid #1a8ac9;
 }
 .card-comment .user-info .name {
   color: #3c3c3c;
@@ -1896,7 +1896,7 @@ input[type=number] {
   left: 0;
   top: 0;
   height: 100%;
-  background-color: rgb(26, 138, 201);
+  background-color: #1a8ac9;
 }
 .footer .social-icons ul {
   display: flex;
@@ -1919,7 +1919,7 @@ input[type=number] {
   color: white;
 }
 .footer .social-icons ul li a:hover {
-  background-color: rgb(26, 138, 201);
+  background-color: #1a8ac9;
 }
 .footer .copyright {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
@@ -2206,39 +2206,20 @@ input[type=number] {
 }
 
 .form-check {
-  padding-right: 1.8rem;
-  margin-top: 10px;
-}
-.form-check .form-check-label {
-  font-size: 14px;
-  font-weight: 400;
-  color: #636063;
-}
-.form-check .form-check-input {
-  width: 1.2em;
-  height: 1.2em;
-  margin-right: -1.8em;
-  position: relative;
-  top: -2px;
-}
-.form-check .form-check-input:checked {
-  background-color: #fda621;
-  border-color: #fda621;
-}
-.form-check .form-check-input:focus {
-  box-shadow: none;
-}
-.form-check .form-check-input[type=radio] {
-  width: 1.2em;
-  height: 1.2em;
-  margin-right: -1.8em;
-}
-
-.form-check {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin: 0 0 10px 25px;
+  margin: 10px 0 10px 25px;
+}
+.form-check .form-check-label {
+  font-size: 16px;
+  font-weight: 400;
+  color: #3c3c3c;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.form-check .form-check-label.big-font {
+  font-size: 18px;
 }
 .form-check .form-check-input {
   -webkit-appearance: none;
@@ -2253,7 +2234,7 @@ input[type=number] {
   cursor: pointer;
 }
 .form-check .form-check-input[type=checkbox]::before {
-  content: "\f312";
+  content: "\f284";
   font-family: uicons-regular-rounded;
   font-size: 12px;
   position: absolute;
@@ -2290,21 +2271,12 @@ input[type=number] {
 }
 .form-check .form-check-input[type=radio]:checked {
   border-color: #fda621;
+  background-color: #fda621;
 }
 .form-check .form-check-input[type=radio]:checked::before {
   opacity: 1;
   width: 0.5em;
   height: 0.5em;
-}
-.form-check .form-check-label {
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 400;
-  color: #3c3c3c;
-  margin-right: 10px;
-}
-.form-check .form-check-label.big-font {
-  font-size: 16px;
 }
 
 /*#endregion -------------- Forms */
@@ -2358,9 +2330,9 @@ input[type=number] {
   font-weight: 600;
   padding: 5px 10px;
   cursor: pointer;
-  color: rgb(26, 138, 201);
-  -webkit-text-decoration: underline 1px dashed rgb(26, 138, 201);
-          text-decoration: underline 1px dashed rgb(26, 138, 201);
+  color: #1a8ac9;
+  -webkit-text-decoration: underline 1px dashed #1a8ac9;
+          text-decoration: underline 1px dashed #1a8ac9;
 }
 .login-section .btn-change-number {
   background-color: transparent;
@@ -2482,9 +2454,21 @@ input[type=number] {
 }
 .user-dashboard-section .user-image .user-name {
   padding-right: 12px;
+}
+.user-dashboard-section .user-image .user-name h6 {
   font-size: 16px;
-  font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-weight: 800;
+  color: #3c3c3c;
+}
+.user-dashboard-section .user-image .user-name p {
   color: #636063;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 0;
 }
 .user-dashboard-section .user-menu {
   padding: 0 15px 15px 15px;
@@ -2545,6 +2529,25 @@ input[type=number] {
   background-color: transparent;
   transform: translateY(-50%);
 }
+.user-dashboard-section .user-menu .badge {
+  color: white;
+  padding: 3px 6px;
+  border-radius: 50px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+.user-dashboard-section .user-menu .badge.badge-success {
+  background-color: #00bd79;
+}
+.user-dashboard-section .user-menu .badge.badge-error {
+  background-color: #ff3333;
+}
+.user-dashboard-section .user-menu .badge.badge-info {
+  background-color: #009cf2;
+}
+.user-dashboard-section .user-menu .badge.badge-warning {
+  background-color: #ffd700;
+}
 .user-dashboard-section .user-menu .sub-menu-list {
   background-color: rgba(99, 96, 99, 0.1);
   padding: 10px 20px 10px 10px;
@@ -2557,15 +2560,15 @@ input[type=number] {
   position: relative;
 }
 .user-dashboard-section .user-menu .menu-item.active .btn-collape {
-  color: rgb(26, 138, 201) !important;
+  color: #1a8ac9 !important;
   background-color: rgba(26, 138, 201, 0.1);
   font-weight: 400;
 }
 .user-dashboard-section .user-menu .menu-item.active .btn-collape::before {
-  background-color: rgb(26, 138, 201);
+  background-color: #1a8ac9;
 }
 .user-dashboard-section .user-menu .menu-item.active .btn-collape .fi {
-  color: rgb(26, 138, 201);
+  color: #1a8ac9;
 }
 .user-dashboard-section .main-title {
   display: flex;
@@ -2604,9 +2607,9 @@ input[type=number] {
   padding-right: 2.2rem;
 }
 .user-dashboard-section .main-title .buttons-group .btn.btn-primary-outline:hover {
-  background-color: rgb(26, 138, 201) !important;
+  background-color: #1a8ac9 !important;
   color: white;
-  border-color: rgb(26, 138, 201);
+  border-color: #1a8ac9;
 }
 .user-dashboard-section .main-title .buttons-group .btn-primary-outline {
   border-color: #9e9e9e;
@@ -2625,6 +2628,9 @@ input[type=number] {
 }
 .user-dashboard-section .btns-action-main .btn {
   margin: 5px;
+}
+.user-dashboard-section.teacher .grid-user-menu .grid-inner {
+  background: linear-gradient(180deg, #ddeef7 10%, white 90%);
 }
 
 .btn-usermenu {
@@ -2774,7 +2780,7 @@ input[type=number] {
   border-radius: 8px;
 }
 .card-reserve .c-info ul li span.warning {
-  background-color: #ffe16a;
+  background-color: #ffd700;
   color: #3c3c3c;
   padding: 4px 8px;
   border-radius: 8px;
@@ -2848,18 +2854,83 @@ input[type=number] {
   border-radius: 8px;
 }
 .card-transaction .list-info li span.warning {
-  background-color: #ffe16a;
+  background-color: #ffd700;
   color: #3c3c3c;
   padding: 4px 8px;
   border-radius: 8px;
 }
 
 .modal-reserve-info .info-list li {
-  margin: 15px 0;
+  margin: 10px 0;
   color: #636063;
 }
 .modal-reserve-info .info-list li span {
   color: #3c3c3c;
+}
+
+.card-status .card-inner {
+  border: 1px solid #d2d2d2;
+  border-radius: 12px;
+  background-color: white;
+  padding: 15px 10px;
+  display: block;
+}
+.card-status .thumb {
+  text-align: center;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1rem auto;
+  background-color: #f2f2f3;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #636063;
+  font-size: 30px;
+}
+.card-status .info {
+  text-align: center;
+}
+.card-status .info h6 {
+  font-size: 14px;
+  color: #636063;
+  margin-bottom: 10px;
+}
+.card-status .info p {
+  color: #3c3c3c;
+  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: 800;
+}
+.card-status:hover .card-inner {
+  border-color: #636063;
+}
+.card-status.color-gold .thumb {
+  background-color: rgba(255, 215, 0, 0.2);
+  color: #ffd700;
+}
+.card-status.color-green .thumb {
+  background-color: rgba(0, 189, 121, 0.1);
+  color: #00bd79;
+}
+.card-status.color-blue .thumb {
+  background-color: rgba(26, 138, 201, 0.1);
+  color: #1a8ac9;
+}
+
+.notifications .item {
+  border-bottom: 1px solid #d2d2d2;
+  padding: 15px 0;
+}
+.notifications .item:last-child {
+  border-bottom: none;
+}
+
+.digital-sign {
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 4px 25px rgba(5, 5, 5, 0.08);
+  margin-bottom: 30px;
 }
 
 @media (max-width: 1280px) {
@@ -2899,6 +2970,9 @@ input[type=number] {
   }
   .user-dashboard-section .grid-user-menu.active {
     right: 0;
+  }
+  .user-dashboard-section .user-image {
+    padding-top: 45px;
   }
   .user-dashboard-section .grid-main {
     padding: 0;
@@ -3008,3 +3082,37 @@ input[type=number] {
 }
 
 /*#endregion -------------- Page Error */
+/*#region ----------------- Table */
+.table-custom {
+  width: 100%;
+  border: 1px solid #d2d2d2;
+}
+.table-custom thead {
+  background-color: #f2f2f3;
+  border-bottom: 1px solid #d2d2d2;
+}
+.table-custom thead th {
+  padding: 12px;
+  font-size: 14px;
+}
+.table-custom tbody td {
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 400;
+  border-bottom: 1px solid #d2d2d2;
+}
+.table-custom .btns-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.table-custom .btns-action .btn-circle {
+  margin: 5px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+/*#endregion -------------- Table */

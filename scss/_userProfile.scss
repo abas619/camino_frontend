@@ -38,9 +38,18 @@
     }
     .user-name {
       padding-right: 12px;
-      font-size: 16px;
-      font-weight: 500;
-      color: $textGrey;
+      h6 {
+        font-size: 16px;
+        @include textTruncate(1);
+        font-weight: 800;
+        color: $textDark;
+      }
+      p {
+        color: $textGrey;
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 0;
+      }
     }
   }
   .user-menu {
@@ -100,6 +109,25 @@
         border-radius: 8px;
         background-color: transparent;
         transform: translateY(-50%);
+      }
+    }
+    .badge {
+      color: white;
+      padding: 3px 6px;
+      border-radius: 50px;
+      font-size: 14px;
+      margin-right: 10px;
+      &.badge-success {
+        background-color: $success;
+      }
+      &.badge-error {
+        background-color: $error;
+      }
+      &.badge-info {
+        background-color: $info;
+      }
+      &.badge-warning {
+        background-color: $warning;
       }
     }
     .sub-menu-list {
@@ -184,6 +212,12 @@
     margin-top: 2rem;
     .btn {
       margin: 5px;
+    }
+  }
+  &.teacher {
+    .grid-user-menu .grid-inner {
+      // background-color: wheat;
+      background: linear-gradient(180deg, #ddeef7 10%, white 90%);
     }
   }
 }
@@ -406,13 +440,86 @@
 .modal-reserve-info {
   .info-list {
     li {
-      margin: 15px 0;
+      margin: 10px 0;
       color: $textGrey;
       span {
         color: $textDark;
       }
     }
   }
+}
+
+.card-status {
+  .card-inner {
+    border: 1px solid $borderColor;
+    border-radius: 12px;
+    background-color: white;
+    padding: 15px 10px;
+    display: block;
+  }
+  .thumb {
+    text-align: center;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 1rem auto;
+    background-color: $background_light;
+    border-radius: 50%;
+    @include displayFlex(flex, center, center);
+    color: $textGrey;
+    font-size: 30px;
+  }
+  .info {
+    text-align: center;
+    h6 {
+      font-size: 14px;
+      color: $textGrey;
+      margin-bottom: 10px;
+    }
+    p {
+      color: $textDark;
+      margin-bottom: 0;
+      font-size: 20px;
+      font-weight: 800;
+    }
+  }
+  &:hover {
+    .card-inner {
+      border-color: $textGrey;
+    }
+  }
+  &.color-gold {
+    .thumb {
+      background-color: rgba($color: $warning, $alpha: 0.2);
+      color: $warning;
+    }
+  }
+  &.color-green {
+    .thumb {
+      background-color: rgba($color: $success, $alpha: 0.1);
+      color: $success;
+    }
+  }
+  &.color-blue {
+    .thumb {
+      background-color: rgba($color: $secondary, $alpha: 0.1);
+      color: $secondary;
+    }
+  }
+}
+.notifications {
+  .item {
+    border-bottom: 1px solid $borderColor;
+    padding: 15px 0;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+.digital-sign {
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: $boxshadow;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 1280px) {
@@ -460,6 +567,9 @@
       &.active {
         right: 0;
       }
+    }
+    .user-image {
+      padding-top: 45px;
     }
     .grid-main {
       padding: 0;

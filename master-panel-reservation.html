@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fa" class="no-js" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffb200" />
+    <meta name="msapplication-navbutton-color" content="#ffb200">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ffb200">
+    <title>کامینو | اطلاعات کاربر</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind.config.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="scss/main.css" />
+
+    <!-- Font Icons -->
+    <link href="css/all.rounded.css" rel="stylesheet" type="text/css" />
+
+    <!-- Favicon -->
+    <!-- <link rel="icon" href="images/small-icon.png" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/logo-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/logo-114x114.png" /> -->
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <div class="container mx-auto">
+            <div class="sidebar-content">
+                <div id="sidebar-menu">
+                    <div class="sidebar-header">
+                        <div class="sidebar-logo">
+                            <a href="index.html" onclick="closeSidebar(this)">
+                                <img src="images/logo-white.svg" class="sidebarlogo" alt="logo">
+                            </a>
+                        </div>
+                        <div class="sidebar-close">
+                            <button class="btn-close-menu"><i class="fi fi-rr-cross"></i></button>
+                        </div>
+                    </div>
+                    <ul class="category-list">
+                        <li class="item" onclick="closeSidebar(this)"><a href="#">صفحه اصلی</a></li>
+                        <li class="item" onclick="closeSidebar(this)"><a href="#">بلاگ</a></li>
+                        <li class="item" onclick="closeSidebar(this)"><a href="#">نمونه‌ کارها</a></li>
+                        <li class="item" onclick="closeSidebar(this)"><a href="#">معرفی پزشکان</a></li>
+                        <li class="item" onclick="closeSidebar(this)"><a href="#">تماس با ما</a></li>
+                    </ul>
+                    <div class="socials-icon">
+                        <ul>
+                            <li onclick="closeSidebar(this)"><a href="#"><i class="fi fi-brands-instagram"></i></a></li>
+                            <li onclick="closeSidebar(this)"><a href="#"><i class="fi fi-brands-whatsapp"></i></a></li>
+                            <li onclick="closeSidebar(this)"><a href="#"><i class="fi fi-rr-envelope"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="overlay-back"></div>
+            </div>
+            <div class="navbar-inner">
+                <button class="btn-mobile-menu"><i class="fi fi-rr-menu-burger"></i></button>
+                <div class="nav-logo">
+                    <a href="index.html"></a>
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#">خانه</a></li>
+                        <li><a href="#">اساتید</a></li>
+                        <li><a href="#">نظرات</a></li>
+                        <li><a href="#">ارتباط با ما</a></li>
+                        <li><a href="#">بیشتر بدانید</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <div class="login">
+                        <a href="login.html" class="btn btn-primary bg-white icon-right">
+                            <i class="fi fi-rr-sign-in-alt"></i>
+                            <span>ورود/ثبت نام</span>
+                        </a>
+                    </div>
+                    <!-- <div class="sign">
+                        <button class="btn btn-primary icon-right">
+                            <i class="fi fi-rr-user"></i>
+                            <span>نام کاربر</span>
+                        </button>
+                        <div class="user-menu">
+                            <ul>
+                                <li><a href="#"><i class="fi fi-rr-user"></i>حساب کاربری</a></li>
+                                <li><a href="#"><i class="fi fi-rr-comments-question"></i>جلسات مشاوره</a></li>
+                                <li><a href="#"><i class="fi fi-rr-bookmark"></i>رزرو‌ها</a></li>
+                                <li><a href="#"><i class="fi fi-rr-comment-alt"></i>پیام‌های دریافتی</a></li>
+                                <hr>
+                                <li><a href="#"><i class="fi fi-rr-sign-out-alt"></i>خروج</a></li>
+                            </ul>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- User Dashboard -->
+    <div class="user-dashboard-section teacher">
+        <div class="container mx-auto">
+            <div class="btn-usermenu">
+                <span class="icon"><i class="fi fi-rr-user"></i></span>
+                <span class="text">
+                    <h4>منوی استاد</h4>
+                    <p>برای باز شدن منو کلیک کنید</p>
+                </span>
+            </div>
+            <div class="grid-layout">
+                <div class="grid-user-menu">
+                    <div class="grid-inner">
+                        <!-- close Userprofile -->
+                        <button type="button" class="btn-closeprofileMenu"><i class="fi fi-rr-cross"></i></button>
+                        <!-- User Image -->
+                        <div class="user-image">
+                            <div class="img-inner">
+                                <img src="images/none.jpg" alt="user-name">
+                            </div>
+                            <div class="user-name">
+                                <h6 class="font-extrabold text-textDark mb-2">وحید حسینی اصل</h6>
+                                <!-- <p>اشتراک : 2 ماه و 6 روز</p> -->
+                                <p>کیف پول : <span>860,000 تومان</span></p>
+                            </div>
+                        </div>
+                        <!-- User Menu -->
+                        <div class="user-menu">
+                            <ul class="menu-list">
+                                <li class="menu-item">
+                                    <a href="master-panel-index.html" class="btn-collape"><i
+                                            class="fi fi-rr-apps"></i>پنل
+                                        مدیریت
+                                    </a>
+                                </li>
+                                <li class="menu-item active">
+                                    <a href="master-panel-reservation.html" class="btn-collape"><i
+                                            class="fi fi-rr-bookmark"></i>لیست رزروها
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="master-panel-comments.html" class="btn-collape"><i
+                                            class="fi fi-rr-comment"></i>نظرات کاربران
+                                        <span class="badge badge-info">15</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="master-panel-profile.html" class="btn-collape"><i
+                                            class="fi fi-rr-user"></i>اطلاعات
+                                        پروفایل استاد
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="master-panel-wallet.html" class="btn-collape"><i
+                                            class="fi fi-rr-wallet"></i>کیف
+                                        پول
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="master-panel-vip.html" class="btn-collape"><i
+                                            class="fi fi-rr-gem"></i>اشتراک
+                                        ماهانه
+                                        <span class="badge badge-error">غیرفعال</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="btn-collape" data-modal-name="modal-logout">
+                                        <i class="fi fi-rr-sign-out-alt"></i>خروج از حساب کاربری
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="overlay-userMenu"></div>
+                </div>
+                <div class="grid-main">
+                    <div class="grid-inner">
+                        <div class="main-title">
+                            <div class="title-inner">
+                                <h3>لیست رزرو‌ها</h3>
+                            </div>
+                        </div>
+                        <div class="main-body">
+                            <!-- آمار رزرو‌ها -->
+                            <div class="user-status">
+                                <div class="flex items-center justify-start flex-wrap">
+                                    <div class="xl:w-1/3 md:w-1/2 w-full p-2">
+                                        <div class="card-status color-green">
+                                            <a href="#" class="card-inner">
+                                                <div class="thumb"><i class="fi fi-rr-calendar-clock"></i></div>
+                                                <div class="info">
+                                                    <h6>رزرو‌های امروز</h6>
+                                                    <p>3 نوبت</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="xl:w-1/3 md:w-1/2 w-full p-2">
+                                        <div class="card-status color-blue">
+                                            <a href="#" class="card-inner">
+                                                <div class="thumb"><i class="fi fi-rr-bookmark"></i></div>
+                                                <div class="info">
+                                                    <h6>تعداد رزرو‌های ماه</h6>
+                                                    <p>12 نوبت</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="xl:w-1/3 md:w-1/2 w-full p-2 flex-grow">
+                                        <div class="card-status color-info">
+                                            <a href="#" class="card-inner">
+                                                <div class="thumb"><i class="fi fi-rr-calendar-lines"></i></div>
+                                                <div class="info">
+                                                    <h6>کل رزرو‌ها</h6>
+                                                    <p>69 نوبت</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- لیست رزرو‌ها -->
+                            <div class="cards-list mt-5">
+                                <div class="card-reserve">
+                                    <div class="card-inner">
+                                        <div class="c-info">
+                                            <h6 class="c-title"><i class="fi fi-rr-play"></i>عنوان جلسه رزرو شده</h6>
+                                            <ul>
+                                                <li>نام استاد : <span>استاد سمیردغاغله</span></li>
+                                                <li>نوع جلسه : <span>آنلاین</span></li>
+                                                <li>تاریخ رزرو : <span>4/25/2124</span></li>
+                                                <li>زمان باقیمانده تا جلسه : <span class="countdown-timer">00:00</span>
+                                                </li>
+                                                <li>وضعیت جلسه : <span class="success">در حال برگذاری</span></li>
+                                                <li>وضعیت پرداخت : <span class="error">موفق</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="c-action">
+                                            <a href="#" class="btn btn-primary">شرکت در جلسه</a>
+                                            <button class="btn btn-secondary-outline"
+                                                data-modal-name="modal-reserve">جزییات جلسه</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-reserve">
+                                    <div class="card-inner">
+                                        <div class="c-info">
+                                            <h6 class="c-title"><i class="fi fi-rr-play"></i>عنوان جلسه رزرو شده</h6>
+                                            <ul>
+                                                <li>نام استاد : <span>استاد سمیردغاغله</span></li>
+                                                <li>نوع جلسه : <span>آنلاین</span></li>
+                                                <li>تاریخ رزرو : <span>4/25/2124</span></li>
+                                                <li>زمان باقیمانده تا جلسه : <span class="countdown-timer">00:00</span>
+                                                </li>
+                                                <li>وضعیت جلسه : <span class="success">در حال برگذاری</span></li>
+                                                <li>وضعیت پرداخت : <span class="error">موفق</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="c-action">
+                                            <a href="#" class="btn btn-primary">شرکت در جلسه</a>
+                                            <button class="btn btn-secondary-outline"
+                                                data-modal-name="modal-reserve">جزییات جلسه</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container mx-auto">
+            <div class="newsletter">
+                <div class="news-inner">
+                    <h5>با ما در تماس باشید</h5>
+                    <p>می توانید با وارد کردن ایمیل خود در اینجا در جریان آخرین اخبار و اتفاقات سایت باشید
+                    </p>
+                    <div class="inputgroup">
+                        <input type="email" class="input" placeholder="youremail@mail.com">
+                        <button type="submit" class="btn btn-secondary">ثبت</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-inner">
+                <div class="flex flex-row flex-wrap items-center justify-center">
+                    <div class="w-full basis-4/4 md:basis-3/5">
+                        <div class="information">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="images/logo-white.svg" alt="logo">
+                                </a>
+                            </div>
+                            <div class="desc">
+                                <p>کامینو شامل معرفی اساتید متخصص در همه حوزه‌ها می‌باشد. این وب‌سایت با بهره‌گیری از
+                                    دانش و تجربه اساتید متخصص دررشته‌های
+                                    مختلف، تلاش می‌کند تا دریافت خدمات را برای مراجعان آسان نماید و ارتباط مطمئنی را
+                                    مابین استاد و مراجعین برقرار نماید</p>
+                            </div>
+                        </div>
+                        <div class="social-icons">
+                            <ul>
+                                <li><a href="#"><i class="fi fi-brands-instagram"></i></a></li>
+                                <li><a href="#"><i class="fi fi-brands-whatsapp"></i></a></li>
+                                <li><a href="#"><i class="fi fi-brands-telegram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- <div class="basis-1/4 md:basis-2/5">
+
+                    </div> -->
+                </div>
+            </div>
+            <div class="copyright">
+                <span>کلیه حقوق مادی و معنوی این سایت متعلق به کامینو می باشد</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Reserve Info -->
+    <div id="modal-reserve"
+        class="fixed left-0 top-0 opacity-0 hidden w-screen h-screen transition-opacity duration-500 flex items-center justify-center z-[9998]">
+        <div class="modal-backdrop fixed left-0 top-0 w-screen h-screen bg-gray-700/75"
+            onclick="hideModalDialog('modal-reserve')"></div>
+        <div class="bg-white rounded-lg shadow-md mx-auto w-full max-h-[95%] max-w-lg z-[9999] flex flex-col">
+            <div class="modal-header p-4 flex align-center justify-between shrink-0 w-full border-b">
+                <h2 class="mb-0">جزییات جلسه رزرو</h2>
+                <button class="btn-close w-8 h-8 p-2 text-gray-500 hover:text-red-500"
+                    onclick="hideModalDialog('modal-reserve')"><i class="fi fi-rr-cross"></i></button>
+            </div>
+            <div class="modal-body flex-auto overflow-y-auto p-4">
+                <div class="select-group">
+                    <label>انتخاب وضعیت جلسه</label>
+                    <select class="select">
+                        <option value="0">تایید</option>
+                        <option value="1">رد درخواست</option>
+                    </select>
+                </div>
+                <div class="modal-reserve-info">
+                    <ul class="info-list">
+                        <li>نام و نام خانوادگی : <span>وحید قلیچخانی</span></li>
+                        <li>شماره تماس : <span>0919919780</span></li>
+                        <li>نام استاد : <span>سجاد وطن پرست</span></li>
+                        <li>تاریخ رزرو : <span>شنبه 21 اسفند 1403</span></li>
+                        <li>ساعت شروع : <span>12:30</span></li>
+                        <li>ساعت پایان : <span>16:30</span></li>
+                        <li>مبلغ پرداختی : <span>360,000 <small>تومان</small></span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex justify-end gap-3 p-4 shrink-0">
+                <button id="btn-next-bookmark" class="btn btn-secondary-outline rounded-full"
+                    onclick="hideModalDialog('modal-reserve')">بستن
+                </button>
+                <button id="btn-next-bookmark" class="btn btn-secondary rounded-full text-white">تایید
+                    جلسه
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="plugins/swiperjs/swiper-initial.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/modalScript.js"></script>
+</body>
+
+</html>
