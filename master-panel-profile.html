@@ -13,6 +13,7 @@
     <script src="js/tailwind.config.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="scss/main.css" />
+    <link rel="stylesheet" href="plugins/dropzone/dropzone.min.css">
 
     <!-- Font Icons -->
     <link href="css/all.rounded.css" rel="stylesheet" type="text/css" />
@@ -103,12 +104,12 @@
     </header>
 
     <!-- User Dashboard -->
-    <div class="user-dashboard-section">
+    <div class="user-dashboard-section teacher">
         <div class="container mx-auto">
             <div class="btn-usermenu">
                 <span class="icon"><i class="fi fi-rr-user"></i></span>
                 <span class="text">
-                    <h4>منوی کاربر</h4>
+                    <h4>منوی استاد</h4>
                     <p>برای باز شدن منو کلیک کنید</p>
                 </span>
             </div>
@@ -124,28 +125,52 @@
                             </div>
                             <div class="user-name">
                                 <h6 class="font-extrabold text-textDark mb-2">وحید حسینی اصل</h6>
+                                <!-- <p>اشتراک : 2 ماه و 6 روز</p> -->
+                                <p>کیف پول : <span>860,000 تومان</span></p>
                             </div>
                         </div>
                         <!-- User Menu -->
                         <div class="user-menu">
                             <ul class="menu-list">
-                                <li class="menu-item"><a href="user-reservation.html" class="btn-collape"><i
-                                            class="fi fi-rr-bookmark"></i>جلسات رزرو شده</a></li>
-                                <li class="menu-item"><a href="user-reservation-history.html" class="btn-collape"><i
-                                            class="fi fi-rr-book-bookmark"></i>
-                                        سوابق رزرو
+                                <li class="menu-item">
+                                    <a href="master-panel-index.html" class="btn-collape"><i
+                                            class="fi fi-rr-apps"></i>پنل
+                                        مدیریت
                                     </a>
                                 </li>
-                                <li class="menu-item"><a href="user-transactions.html" class="btn-collape"><i
-                                            class="fi fi-rr-receipt"></i>تراکنش‌ها</a>
+                                <li class="menu-item">
+                                    <a href="master-panel-reservation.html" class="btn-collape"><i
+                                            class="fi fi-rr-bookmark"></i>لیست رزروها
+                                    </a>
                                 </li>
-                                <li class="menu-item active"><a href="user-profile.html" class="btn-collape"><i
+                                <li class="menu-item">
+                                    <a href="master-panel-comments.html" class="btn-collape"><i
+                                            class="fi fi-rr-comment"></i>نظرات کاربران
+                                        <span class="badge badge-info">15</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item active">
+                                    <a href="master-panel-profile.html" class="btn-collape"><i
                                             class="fi fi-rr-user"></i>اطلاعات
-                                        کاربر</a></li>
+                                        پروفایل
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="master-panel-wallet.html" class="btn-collape"><i
+                                            class="fi fi-rr-wallet"></i>کیف
+                                        پول
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="master-panel-vip.html" class="btn-collape"><i
+                                            class="fi fi-rr-gem"></i>اشتراک
+                                        ماهانه
+                                        <span class="badge badge-error">غیرفعال</span>
+                                    </a>
+                                </li>
                                 <li class="menu-item">
                                     <a href="#" class="btn-collape" data-modal-name="modal-logout">
-                                        <i class="fi fi-rr-sign-out-alt"></i>
-                                        خروج از حساب کاربری
+                                        <i class="fi fi-rr-sign-out-alt"></i>خروج از حساب کاربری
                                     </a>
                                 </li>
                             </ul>
@@ -195,7 +220,29 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="w-full px-2">
+                                <div class="sm:w-1/2 w-full px-2">
+                                    <div class="select-group">
+                                        <label>آخرین مدرک تحصیلی</label>
+                                        <select class="select">
+                                            <option value="0">دیپلم</option>
+                                            <option value="1">لیسانس</option>
+                                            <option value="1">فوق لیسانس</option>
+                                            <option value="1">دکترا</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="sm:w-1/2 w-full px-2">
+                                    <div class="select-group">
+                                        <label>مدرک استادی</label>
+                                        <select class="select">
+                                            <option value="0">دیپلم</option>
+                                            <option value="1">لیسانس</option>
+                                            <option value="1">فوق لیسانس</option>
+                                            <option value="1">دکترا</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="sm:w-1/2 w-full px-2">
                                     <div class="inputgroup">
                                         <label>رشته تحصیلی</label>
                                         <input type="text" placeholder="مثال : کارشناسی" class="input">
@@ -203,12 +250,34 @@
                                         <!-- <div class="alert-msg text-green-500">شماره اشتباه است</div> -->
                                     </div>
                                 </div>
-                                <div class="w-full px-2">
+                                <div class="sm:w-1/2 w-full px-2">
+                                    <div class="inputgroup">
+                                        <label>ایمیل</label>
+                                        <input type="email" placeholder="مثال : کارشناسی" class="input">
+                                        <div class="icon"><i class="fi fi-rr-envelope"></i></div>
+                                        <!-- <div class="alert-msg text-green-500">شماره اشتباه است</div> -->
+                                    </div>
+                                </div>
+                                <div class="sm:w-1/2 w-full px-2">
                                     <div class="inputgroup">
                                         <label>رمز عبور</label>
                                         <input type="password" placeholder="" class="input">
                                         <div class="icon"><i class="fi fi-rr-lock"></i></div>
                                         <!-- <div class="alert-msg text-green-500">شماره اشتباه است</div> -->
+                                    </div>
+                                </div>
+                                <div class="w-full px-2">
+                                    <div class="card-upload">
+                                        <h6 class="card-title">بارگذاری عکس پروفایل</h6>
+                                        <p class="card-subtitle">فایل با پسوند PNG, JPEG قایل قبول
+                                            می‌باشد</p>
+                                        <form action="/file-upload" class="dropzone m-t-20 dz-clickable"
+                                            id="file-images-profile">
+
+                                            <div class="dz-default dz-message"><button class="dz-button"
+                                                    type="button">فایل‌های خود را بکشید و رها
+                                                    کنید</button></div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -232,8 +301,7 @@
             <div class="newsletter">
                 <div class="news-inner">
                     <h5>با ما در تماس باشید</h5>
-                    <p>می توانید با وارد کردن ایمیل خود در اینجا در جریان آخرین اخبار و اتفاقات سایت باشید
-                    </p>
+                    <p>می توانید با وارد کردن ایمیل خود در اینجا در جریان آخرین اخبار و اتفاقات سایت باشید</p>
                     <div class="inputgroup">
                         <input type="email" class="input" placeholder="youremail@mail.com">
                         <button type="submit" class="btn btn-secondary">ثبت</button>
@@ -280,6 +348,8 @@
     <script src="plugins/swiperjs/swiper-initial.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/modalScript.js"></script>
+    <script src="plugins/dropzone/dropzone.min.js"></script>
+    <script src="plugins/dropzone/dropzone.init.js"></script>
 </body>
 
 </html>

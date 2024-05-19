@@ -208,4 +208,20 @@
     }
   }
 }
+
+.card-upload {
+  margin: 20px 0;
+  .card-title {
+    font-size: 16px;
+    color: $textDark;
+    margin-bottom: 5px;
+  }
+  .card-subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    color: $textGrey;
+    margin-bottom: 10px;
+  }
+}
+
 /*#endregion -------------- Forms */

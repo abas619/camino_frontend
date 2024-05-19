@@ -216,8 +216,8 @@
   }
   &.teacher {
     .grid-user-menu .grid-inner {
-      // background-color: wheat;
-      background: linear-gradient(180deg, #ddeef7 10%, white 90%);
+      background: linear-gradient(180deg, #e8f4fc 5%, white 95%);
+      // fff6e9
     }
   }
 }
@@ -302,6 +302,7 @@
     }
   }
 }
+
 .card-reserve {
   margin-bottom: 15px;
   .card-inner {
@@ -373,6 +374,8 @@
     .btn {
       width: 100%;
       margin: 5px 0;
+      padding: 0.6rem 1rem;
+      font-size: 14px;
     }
   }
 }
@@ -382,7 +385,7 @@
   .card-inner {
     border: 1px solid $borderColor;
     border-radius: 10px;
-    padding: 15px;
+    padding: 10px 15px;
   }
   .c-title {
     font-size: 16px;
@@ -489,8 +492,8 @@
   }
   &.color-gold {
     .thumb {
-      background-color: rgba($color: $warning, $alpha: 0.2);
-      color: $warning;
+      background-color: rgba($color: $primary, $alpha: 0.2);
+      color: $primary;
     }
   }
   &.color-green {
@@ -520,6 +523,117 @@
   background-color: white;
   box-shadow: $boxshadow;
   margin-bottom: 30px;
+}
+
+.card-ticket {
+  margin-bottom: 10px;
+  .ticket-inner {
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid $borderColor;
+    display: block;
+    h6 {
+      font-size: 16px;
+      font-weight: 600;
+      color: $textDark;
+      margin-bottom: 10px;
+    }
+  }
+  ul {
+    @include displayFlex(flex, center, flex-start);
+    flex-wrap: wrap;
+    li {
+      flex: 1 0 50%;
+      width: 50%;
+      font-size: 14px;
+      margin: 3px 0;
+      color: $textGrey;
+      span {
+        color: $textDark;
+        display: inline-block;
+        &.success {
+          background-color: $success;
+          color: white;
+          padding: 4px 8px;
+          border-radius: 8px;
+        }
+        &.info {
+          background-color: $info;
+          color: white;
+          padding: 4px 8px;
+          border-radius: 8px;
+        }
+        &.error {
+          background-color: $error;
+          color: white;
+          padding: 4px 8px;
+          border-radius: 8px;
+        }
+        &.warning {
+          background-color: $warning;
+          color: white;
+          padding: 4px 8px;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+  .text {
+    background-color: $background_light;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    p {
+      font-size: 14px;
+      @include textTruncate(1);
+      margin-bottom: 0;
+    }
+  }
+  .btns-action {
+    margin-top: 10px;
+    text-align: left;
+    display: block;
+    border-top: 1px solid $borderColor;
+    padding-top: 15px;
+    .btn {
+      padding: 0.6rem;
+      display: inline-block;
+    }
+  }
+  &:hover {
+    .ticket-inner {
+      border-color: $textGrey;
+    }
+  }
+  &.type-full {
+    .ticket-inner {
+      padding: 0;
+      border: none;
+      h6 {
+        font-size: 18px;
+      }
+    }
+    ul {
+      li {
+        font-size: 16px;
+        margin: 5px 0;
+      }
+    }
+    .text {
+      p {
+        font-size: 16px;
+        display: block;
+        -webkit-line-clamp: unset;
+        -webkit-box-orient: unset;
+        overflow: unset;
+      }
+    }
+    &:hover {
+      .ticket-inner {
+        border-color: unset;
+      }
+    }
+  }
 }
 
 @media (max-width: 1280px) {
@@ -648,6 +762,14 @@
             display: none;
           }
         }
+      }
+    }
+  }
+  .card-ticket {
+    ul {
+      li {
+        flex: 1 0 100%;
+        width: 100%;
       }
     }
   }

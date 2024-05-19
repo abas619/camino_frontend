@@ -159,7 +159,7 @@ input[type=number] {
   font-size: 16px;
   padding: 0.7rem 1.2rem;
   border-radius: 80px;
-  border: none;
+  border: 1px solid transparent;
   min-width: 120px;
   box-shadow: none;
   overflow: hidden;
@@ -215,6 +215,7 @@ input[type=number] {
 .btn-primary {
   background: #fda621;
   color: white;
+  border-color: #fda621;
 }
 .btn-primary:hover, .btn-primary:focus {
   background: #e98e02 !important;
@@ -240,6 +241,7 @@ input[type=number] {
 .btn-secondary {
   background: #1a8ac9;
   color: white;
+  border-color: #1a8ac9;
 }
 .btn-secondary:hover, .btn-secondary:focus {
   background: #1571a5;
@@ -253,8 +255,7 @@ input[type=number] {
 .btn-primary-outline {
   background: transparent;
   color: #fda621;
-  border: 2px solid #fda621;
-  padding: 0.58rem 1.2rem;
+  border-color: #fda621;
 }
 .btn-primary-outline:hover, .btn-primary-outline:focus {
   background: #fda621;
@@ -271,8 +272,7 @@ input[type=number] {
 .btn-secondary-outline {
   background: transparent;
   color: #1a8ac9;
-  border: 2px solid #1a8ac9;
-  padding: 0.58rem 1.2rem;
+  border-color: #1a8ac9;
 }
 .btn-secondary-outline:hover, .btn-secondary-outline:focus {
   background-color: #1a8ac9;
@@ -1771,11 +1771,22 @@ input[type=number] {
   top: 2px;
 }
 .comment-content .comment-item .reply {
-  padding-right: 20px;
+  padding-right: 15px;
+  padding-top: 15px;
   border-right: 4px solid #d2d2d2;
+  background-color: white;
 }
 .comment-content .comment-item .reply .c-header {
   padding-top: 0;
+}
+.comment-content .comment-item .reply .c-body {
+  padding: 0 15px 15px 15px;
+}
+.comment-content .comment-item .reply .c-body .desc {
+  margin-bottom: 0;
+}
+.comment-content .comment-item .reply .c-body .desc p {
+  margin-bottom: 0;
 }
 
 @media (max-width: 1024px) {
@@ -2279,6 +2290,21 @@ input[type=number] {
   height: 0.5em;
 }
 
+.card-upload {
+  margin: 20px 0;
+}
+.card-upload .card-title {
+  font-size: 16px;
+  color: #3c3c3c;
+  margin-bottom: 5px;
+}
+.card-upload .card-subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: #636063;
+  margin-bottom: 10px;
+}
+
 /*#endregion -------------- Forms */
 /*#region ----------------- Login */
 .wrapper-login {
@@ -2546,7 +2572,7 @@ input[type=number] {
   background-color: #009cf2;
 }
 .user-dashboard-section .user-menu .badge.badge-warning {
-  background-color: #ffd700;
+  background-color: #fbbf24;
 }
 .user-dashboard-section .user-menu .sub-menu-list {
   background-color: rgba(99, 96, 99, 0.1);
@@ -2630,7 +2656,7 @@ input[type=number] {
   margin: 5px;
 }
 .user-dashboard-section.teacher .grid-user-menu .grid-inner {
-  background: linear-gradient(180deg, #ddeef7 10%, white 90%);
+  background: linear-gradient(180deg, #e8f4fc 5%, white 95%);
 }
 
 .btn-usermenu {
@@ -2780,7 +2806,7 @@ input[type=number] {
   border-radius: 8px;
 }
 .card-reserve .c-info ul li span.warning {
-  background-color: #ffd700;
+  background-color: #fbbf24;
   color: #3c3c3c;
   padding: 4px 8px;
   border-radius: 8px;
@@ -2796,6 +2822,8 @@ input[type=number] {
 .card-reserve .c-action .btn {
   width: 100%;
   margin: 5px 0;
+  padding: 0.6rem 1rem;
+  font-size: 14px;
 }
 
 .card-transaction {
@@ -2804,7 +2832,7 @@ input[type=number] {
 .card-transaction .card-inner {
   border: 1px solid #d2d2d2;
   border-radius: 10px;
-  padding: 15px;
+  padding: 10px 15px;
 }
 .card-transaction .c-title {
   font-size: 16px;
@@ -2854,7 +2882,7 @@ input[type=number] {
   border-radius: 8px;
 }
 .card-transaction .list-info li span.warning {
-  background-color: #ffd700;
+  background-color: #fbbf24;
   color: #3c3c3c;
   padding: 4px 8px;
   border-radius: 8px;
@@ -2906,8 +2934,8 @@ input[type=number] {
   border-color: #636063;
 }
 .card-status.color-gold .thumb {
-  background-color: rgba(255, 215, 0, 0.2);
-  color: #ffd700;
+  background-color: rgba(253, 166, 33, 0.2);
+  color: #fda621;
 }
 .card-status.color-green .thumb {
   background-color: rgba(0, 189, 121, 0.1);
@@ -2931,6 +2959,112 @@ input[type=number] {
   background-color: white;
   box-shadow: 0px 4px 25px rgba(5, 5, 5, 0.08);
   margin-bottom: 30px;
+}
+
+.card-ticket {
+  margin-bottom: 10px;
+}
+.card-ticket .ticket-inner {
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #d2d2d2;
+  display: block;
+}
+.card-ticket .ticket-inner h6 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3c3c3c;
+  margin-bottom: 10px;
+}
+.card-ticket ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.card-ticket ul li {
+  flex: 1 0 50%;
+  width: 50%;
+  font-size: 14px;
+  margin: 3px 0;
+  color: #636063;
+}
+.card-ticket ul li span {
+  color: #3c3c3c;
+  display: inline-block;
+}
+.card-ticket ul li span.success {
+  background-color: #00bd79;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+.card-ticket ul li span.info {
+  background-color: #009cf2;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+.card-ticket ul li span.error {
+  background-color: #ff3333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+.card-ticket ul li span.warning {
+  background-color: #fbbf24;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+.card-ticket .text {
+  background-color: #f2f2f3;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+}
+.card-ticket .text p {
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.card-ticket .btns-action {
+  margin-top: 10px;
+  text-align: left;
+  display: block;
+  border-top: 1px solid #d2d2d2;
+  padding-top: 15px;
+}
+.card-ticket .btns-action .btn {
+  padding: 0.6rem;
+  display: inline-block;
+}
+.card-ticket:hover .ticket-inner {
+  border-color: #636063;
+}
+.card-ticket.type-full .ticket-inner {
+  padding: 0;
+  border: none;
+}
+.card-ticket.type-full .ticket-inner h6 {
+  font-size: 18px;
+}
+.card-ticket.type-full ul li {
+  font-size: 16px;
+  margin: 5px 0;
+}
+.card-ticket.type-full .text p {
+  font-size: 16px;
+  display: block;
+  -webkit-line-clamp: unset;
+  -webkit-box-orient: unset;
+  overflow: unset;
+}
+.card-ticket.type-full:hover .ticket-inner {
+  border-color: unset;
 }
 
 @media (max-width: 1280px) {
@@ -3044,6 +3178,10 @@ input[type=number] {
   }
   .user-dashboard-section .main-title .buttons-group .btn span {
     display: none;
+  }
+  .card-ticket ul li {
+    flex: 1 0 100%;
+    width: 100%;
   }
 }
 @media (max-width: 350px) {

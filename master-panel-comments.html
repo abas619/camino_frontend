@@ -103,12 +103,12 @@
     </header>
 
     <!-- User Dashboard -->
-    <div class="user-dashboard-section">
+    <div class="user-dashboard-section teacher">
         <div class="container mx-auto">
             <div class="btn-usermenu">
                 <span class="icon"><i class="fi fi-rr-user"></i></span>
                 <span class="text">
-                    <h4>منوی کاربر</h4>
+                    <h4>منوی استاد</h4>
                     <p>برای باز شدن منو کلیک کنید</p>
                 </span>
             </div>
@@ -124,28 +124,52 @@
                             </div>
                             <div class="user-name">
                                 <h6 class="font-extrabold text-textDark mb-2">وحید حسینی اصل</h6>
+                                <!-- <p>اشتراک : 2 ماه و 6 روز</p> -->
+                                <p>کیف پول : <span>860,000 تومان</span></p>
                             </div>
                         </div>
                         <!-- User Menu -->
                         <div class="user-menu">
                             <ul class="menu-list">
-                                <li class="menu-item"><a href="user-reservation.html" class="btn-collape"><i
-                                            class="fi fi-rr-bookmark"></i>جلسات رزرو شده</a></li>
-                                <li class="menu-item"><a href="user-reservation-history.html" class="btn-collape"><i
-                                            class="fi fi-rr-book-bookmark"></i>
-                                        سوابق رزرو
+                                <li class="menu-item">
+                                    <a href="master-panel-index.html" class="btn-collape"><i
+                                            class="fi fi-rr-apps"></i>پنل
+                                        مدیریت
                                     </a>
                                 </li>
-                                <li class="menu-item"><a href="user-transactions.html" class="btn-collape"><i
-                                            class="fi fi-rr-receipt"></i>تراکنش‌ها</a>
+                                <li class="menu-item">
+                                    <a href="master-panel-reservation.html" class="btn-collape"><i
+                                            class="fi fi-rr-bookmark"></i>لیست رزروها
+                                    </a>
                                 </li>
-                                <li class="menu-item active"><a href="user-profile.html" class="btn-collape"><i
+                                <li class="menu-item active">
+                                    <a href="master-panel-comments.html" class="btn-collape"><i
+                                            class="fi fi-rr-comment"></i>نظرات کاربران
+                                        <span class="badge badge-info">15</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="master-panel-profile.html" class="btn-collape"><i
                                             class="fi fi-rr-user"></i>اطلاعات
-                                        کاربر</a></li>
+                                        پروفایل
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="master-panel-wallet.html" class="btn-collape"><i
+                                            class="fi fi-rr-wallet"></i>کیف
+                                        پول
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="master-panel-vip.html" class="btn-collape"><i
+                                            class="fi fi-rr-gem"></i>اشتراک
+                                        ماهانه
+                                        <span class="badge badge-error">غیرفعال</span>
+                                    </a>
+                                </li>
                                 <li class="menu-item">
                                     <a href="#" class="btn-collape" data-modal-name="modal-logout">
-                                        <i class="fi fi-rr-sign-out-alt"></i>
-                                        خروج از حساب کاربری
+                                        <i class="fi fi-rr-sign-out-alt"></i>خروج از حساب کاربری
                                     </a>
                                 </li>
                             </ul>
@@ -157,66 +181,47 @@
                     <div class="grid-inner">
                         <div class="main-title">
                             <div class="title-inner">
-                                <h3>اطلاعات کاربر</h3>
+                                <h3>نظرات کاربران</h3>
                             </div>
                         </div>
                         <div class="main-body">
-                            <div class="flex items-start justify-start flex-wrap">
-                                <div class="sm:w-1/2 w-full px-2">
-                                    <div class="inputgroup">
-                                        <label>نام</label>
-                                        <input type="text" placeholder="" class="input">
-                                        <div class="icon"><i class="fi fi-rr-user"></i></div>
-                                        <div class="alert-msg text-red-500">شماره اشتباه است</div>
+                            <div class="card-ticket">
+                                <a href="master-panel-comment-details.html" class="ticket-inner">
+                                    <h6>عنوان پیام یا نام دوره</h6>
+                                    <ul>
+                                        <li>نام و نام خانوادگی :<span>امیرحسین پورمند</span></li>
+                                        <li>زمان و تاریخ : <span>7/19/2123 - 12:30</span></li>
+                                        <li>امتیاز : <span>4.3</span></li>
+                                        <li>وضعیت : <span class="success">پاسخ داده شده</span></li>
+                                    </ul>
+                                    <div class="text">
+                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+                                            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                                            سطرآنچنان که است.</p>
                                     </div>
-                                </div>
-                                <div class="sm:w-1/2 w-full px-2">
-                                    <div class="inputgroup">
-                                        <label>نام خانوادگی</label>
-                                        <input type="text" placeholder="" class="input">
-                                        <div class="icon"><i class="fi fi-rr-user"></i></div>
-                                        <!-- <div class="alert-msg text-green-500">شماره اشتباه است</div> -->
-                                    </div>
-                                </div>
-                                <div class="sm:w-1/2 w-full px-2">
-                                    <div class="inputgroup">
-                                        <label>شماره همراه</label>
-                                        <input type="number" placeholder="مثال : 09127442012" class="input">
-                                        <div class="icon"><i class="fi fi-rr-phone-call"></i></div>
-                                        <!-- <div class="alert-msg text-red-500">شماره اشتباه است</div> -->
-                                    </div>
-                                </div>
-                                <div class="sm:w-1/2 w-full px-2">
-                                    <div class="select-group">
-                                        <label>جنسیت</label>
-                                        <select class="select">
-                                            <option value="0">مرد</option>
-                                            <option value="1">زن</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="w-full px-2">
-                                    <div class="inputgroup">
-                                        <label>رشته تحصیلی</label>
-                                        <input type="text" placeholder="مثال : کارشناسی" class="input">
-                                        <div class="icon"><i class="fi fi-rr-graduation-cap"></i></div>
-                                        <!-- <div class="alert-msg text-green-500">شماره اشتباه است</div> -->
-                                    </div>
-                                </div>
-                                <div class="w-full px-2">
-                                    <div class="inputgroup">
-                                        <label>رمز عبور</label>
-                                        <input type="password" placeholder="" class="input">
-                                        <div class="icon"><i class="fi fi-rr-lock"></i></div>
-                                        <!-- <div class="alert-msg text-green-500">شماره اشتباه است</div> -->
-                                    </div>
-                                </div>
+                                </a>
                             </div>
-                            <div class="btns-action text-center mt-3">
-                                <button class="btn btn-primary icon-right"><i class="fi fi-rr-check"></i>ثبت
-                                    تغییرات</button>
-                                <button class="btn btn-secondary-outline icon-right"><i
-                                        class="fi fi-rr-cross"></i>انصراف</button>
+                            <div class="card-ticket">
+                                <a href="master-panel-comment-details.html" class="ticket-inner">
+                                    <h6>عنوان پیام یا نام دوره</h6>
+                                    <ul>
+                                        <li>نام و نام خانوادگی :<span>امیرحسین پورمند</span></li>
+                                        <li>زمان و تاریخ : <span>7/19/2123 - 12:30</span></li>
+                                        <li>امتیاز : <span>4.3</span></li>
+                                        <li>وضعیت : <span class="warning">در انتظار جواب</span></li>
+                                    </ul>
+                                </a>
+                            </div>
+                            <div class="card-ticket">
+                                <a href="master-panel-comment-details.html" class="ticket-inner">
+                                    <h6>عنوان پیام یا نام دوره</h6>
+                                    <ul>
+                                        <li>نام و نام خانوادگی :<span>امیرحسین پورمند</span></li>
+                                        <li>زمان و تاریخ : <span>7/19/2123 - 12:30</span></li>
+                                        <li>امتیاز : <span>4.3</span></li>
+                                        <li>وضعیت : <span class="warning">در انتظار جواب</span></li>
+                                    </ul>
+                                </a>
                             </div>
                         </div>
                     </div>

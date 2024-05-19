@@ -3,7 +3,7 @@
   font-size: 16px;
   padding: 0.7rem 1.2rem;
   border-radius: 80px;
-  border: none;
+  border: 1px solid transparent;
   min-width: 120px;
   box-shadow: none;
   overflow: hidden;
@@ -58,6 +58,7 @@
 .btn-primary {
   background: $primary;
   color: white;
+  border-color: $primary;
   &:hover,
   &:focus {
     background: darken($color: $primary, $amount: 10) !important;
@@ -84,6 +85,7 @@
 .btn-secondary {
   background: $secondary;
   color: white;
+  border-color: $secondary;
   &:hover,
   &:focus {
     background: darken($color: $secondary, $amount: 8);
@@ -97,8 +99,8 @@
 .btn-primary-outline {
   background: transparent;
   color: $primary;
-  border: 2px solid $primary;
-  padding: 0.58rem 1.2rem;
+  border-color: $primary;
+  // padding: 0.58rem 1.2rem;
   &:hover,
   &:focus {
     background: $primary;
@@ -116,8 +118,8 @@
 .btn-secondary-outline {
   background: transparent;
   color: $secondary;
-  border: 2px solid $secondary;
-  padding: 0.58rem 1.2rem;
+  border-color: $secondary;
+  // padding: 0.58rem 1.2rem;
   &:hover,
   &:focus {
     background-color: $secondary;

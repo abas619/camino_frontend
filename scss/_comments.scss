@@ -152,10 +152,21 @@
       }
     }
     .reply {
-      padding-right: 20px;
+      padding-right: 15px;
+      padding-top: 15px;
       border-right: 4px solid $borderColor;
+      background-color: white;
       .c-header {
         padding-top: 0;
+      }
+      .c-body {
+        padding: 0 15px 15px 15px;
+        .desc {
+          margin-bottom: 0;
+          p {
+            margin-bottom: 0;
+          }
+        }
       }
     }
   }
