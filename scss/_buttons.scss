@@ -126,4 +126,42 @@
     color: white;
   }
 }
+
+// For Collapse Buttons
+.btn-collapse {
+  width: 100%;
+  text-align: right;
+  color: $textDark;
+  position: relative;
+  .icon {
+    transition: all 0.2s ease-in-out;
+    transform: rotate(0deg);
+    &.icon-plus {
+      transform: unset;
+      &::before {
+        content: "\f80d";
+        position: absolute;
+        font-family: $iconFontRegular;
+        color: $textSilver;
+      }
+    }
+  }
+  &.active {
+    .icon {
+      transform: rotate(-90deg);
+      &.icon-plus {
+        transform: unset;
+        &::before {
+          content: "\f730";
+        }
+      }
+    }
+  }
+}
+.card-collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
 /*#endregion -------------- Buttons */

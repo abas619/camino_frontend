@@ -279,6 +279,41 @@ input[type=number] {
   color: white;
 }
 
+.btn-collapse {
+  width: 100%;
+  text-align: right;
+  color: #3c3c3c;
+  position: relative;
+}
+.btn-collapse .icon {
+  transition: all 0.2s ease-in-out;
+  transform: rotate(0deg);
+}
+.btn-collapse .icon.icon-plus {
+  transform: unset;
+}
+.btn-collapse .icon.icon-plus::before {
+  content: "\f80d";
+  position: absolute;
+  font-family: uicons-regular-rounded;
+  color: #9e9e9e;
+}
+.btn-collapse.active .icon {
+  transform: rotate(-90deg);
+}
+.btn-collapse.active .icon.icon-plus {
+  transform: unset;
+}
+.btn-collapse.active .icon.icon-plus::before {
+  content: "\f730";
+}
+
+.card-collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
 /*#endregion -------------- Buttons */
 /*#region ----------------- Animation */
 .smooth-anim-3s {
@@ -443,14 +478,14 @@ input[type=number] {
   color: #fda621 !important;
 }
 .navbar .navbar-inner {
-  padding: 20px 0;
+  padding: 15px 0;
   display: grid;
-  grid-template-columns: 160px 1fr auto;
+  grid-template-columns: 180px 1fr auto;
   align-items: center;
   position: relative;
 }
 .navbar .nav-logo a {
-  width: 160px;
+  width: 180px;
   height: 50px;
   display: block;
   position: relative;
@@ -490,6 +525,7 @@ input[type=number] {
 .navbar .nav-actions .login .btn-primary {
   background-color: #1a8ac9 !important;
   color: white;
+  border: none;
 }
 .navbar .nav-actions .sign {
   position: relative;
@@ -578,8 +614,11 @@ input[type=number] {
     display: none;
   }
   .navbar .nav-logo {
-    width: 160px;
     margin: 0 auto;
+    width: 160px;
+  }
+  .navbar .nav-logo a {
+    width: 100%;
   }
   .navbar .nav-logo a::before {
     background-image: url(../images/logo-color.svg) !important;
@@ -594,6 +633,7 @@ input[type=number] {
     min-width: unset;
     background-color: transparent !important;
     color: #3c3c3c !important;
+    border: none;
   }
   .navbar .nav-actions .login .btn span {
     display: none;
@@ -611,6 +651,7 @@ input[type=number] {
     min-width: unset;
     background-color: transparent;
     color: #3c3c3c;
+    border: none;
   }
   .navbar .nav-actions .sign .btn span {
     display: none;
@@ -2305,6 +2346,45 @@ input[type=number] {
   margin-bottom: 10px;
 }
 
+.input-counter {
+  margin-bottom: 16px;
+}
+.input-counter label {
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.input-counter .stepper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.input-counter .stepper button {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background-color: #1a8ac9;
+  border: none;
+}
+.input-counter .stepper button .fi {
+  line-height: 0;
+  display: inline-block;
+  color: white;
+  position: relative;
+  top: 4px;
+  font-size: 14px;
+}
+.input-counter .stepper input {
+  height: 38px;
+  width: 80px;
+  margin: 0 10px;
+  padding: 2px 10px;
+  border: 1px solid #d2d2d2;
+  border-radius: 10px;
+  text-align: center;
+}
+
 /*#endregion -------------- Forms */
 /*#region ----------------- Login */
 .wrapper-login {
@@ -2444,7 +2524,7 @@ input[type=number] {
 }
 .user-dashboard-section .grid-layout {
   display: grid;
-  grid-template-columns: 320px auto;
+  grid-template-columns: 320px calc(100% - 320px);
 }
 .user-dashboard-section .grid-user-menu {
   transition: all 0.3s ease-in-out;
@@ -2500,8 +2580,8 @@ input[type=number] {
   padding: 0 15px 15px 15px;
   position: relative;
 }
-.user-dashboard-section .user-menu .btn-collape,
-.user-dashboard-section .user-menu .sub-btn-collape {
+.user-dashboard-section .user-menu .btn-user-menu,
+.user-dashboard-section .user-menu .sub-btn-user-menu {
   border-radius: 8px;
   font-size: 16px;
   font-weight: 500;
@@ -2514,37 +2594,22 @@ input[type=number] {
   width: 100%;
   transition: all 0.2s ease-in;
 }
-.user-dashboard-section .user-menu .btn-collape .fi,
-.user-dashboard-section .user-menu .sub-btn-collape .fi {
+.user-dashboard-section .user-menu .btn-user-menu .fi,
+.user-dashboard-section .user-menu .sub-btn-user-menu .fi {
   font-size: 20px;
   margin-left: 10px;
   color: #9e9e9e;
   transition: all 0.2s ease-in;
 }
-.user-dashboard-section .user-menu .btn-collape.dropdown::before,
-.user-dashboard-section .user-menu .sub-btn-collape.dropdown::before {
-  content: "\f10d";
-  font-family: uicons-regular-rounded;
-  position: absolute;
-  top: 10px;
-  left: 5px;
-  font-size: 12px;
-  color: #9e9e9e;
-  transform: rotate(0deg);
-}
-.user-dashboard-section .user-menu .btn-collape.collapsed.dropdown::before,
-.user-dashboard-section .user-menu .sub-btn-collape.collapsed.dropdown::before {
-  transform: rotate(90deg);
-}
-.user-dashboard-section .user-menu .btn-collape:hover,
-.user-dashboard-section .user-menu .sub-btn-collape:hover {
+.user-dashboard-section .user-menu .btn-user-menu:hover,
+.user-dashboard-section .user-menu .sub-btn-user-menu:hover {
   color: #fda621 !important;
 }
-.user-dashboard-section .user-menu .btn-collape:hover .fi,
-.user-dashboard-section .user-menu .sub-btn-collape:hover .fi {
+.user-dashboard-section .user-menu .btn-user-menu:hover .fi,
+.user-dashboard-section .user-menu .sub-btn-user-menu:hover .fi {
   color: #fda621;
 }
-.user-dashboard-section .user-menu .btn-collape::before {
+.user-dashboard-section .user-menu .btn-user-menu::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -2579,22 +2644,50 @@ input[type=number] {
   padding: 10px 20px 10px 10px;
   border-radius: 10px;
 }
-.user-dashboard-section .user-menu .sub-menu-list .btn-collape {
+.user-dashboard-section .user-menu .sub-menu-list .btn-user-menu {
   color: #636063;
 }
 .user-dashboard-section .user-menu .menu-item {
   position: relative;
 }
-.user-dashboard-section .user-menu .menu-item.active .btn-collape {
+.user-dashboard-section .user-menu .menu-item.active .btn-user-menu {
   color: #1a8ac9 !important;
   background-color: rgba(26, 138, 201, 0.1);
   font-weight: 400;
 }
-.user-dashboard-section .user-menu .menu-item.active .btn-collape::before {
+.user-dashboard-section .user-menu .menu-item.active .btn-user-menu::before {
   background-color: #1a8ac9;
 }
-.user-dashboard-section .user-menu .menu-item.active .btn-collape .fi {
+.user-dashboard-section .user-menu .menu-item.active .btn-user-menu .fi {
   color: #1a8ac9;
+}
+.user-dashboard-section .user-menu .sub-btn-user-menu {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.user-dashboard-section .user-menu .sub-btn-user-menu.active {
+  color: #1a8ac9;
+}
+.user-dashboard-section .user-menu .btn-collapse::after {
+  content: "\f12d";
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-family: uicons-regular-rounded;
+}
+.user-dashboard-section .user-menu .btn-collapse.active {
+  border-radius: 8px 8px 0 0;
+}
+.user-dashboard-section .user-menu .btn-collapse.active::after {
+  content: "\f12c";
+}
+.user-dashboard-section .user-menu .card-collapse {
+  background-color: #f2f2f3;
+  border-radius: 0 0 8px 8px;
+  padding: 0 30px 0 10px;
+}
+.user-dashboard-section .user-menu .card-collapse ul {
+  padding: 10px 0;
 }
 .user-dashboard-section .main-title {
   display: flex;
@@ -3069,7 +3162,7 @@ input[type=number] {
 
 @media (max-width: 1280px) {
   .user-dashboard-section .grid-layout {
-    grid-template-columns: 280px auto;
+    grid-template-columns: 280px calc(100% - 280px);
   }
   .card-reserve .c-info ul li {
     flex: 1 0 100%;
@@ -3254,3 +3347,68 @@ input[type=number] {
 }
 
 /*#endregion -------------- Table */
+/*#region ----------------- Alert */
+.alert {
+  display: grid;
+  grid-template-columns: 40px auto;
+  align-items: center;
+  border-right: 5px solid transparent;
+  padding: 12px;
+  border-radius: 10px 0 0 10px;
+  position: relative;
+  margin: 10px 0;
+}
+.alert .icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+.alert .text {
+  font-size: 16px;
+  color: #3c3c3c;
+  padding-right: 15px;
+}
+.alert .close-alerttMessage {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 16px;
+}
+.alert.alert-success {
+  border-right-color: #00bd79;
+  background-color: rgba(0, 189, 121, 0.1);
+}
+.alert.alert-success .icon {
+  background-color: #00bd79;
+  color: white;
+}
+.alert.alert-error {
+  border-right-color: #ff3333;
+  background-color: rgba(255, 51, 51, 0.1);
+}
+.alert.alert-error .icon {
+  background-color: #ff3333;
+  color: white;
+}
+.alert.alert-info {
+  border-right-color: #009cf2;
+  background-color: rgba(0, 156, 242, 0.1);
+}
+.alert.alert-info .icon {
+  background-color: #009cf2;
+  color: white;
+}
+.alert.alert-warning {
+  border-right-color: #fbbf24;
+  background-color: rgba(251, 191, 36, 0.1);
+}
+.alert.alert-warning .icon {
+  background-color: #fbbf24;
+  color: white;
+}
+
+/*#endregion -------------- Alert */

@@ -184,3 +184,91 @@ document.addEventListener("DOMContentLoaded", function () {
     link.addEventListener("click", scrollToSection);
   });
 });
+
+if (document.querySelector(".btn-collapse") != null) {
+  const btnsCollapseGroup = document.querySelectorAll(".btn-collapse");
+  const cardCollapse = document.querySelectorAll(".card-collapse");
+
+  btnsCollapseGroup.forEach((button, index) => {
+    const content = cardCollapse[index];
+
+    if (button.classList.contains("active")) {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } else {
+      content.style.maxHeight = null;
+    }
+
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      button.classList.toggle("active");
+
+      content.style.maxHeight = content.style.maxHeight
+        ? null
+        : content.scrollHeight + "px";
+    });
+  });
+}
+
+if (document.querySelector(".close-alerttMessage") != null) {
+  var closetoastbtns = document.querySelectorAll(".close-alerttMessage");
+  closetoastbtns.forEach((btn) => {
+    btn.onclick = () => {
+      btn.parentElement.remove();
+    };
+  });
+}
+
+// For Select FreeClass
+function checkFreeClass(num) {
+  if (num === 1) {
+    document.getElementById("free-class").style.display = "none";
+  } else {
+    document.getElementById("free-class").style.display = "flex";
+  }
+}
+
+// For Change Input Value
+if (document.querySelector(".stepper") != null) {
+  var inc = document.getElementsByClassName("stepper");
+  for (i = 0; i < inc.length; i++) {
+    var incI = inc[i].querySelector("input"),
+      id = incI.getAttribute("id"),
+      min = incI.getAttribute("min"),
+      max = incI.getAttribute("max"),
+      step = incI.getAttribute("step");
+    document
+      .getElementById(id)
+      .previousElementSibling.setAttribute(
+        "onclick",
+        "stepperInput('" + id + "', -" + step + ", " + min + ")"
+      );
+    document
+      .getElementById(id)
+      .nextElementSibling.setAttribute(
+        "onclick",
+        "stepperInput('" + id + "', " + step + ", " + max + ")"
+      );
+  }
+}
+
+function stepperInput(id, s, m) {
+  var el = document.getElementById(id);
+  if (s > 0) {
+    if (parseInt(el.value) < m) {
+      el.value = parseInt(el.value) + s;
+    }
+  } else {
+    if (parseInt(el.value) > m) {
+      el.value = parseInt(el.value) + s;
+    }
+  }
+}
+
+function numberWithCommas(str) {
+  str = str.replace(/\,/g, "");
+  var objRegex = new RegExp("(-?[0-9]+)([0-9]{3})");
+  while (objRegex.test(str)) {
+    str = str.replace(objRegex, "$1,$2");
+  }
+  return str;
+}

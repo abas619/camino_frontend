@@ -32,15 +32,15 @@
     }
   }
   .navbar-inner {
-    padding: 20px 0;
+    padding: 15px 0;
     display: grid;
-    grid-template-columns: 160px 1fr auto;
+    grid-template-columns: 180px 1fr auto;
     align-items: center;
     position: relative;
   }
   .nav-logo {
     a {
-      width: 160px;
+      width: 180px;
       height: 50px;
       display: block;
       position: relative;
@@ -81,6 +81,7 @@
       .btn-primary {
         background-color: $secondary !important;
         color: white;
+        border: none;
       }
     }
     .sign {
@@ -88,6 +89,7 @@
       .btn {
         min-width: unset;
         padding-left: 2rem;
+        // border: none;
         &::after {
           content: "\f25d";
           position: absolute;
@@ -177,9 +179,10 @@
       display: none;
     }
     .nav-logo {
-      width: 160px;
       margin: 0 auto;
+      width: 160px;
       a {
+        width: 100%;
         &::before {
           background-image: url(../images/logo-color.svg) !important;
         }
@@ -195,6 +198,7 @@
           min-width: unset;
           background-color: transparent !important;
           color: $textDark !important;
+          border: none;
           span {
             display: none;
           }
@@ -212,6 +216,7 @@
           min-width: unset;
           background-color: transparent;
           color: $textDark;
+          border: none;
           span {
             display: none;
           }

@@ -11,6 +11,35 @@ const swiperComments = new Swiper(".swiper-comments", {
   },
 });
 
+const swiperCalendar = new Swiper(".swiper-calendar", {
+  slidesPerView: 2,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    250: {
+      slidesPerView: 2,
+    },
+    480: {
+      slidesPerView: 3,
+    },
+    575: {
+      slidesPerView: 4,
+    },
+    768: {
+      slidesPerView: 6,
+    },
+    992: {
+      slidesPerView: 5,
+    },
+    1200: {
+      slidesPerView: 7,
+    },
+  },
+});
+
 // const swiper = new Swiper(".swiper", {
 //   // Optional parameters
 //   direction: "vertical",

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fa" class="no-js" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffb200" />
+    <meta name="msapplication-navbutton-color" content="#ffb200">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ffb200">
+    <title>کامینو | اطلاعات کاربر</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind.config.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="scss/main.css" />
+    <link rel="stylesheet" href="plugins/dropzone/dropzone.min.css">
+
+    <!-- Font Icons -->
+    <link href="css/all.rounded.css" rel="stylesheet" type="text/css" />
+
+    <!-- Favicon -->
+    <!-- <link rel="icon" href="images/small-icon.png" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/logo-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/logo-114x114.png" /> -->
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <div class="container mx-auto">
+            <div class="sidebar-content">
+                <div id="sidebar-menu">
+                    <div class="sidebar-header">
+                        <div class="sidebar-logo">
+                            <a href="index.html" onclick="closeSidebar(this)">
+                                <img src="images/logo-white.svg" class="sidebarlogo" alt="logo">
+                            </a>
+                        </div>
+                        <div class="sidebar-close">
+                            <button class="btn-close-menu"><i class="fi fi-rr-cross"></i></button>
+                        </div>
+                    </div>
+                    <ul class="category-list">
+                        <li class="item" onclick="closeSidebar(this)"><a href="#">صفحه اصلی</a></li>
+                        <li class="item" onclick="closeSidebar(this)"><a href="#">بلاگ</a></li>
+                        <li class="item" onclick="closeSidebar(this)"><a href="#">نمونه‌ کارها</a></li>
+                        <li class="item" onclick="closeSidebar(this)"><a href="#">معرفی پزشکان</a></li>
+                        <li class="item" onclick="closeSidebar(this)"><a href="#">تماس با ما</a></li>
+                    </ul>
+                    <div class="socials-icon">
+                        <ul>
+                            <li onclick="closeSidebar(this)"><a href="#"><i class="fi fi-brands-instagram"></i></a></li>
+                            <li onclick="closeSidebar(this)"><a href="#"><i class="fi fi-brands-whatsapp"></i></a></li>
+                            <li onclick="closeSidebar(this)"><a href="#"><i class="fi fi-rr-envelope"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="overlay-back"></div>
+            </div>
+            <div class="navbar-inner">
+                <button class="btn-mobile-menu"><i class="fi fi-rr-menu-burger"></i></button>
+                <div class="nav-logo">
+                    <a href="index.html"></a>
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#">خانه</a></li>
+                        <li><a href="#">اساتید</a></li>
+                        <li><a href="#">نظرات</a></li>
+                        <li><a href="#">ارتباط با ما</a></li>
+                        <li><a href="#">بیشتر بدانید</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <div class="login">
+                        <a href="login.html" class="btn btn-primary bg-white icon-right">
+                            <i class="fi fi-rr-sign-in-alt"></i>
+                            <span>ورود/ثبت نام</span>
+                        </a>
+                    </div>
+                    <!-- <div class="sign">
+                        <button class="btn btn-primary icon-right">
+                            <i class="fi fi-rr-user"></i>
+                            <span>نام کاربر</span>
+                        </button>
+                        <div class="user-menu">
+                            <ul>
+                                <li><a href="#"><i class="fi fi-rr-user"></i>حساب کاربری</a></li>
+                                <li><a href="#"><i class="fi fi-rr-comments-question"></i>جلسات مشاوره</a></li>
+                                <li><a href="#"><i class="fi fi-rr-bookmark"></i>رزرو‌ها</a></li>
+                                <li><a href="#"><i class="fi fi-rr-comment-alt"></i>پیام‌های دریافتی</a></li>
+                                <hr>
+                                <li><a href="#"><i class="fi fi-rr-sign-out-alt"></i>خروج</a></li>
+                            </ul>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- User Dashboard -->
+    <div class="user-dashboard-section teacher">
+        <div class="container mx-auto">
+            <div class="btn-usermenu">
+                <span class="icon"><i class="fi fi-rr-user"></i></span>
+                <span class="text">
+                    <h4>منوی استاد</h4>
+                    <p>برای باز شدن منو کلیک کنید</p>
+                </span>
+            </div>
+            <div class="grid-layout">
+                <div class="grid-user-menu">
+                    <div class="grid-inner">
+                        <!-- close Userprofile -->
+                        <button type="button" class="btn-closeprofileMenu"><i class="fi fi-rr-cross"></i></button>
+                        <!-- User Image -->
+                        <div class="user-image">
+                            <div class="img-inner">
+                                <img src="images/none.jpg" alt="user-name">
+                            </div>
+                            <div class="user-name">
+                                <h6 class="font-extrabold text-textDark mb-2">وحید حسینی اصل</h6>
+                                <!-- <p>اشتراک : 2 ماه و 6 روز</p> -->
+                                <p>کیف پول : <span>860,000 تومان</span></p>
+                            </div>
+                        </div>
+                        <!-- User Menu -->
+                        <div class="user-menu">
+                            <ul class="menu-list">
+                                <li class="menu-item">
+                                    <a href="master-panel-index.html" class="btn-user-menu"><i
+                                            class="fi fi-rr-apps"></i>پنل
+                                        مدیریت
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="master-panel-reservation.html" class="btn-user-menu"><i
+                                            class="fi fi-rr-bookmark"></i>لیست رزروها
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="master-panel-comments.html" class="btn-user-menu"><i
+                                            class="fi fi-rr-comment"></i>نظرات کاربران
+                                        <span class="badge badge-info">15</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item active">
+                                    <a href="#" class="btn-user-menu btn-collapse active"><i
+                                            class="fi fi-rr-user"></i>اطلاعات
+                                        کاربر
+                                    </a>
+                                    <div class="card-collapse active">
+                                        <ul>
+                                            <li class="sub-btn-user-menu"><a href="master-panel-profile.html">اطلاعات
+                                                    شخصی</a></li>
+                                            <li class="sub-btn-user-menu"><a
+                                                    href="master-panel-biography.html">بیوگرافی</a></li>
+                                            <li class="sub-btn-user-menu active"><a
+                                                    href="master-panel-bank.html">اطلاعات
+                                                    بانکی</a></li>
+                                            <li class="sub-btn-user-menu"><a
+                                                    href="master-panel-timeclass.html">زمان‌بندی کلاس‌ها</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="master-panel-wallet.html" class="btn-user-menu"><i
+                                            class="fi fi-rr-wallet"></i>کیف
+                                        پول
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="master-panel-vip.html" class="btn-user-menu"><i
+                                            class="fi fi-rr-gem"></i>اشتراک
+                                        ماهانه
+                                        <span class="badge badge-error">غیرفعال</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="btn-user-menu" data-modal-name="modal-logout">
+                                        <i class="fi fi-rr-sign-out-alt"></i>خروج از حساب کاربری
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="overlay-userMenu"></div>
+                </div>
+                <div class="grid-main">
+                    <div class="grid-inner">
+                        <div class="main-title">
+                            <div class="title-inner">
+                                <h3>اطلاعات بانکی</h3>
+                            </div>
+                        </div>
+                        <div class="main-body">
+                            <!-- Alert Message -->
+                            <div class="alert alert-success">
+                                <div class="icon"><i class="fi fi-rr-check"></i></div>
+                                <div class="text">
+                                    اطلاعات شما با موفقیت ثبت شد
+                                </div>
+                                <button class="close-alerttMessage">
+                                    <i class="fi fi-rr-cross"></i>
+                                </button>
+                            </div>
+                            <div class="alert alert-error">
+                                <div class="icon"><i class="fi fi-rr-check"></i></div>
+                                <div class="text">
+                                    اطلاعات شما با موفقیت ثبت شد
+                                </div>
+                                <button class="close-alerttMessage">
+                                    <i class="fi fi-rr-cross"></i>
+                                </button>
+                            </div>
+                            <div class="alert alert-warning">
+                                <div class="icon"><i class="fi fi-rr-check"></i></div>
+                                <div class="text">
+                                    اطلاعات شما با موفقیت ثبت شد
+                                </div>
+                                <button class="close-alerttMessage">
+                                    <i class="fi fi-rr-cross"></i>
+                                </button>
+                            </div>
+                            <div class="alert alert-info">
+                                <div class="icon"><i class="fi fi-rr-check"></i></div>
+                                <div class="text">
+                                    اطلاعات شما با موفقیت ثبت شد
+                                </div>
+                                <button class="close-alerttMessage">
+                                    <i class="fi fi-rr-cross"></i>
+                                </button>
+                            </div>
+
+                            <div class="flex items-start justify-start flex-wrap">
+                                <div class="sm:w-1/2 w-full px-2">
+                                    <div class="inputgroup">
+                                        <label>شماره شبا</label>
+                                        <input type="text" placeholder="" class="input">
+                                        <div class="icon"><i class="fi fi-rr-user"></i></div>
+                                        <div class="alert-msg text-red-500">شماره اشتباه است</div>
+                                    </div>
+                                </div>
+                                <div class="sm:w-1/2 w-full px-2">
+                                    <div class="inputgroup">
+                                        <label>نام کامل دارنده حساب</label>
+                                        <input type="text" placeholder="" class="input">
+                                        <div class="icon"><i class="fi fi-rr-user"></i></div>
+                                        <!-- <div class="alert-msg text-green-500">شماره اشتباه است</div> -->
+                                    </div>
+                                </div>
+                                <div class="sm:w-1/2 w-full px-2">
+                                    <div class="inputgroup">
+                                        <label>کد ملی</label>
+                                        <input type="text" placeholder="" class="input">
+                                        <div class="icon"><i class="fi fi-rr-user"></i></div>
+                                        <!-- <div class="alert-msg text-green-500">شماره اشتباه است</div> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btns-action text-center mt-3">
+                                <button class="btn btn-primary icon-right"><i class="fi fi-rr-check"></i>ثبت
+                                    تغییرات</button>
+                                <button class="btn btn-secondary-outline icon-right"><i
+                                        class="fi fi-rr-cross"></i>انصراف</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container mx-auto">
+            <div class="newsletter">
+                <div class="news-inner">
+                    <h5>با ما در تماس باشید</h5>
+                    <p>می توانید با وارد کردن ایمیل خود در اینجا در جریان آخرین اخبار و اتفاقات سایت باشید</p>
+                    <div class="inputgroup">
+                        <input type="email" class="input" placeholder="youremail@mail.com">
+                        <button type="submit" class="btn btn-secondary">ثبت</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-inner">
+                <div class="flex flex-row flex-wrap items-center justify-center">
+                    <div class="w-full basis-4/4 md:basis-3/5">
+                        <div class="information">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="images/logo-white.svg" alt="logo">
+                                </a>
+                            </div>
+                            <div class="desc">
+                                <p>کامینو شامل معرفی اساتید متخصص در همه حوزه‌ها می‌باشد. این وب‌سایت با بهره‌گیری از
+                                    دانش و تجربه اساتید متخصص دررشته‌های
+                                    مختلف، تلاش می‌کند تا دریافت خدمات را برای مراجعان آسان نماید و ارتباط مطمئنی را
+                                    مابین استاد و مراجعین برقرار نماید</p>
+                            </div>
+                        </div>
+                        <div class="social-icons">
+                            <ul>
+                                <li><a href="#"><i class="fi fi-brands-instagram"></i></a></li>
+                                <li><a href="#"><i class="fi fi-brands-whatsapp"></i></a></li>
+                                <li><a href="#"><i class="fi fi-brands-telegram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- <div class="basis-1/4 md:basis-2/5">
+
+                    </div> -->
+                </div>
+            </div>
+            <div class="copyright">
+                <span>کلیه حقوق مادی و معنوی این سایت متعلق به کامینو می باشد</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="plugins/swiperjs/swiper-initial.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/modalScript.js"></script>
+    <script src="plugins/dropzone/dropzone.min.js"></script>
+    <script src="plugins/dropzone/dropzone.init.js"></script>
+    <script src="plugins/ckeditor4/ckeditor.js"></script>
+    <script src="plugins/ckeditor4/ckeditor-initial.js"></script>
+</body>
+
+</html>

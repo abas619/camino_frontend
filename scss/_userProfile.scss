@@ -3,7 +3,7 @@
   margin: 120px 0 100px 0;
   .grid-layout {
     display: grid;
-    grid-template-columns: 320px auto;
+    grid-template-columns: 320px calc(100% - 320px);
   }
   .grid-user-menu {
     transition: all 0.3s ease-in-out;
@@ -55,8 +55,8 @@
   .user-menu {
     padding: 0 15px 15px 15px;
     position: relative;
-    .btn-collape,
-    .sub-btn-collape {
+    .btn-user-menu,
+    .sub-btn-user-menu {
       border-radius: 8px;
       font-size: 16px;
       font-weight: 500;
@@ -72,25 +72,6 @@
         color: $textSilver;
         transition: all 0.2s ease-in;
       }
-      &.dropdown {
-        &::before {
-          content: "\f10d";
-          font-family: $iconFontRegular;
-          position: absolute;
-          top: 10px;
-          left: 5px;
-          font-size: 12px;
-          color: $textSilver;
-          transform: rotate(0deg);
-        }
-      }
-      &.collapsed {
-        &.dropdown {
-          &::before {
-            transform: rotate(90deg);
-          }
-        }
-      }
       &:hover {
         color: $primary !important;
         .fi {
@@ -98,7 +79,7 @@
         }
       }
     }
-    .btn-collape {
+    .btn-user-menu {
       &::before {
         content: "";
         position: absolute;
@@ -134,14 +115,14 @@
       background-color: rgba($color: $textGrey, $alpha: 0.1);
       padding: 10px 20px 10px 10px;
       border-radius: 10px;
-      .btn-collape {
+      .btn-user-menu {
         color: $textGrey;
       }
     }
     .menu-item {
       position: relative;
       &.active {
-        .btn-collape {
+        .btn-user-menu {
           color: $secondary !important;
           background-color: rgba($color: $secondary, $alpha: 0.1);
           font-weight: 400;
@@ -152,6 +133,36 @@
             color: $secondary;
           }
         }
+      }
+    }
+    .sub-btn-user-menu {
+      padding-top: 6px;
+      padding-bottom: 6px;
+      &.active {
+        color: $secondary;
+      }
+    }
+    .btn-collapse {
+      &::after {
+        content: "\f12d";
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        font-family: $iconFontRegular;
+      }
+      &.active {
+        border-radius: 8px 8px 0 0;
+        &::after {
+          content: "\f12c";
+        }
+      }
+    }
+    .card-collapse {
+      background-color: $background_light;
+      border-radius: 0 0 8px 8px;
+      padding: 0 30px 0 10px;
+      ul {
+        padding: 10px 0;
       }
     }
   }
@@ -639,7 +650,7 @@
 @media (max-width: 1280px) {
   .user-dashboard-section {
     .grid-layout {
-      grid-template-columns: 280px auto;
+      grid-template-columns: 280px calc(100% - 280px);
     }
   }
   .card-reserve {

@@ -1,0 +1,62 @@
+/*#region ----------------- Alert */
+.alert {
+  display: grid;
+  grid-template-columns: 40px auto;
+  align-items: center;
+  border-right: 5px solid transparent;
+  padding: 12px;
+  border-radius: 10px 0 0 10px;
+  position: relative;
+  margin: 10px 0;
+  .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    @include displayFlex(flex, center, center);
+    font-size: 24px;
+  }
+  .text {
+    font-size: 16px;
+    color: $textDark;
+    padding-right: 15px;
+  }
+  .close-alerttMessage {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 16px;
+  }
+  &.alert-success {
+    border-right-color: $success;
+    background-color: rgba($color: $success, $alpha: 0.1);
+    .icon {
+      background-color: $success;
+      color: white;
+    }
+  }
+  &.alert-error {
+    border-right-color: $error;
+    background-color: rgba($color: $error, $alpha: 0.1);
+    .icon {
+      background-color: $error;
+      color: white;
+    }
+  }
+  &.alert-info {
+    border-right-color: $info;
+    background-color: rgba($color: $info, $alpha: 0.1);
+    .icon {
+      background-color: $info;
+      color: white;
+    }
+  }
+  &.alert-warning {
+    border-right-color: $warning;
+    background-color: rgba($color: $warning, $alpha: 0.1);
+    .icon {
+      background-color: $warning;
+      color: white;
+    }
+  }
+}
+/*#endregion -------------- Alert */
