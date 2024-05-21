@@ -13,6 +13,7 @@
     <script src="js/tailwind.config.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="scss/main.css" />
+    <link rel="stylesheet" href="plugins/dropzone/dropzone.min.css">
 
     <!-- Font Icons -->
     <link href="css/all.rounded.css" rel="stylesheet" type="text/css" />
@@ -131,7 +132,7 @@
                         <!-- User Menu -->
                         <div class="user-menu">
                             <ul class="menu-list">
-                                <li class="menu-item active">
+                                <li class="menu-item">
                                     <a href="master-panel-index.html" class="btn-user-menu"><i
                                             class="fi fi-rr-apps"></i>پنل
                                         مدیریت
@@ -165,7 +166,7 @@
                                         </ul>
                                     </div>
                                 </li>
-                                <li class="menu-item">
+                                <li class="menu-item active">
                                     <a href="master-panel-wallet.html" class="btn-user-menu"><i
                                             class="fi fi-rr-wallet"></i>کیف
                                         پول
@@ -189,163 +190,55 @@
                     <div class="overlay-userMenu"></div>
                 </div>
                 <div class="grid-main">
-                    <div class="digital-sign">
-                        <div class="main-title">
-                            <div class="title-inner">
-                                <h3 class="!mb-2">امضای دیجیتال</h3>
-                                <p class="text-textDark">برای استفاده از پنل باید متن زیر را بخوانید و تایید کنید تا
-                                    بریم
-                                    برای ادامه کار‌ :
-                                </p>
-                            </div>
-                        </div>
-                        <div class="inner p-5 pt-0">
-                            <div class="desc mb-5">
-                                <p class="text-justify text-textDark">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
-                                    صنعت چاپ، و با
-                                    استفاده از طراحان
-                                    گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و
-                                    برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی
-                                    می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
-                                    متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
-                                    الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
-                                    داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان
-                                    مورد نیاز شامل حروفچینی دستاوردهای این سایت است.</p>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="checbox-category-11"
-                                    checked>
-                                <label class="form-check-label" for="checbox-category-11">
-                                    قوانین و مقررات را خواندم و امضا می‌کنم
-                                </label>
-                            </div>
-                            <div class="btns-action text-center mt-4">
-                                <button type="submit" class="btn btn-primary">تایید و امضا دیجیتال</button>
-                            </div>
-                        </div>
-                    </div>
                     <div class="grid-inner">
                         <div class="main-title">
                             <div class="title-inner">
-                                <h3>پنل مدیریت</h3>
+                                <h3>کیف پول</h3>
                             </div>
                         </div>
                         <div class="main-body">
-
-                            <!-- User Status -->
-                            <div class="user-status">
-                                <div class="flex items-center justify-start flex-wrap">
-                                    <div class="xl:w-1/3 md:w-1/2 w-full p-2">
-                                        <div class="card-status color-gold">
-                                            <a href="#" class="card-inner">
-                                                <div class="thumb"><i class="fi fi-rr-gem"></i></div>
-                                                <div class="info">
-                                                    <h6>اشتراک باقیمانده</h6>
-                                                    <p>69 روز</p>
-                                                </div>
-                                            </a>
-                                        </div>
+                            <div class="wallet-info">
+                                <div class="wallet">
+                                    <div class="thumb"><i class="fi fi-rr-credit-card"></i></div>
+                                    <div class="info">
+                                        <h6>موجودی کیف پول</h6>
+                                        <h3>980,000 <span>تومان</span></h3>
                                     </div>
-                                    <div class="xl:w-1/3 md:w-1/2 w-full p-2">
-                                        <div class="card-status color-green">
-                                            <a href="#" class="card-inner">
-                                                <div class="thumb"><i class="fi fi-rr-bookmark"></i></div>
-                                                <div class="info">
-                                                    <h6>تعداد رزرو‌های امروز</h6>
-                                                    <p>12 نوبت</p>
-                                                </div>
-                                            </a>
-                                        </div>
+                                </div>
+                                <div class="btns-wallet">
+                                    <a href="master-panel-wallet-deposit.html" class="btn btn-secondary icon-right"><i
+                                            class="fi fi-rr-plus"></i>واریز به حساب</a>
+                                    <a href="master-panel-wallet-withdraw.html"
+                                        class="btn btn-secondary-outline icon-right"><i
+                                            class="fi fi-rr-minus"></i>برداشت از
+                                        حساب</a>
+                                </div>
+                            </div>
+                            <div class="cards-list mt-6">
+                                <h5 class="list-title">تراکنش‌ها</h5>
+                                <div class="card-transaction">
+                                    <div class="card-inner">
+                                        <ul class="list-info">
+                                            <li>شماره تراکنش : <span>480032154</span></li>
+                                            <li>تاریخ و زمان : <span>9/29/2085 - 12:30 ب.ظ</span></li>
+                                            <li>مبلغ تراکنش : <span>560,000 تومان</span></li>
+                                            <li>وضعیت تراکنش : <span class="error">ناموفق</span>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <div class="xl:w-1/3 md:w-1/2 w-full p-2 flex-grow">
-                                        <div class="card-status color-blue">
-                                            <a href="#" class="card-inner">
-                                                <div class="thumb"><i class="fi fi-rr-credit-card"></i></div>
-                                                <div class="info">
-                                                    <h6>کیف پول</h6>
-                                                    <p>860,000‌ تومان</p>
-                                                </div>
-                                            </a>
-                                        </div>
+                                </div>
+                                <div class="card-transaction">
+                                    <div class="card-inner">
+                                        <ul class="list-info">
+                                            <li>شماره تراکنش : <span>480032154</span></li>
+                                            <li>تاریخ و زمان : <span>9/29/2085 - 12:30 ب.ظ</span></li>
+                                            <li>مبلغ تراکنش : <span>560,000 تومان</span></li>
+                                            <li>وضعیت تراکنش : <span class="error">ناموفق</span>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Reserve Table -->
-                            <div class="reserve-table">
-                                <div class="table-details my-8">
-                                    <h6 class="text-[18px] text-textDar font-bold mb-3">لیست جدیدترین رزرو‌ها</h6>
-                                    <div class="table-responsive">
-                                        <table class="table-custom table-auto border-collapse bg-white">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">#</th>
-                                                    <th scope="col">نام کاربر</th>
-                                                    <th scope="col">تاریخ رزرو</th>
-                                                    <th scope="col">وضعیت پرداخت</th>
-                                                    <th scope="col">وضعیت رزرو</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td scope="row">1</td>
-                                                    <td>سمیر دغاغله</td>
-                                                    <td>10/13/2079 - 12:30</td>
-                                                    <td><span
-                                                            class="bg-red-500 py-1 px-2 rounded-full text-xs text-white">تایید
-                                                            نشد</span></td>
-                                                    <td><span
-                                                            class="bg-green-500 py-1 px-2 rounded-full text-xs text-white">تایید
-                                                            شد</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td scope="row">2</td>
-                                                    <td>امیرحسین پورمند</td>
-                                                    <td>10/13/2079 - 12:30</td>
-                                                    <td><span
-                                                            class="bg-blue-500 py-1 px-2 rounded-full text-xs text-white">در
-                                                            حال
-                                                            بررسی</span></td>
-                                                    <td><span
-                                                            class="bg-amber-500 py-1 px-2 rounded-full text-xs text-white">منتظر
-                                                            تایید</span>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Noifications -->
-                            <div class="notifications my-4">
-                                <h4 class="text-lg text-[#3c3c3c]">اطلاعیه‌ها یا اعلانات</h4>
-                                <div class="notif-inner bg-[#f4f4f6] rounded-lg p-4 mt-3">
-                                    <div class="item">
-                                        <h5 class="text-black mb-2">پشتیبانی کامینو</h5>
-                                        <div class="text-sm text-slate-600">4/6/2078 - 12:30</div>
-                                        <div class="text mt-1">
-                                            <p class="text-md text-justify text-black">لورم ایپسوم متن ساختگی با
-                                                تولید سادگی
-                                                نامفهوم از صنعت
-                                                چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و
-                                                مجله در ستون و سطرآنچنان که است.</p>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <h5 class="text-black mb-2">پشتیبانی کامینو</h5>
-                                        <div class="text-sm text-slate-600">4/6/2078 - 12:30</div>
-                                        <div class="text mt-1">
-                                            <p class="text-md text-justify text-black">لورم ایپسوم متن ساختگی با
-                                                تولید سادگی
-                                                نامفهوم از صنعت
-                                                چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و
-                                                مجله در ستون و سطرآنچنان که است.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
@@ -360,8 +253,7 @@
             <div class="newsletter">
                 <div class="news-inner">
                     <h5>با ما در تماس باشید</h5>
-                    <p>می توانید با وارد کردن ایمیل خود در اینجا در جریان آخرین اخبار و اتفاقات سایت باشید
-                    </p>
+                    <p>می توانید با وارد کردن ایمیل خود در اینجا در جریان آخرین اخبار و اتفاقات سایت باشید</p>
                     <div class="inputgroup">
                         <input type="email" class="input" placeholder="youremail@mail.com">
                         <button type="submit" class="btn btn-secondary">ثبت</button>
@@ -392,9 +284,6 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- <div class="basis-1/4 md:basis-2/5">
-
-                    </div> -->
                 </div>
             </div>
             <div class="copyright">
@@ -403,11 +292,14 @@
         </div>
     </footer>
 
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="plugins/swiperjs/swiper-initial.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/modalScript.js"></script>
+    <script src="plugins/dropzone/dropzone.min.js"></script>
+    <script src="plugins/dropzone/dropzone.init.js"></script>
 </body>
 
 </html>

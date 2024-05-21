@@ -121,6 +121,7 @@
     }
     .menu-item {
       position: relative;
+      margin: 5px 0;
       &.active {
         .btn-user-menu {
           color: $secondary !important;
@@ -227,8 +228,117 @@
   }
   &.teacher {
     .grid-user-menu .grid-inner {
+      border-top: 5px solid $secondary;
+      border-radius: 0 0 20px 20px;
+      z-index: 10;
+    }
+    .user-image {
       background: linear-gradient(180deg, #e8f4fc 5%, white 95%);
-      // fff6e9
+    }
+  }
+  .wallet-info {
+    background-color: $background_light;
+    border-radius: 12px;
+    padding: 15px;
+    @include displayFlex(flex, center, space-between);
+    flex-wrap: wrap;
+    .wallet {
+      display: grid;
+      grid-template-columns: 54px auto;
+      align-items: center;
+      .thumb {
+        width: 54px;
+        height: 54px;
+        background-color: $secondary;
+        color: white;
+        font-size: 24px;
+        border-radius: 50%;
+        @include displayFlex(flex, center, center);
+      }
+      .info {
+        padding-right: 20px;
+        h6 {
+          font-size: 16px;
+          font-weight: 400;
+          color: $textGrey;
+          margin-bottom: 10px;
+        }
+        h3 {
+          font-size: 20px;
+          font-weight: 600;
+          color: $textDark;
+          margin-bottom: 0;
+          span {
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    .btns-wallet {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      .btn {
+        flex-grow: 1;
+        margin: 5px;
+        white-space: nowrap;
+      }
+    }
+  }
+  .vip-info {
+    background-color: $background_light;
+    border-radius: 12px;
+    padding: 15px;
+    .vip {
+      display: grid;
+      grid-template-columns: 54px auto;
+      align-items: center;
+      .thumb {
+        width: 54px;
+        height: 54px;
+        background-color: $warning;
+        color: white;
+        font-size: 24px;
+        border-radius: 50%;
+        @include displayFlex(flex, center, center);
+      }
+      .info {
+        padding-right: 20px;
+        h6 {
+          font-size: 16px;
+          font-weight: 400;
+          color: $textGrey;
+          margin-bottom: 10px;
+          span {
+            padding: 5px 10px;
+            border-radius: 50px;
+            font-size: 14px;
+            &.success {
+              background-color: $success;
+              color: white;
+            }
+            &.error {
+              background-color: $error;
+              color: white;
+            }
+            &.waiting {
+              background-color: $warning;
+              color: white;
+            }
+          }
+        }
+        h3 {
+          font-size: 20px;
+          font-weight: 600;
+          color: $textDark;
+          margin-bottom: 0;
+          span {
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+      }
     }
   }
 }
@@ -647,10 +757,202 @@
   }
 }
 
+.calendar-column {
+  padding: 4px;
+  .calendar-header {
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid $borderColor;
+    .day,
+    .month {
+      font-size: 14px;
+      font-weight: 400;
+      color: $textGrey;
+    }
+    .number {
+      font-size: 18px;
+      font-weight: 800;
+      color: $secondary;
+      margin: 4px 0;
+    }
+  }
+  .btn-add-bookmark {
+    background-color: $secondary;
+    text-align: center;
+    width: 100%;
+    padding: 8px 5px;
+    border-radius: 0 0 10px 10px;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .fi {
+      margin-left: 5px;
+      font-size: 16px;
+    }
+  }
+  .column-row-item {
+    position: relative;
+    padding: 12px 5px;
+    margin: 5px 0;
+    background-color: $background_light;
+    border-radius: 10px;
+    border: 1px solid $borderColor;
+    .time {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+      color: $textDark;
+    }
+    .action {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.3);
+      border-radius: 10px;
+      backdrop-filter: blur(2px);
+      font-size: 20px;
+      @include displayFlex(flex, center, center);
+      color: white;
+      opacity: 0;
+      .btn-delete {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    &:hover {
+      .action {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.swiper-calendar {
+  .swiper-wrapper {
+    padding: 5px 0;
+  }
+}
+
+.calendar-button-next,
+.calendar-button-prev {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid $borderColor;
+  margin-right: 5px;
+  border-radius: 50%;
+  @include displayFlex(flex, center, center);
+  cursor: pointer;
+  &:hover {
+    border-color: $secondary;
+    color: $secondary;
+  }
+}
+
+.card-vip {
+  margin: 10px 0;
+  // cursor: pointer;
+  .card-inner {
+    border: 1px solid $borderColor;
+    border-radius: 0 0 15px 15px;
+    padding: 10px;
+  }
+  .title {
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 12px;
+  }
+  .price {
+    margin: 15px 0;
+    text-align: center;
+    h1 {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 0;
+      span {
+        font-size: 16px;
+        color: $textDark;
+      }
+    }
+  }
+  .property-list {
+    list-style: disc;
+    padding-right: 20px;
+    li {
+      font-size: 14px;
+      font-weight: 400;
+      color: $textDark;
+      margin: 5px 0;
+    }
+  }
+  &.bronze {
+    .card-inner {
+      border-top-width: 6px;
+      border-color: #c77c30;
+    }
+    .title {
+      background-color: hwb(30 19% 22%);
+      color: white;
+    }
+    .price {
+      h1 {
+        color: #c77c30;
+      }
+    }
+  }
+  &.silver {
+    .card-inner {
+      border-top-width: 6px;
+      border-color: #cecece;
+    }
+    .title {
+      background-color: #cecece;
+      color: $textDark;
+    }
+    .price {
+      h1 {
+        color: $textGrey;
+      }
+    }
+  }
+  &.gold {
+    .card-inner {
+      border-top-width: 6px;
+      border-color: #edbf08;
+    }
+    .title {
+      background-color: #edbf08;
+      color: white;
+    }
+    .price {
+      h1 {
+        color: #edbf08;
+      }
+    }
+  }
+  .btns-action {
+    margin-top: 30px;
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
 @media (max-width: 1280px) {
   .user-dashboard-section {
     .grid-layout {
       grid-template-columns: 280px calc(100% - 280px);
+    }
+    .wallet-info {
+      flex-direction: column;
+      .btns-wallet {
+        margin-top: 15px;
+      }
     }
   }
   .card-reserve {
@@ -778,6 +1080,14 @@
   }
   .card-ticket {
     ul {
+      li {
+        flex: 1 0 100%;
+        width: 100%;
+      }
+    }
+  }
+  .card-transaction {
+    .list-info {
       li {
         flex: 1 0 100%;
         width: 100%;

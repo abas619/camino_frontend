@@ -201,7 +201,7 @@
                             <div class="forms-group">
                                 <div class="radios-group mb-4">
                                     <label class="label">جلسات در کدام پلتفرم باشد؟</label>
-                                    <div class="radio-inner flex items-center">
+                                    <div class="radio-inner md:flex md:items-center md:flex-row sm:flex-col">
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="area-class"
                                                 id="classArea-radio-1" checked>
@@ -221,7 +221,7 @@
                                 <hr class="my-5">
                                 <div class="radios-group">
                                     <label class="label">جلسه رایگان دارید؟</label>
-                                    <div class="radio-inner flex items-center">
+                                    <div class="radio-inner md:flex md:items-center md:flex-row sm:flex-col">
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="free-class"
                                                 id="freeClass-radio-1" checked onclick="checkFreeClass(1)">
@@ -289,188 +289,173 @@
                                 </div>
                                 <hr class="line-gradient mt-5">
                                 <!-- تقویم آموزشی -->
-                                <div class="row row-section">
-                                    <h4>تقویم آموزشی</h4>
-                                    <div class="col-lg-12 mt-4">
-                                        <div class="calendar-section">
-                                            <div class="swiper swiper-calendar">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <div class="calendar-column">
-                                                            <div class="calendar-header">
-                                                                <div class="day">شنبه</div>
-                                                                <div class="number">1</div>
-                                                                <div class="month">اسفند 1401</div>
-                                                            </div>
-                                                            <div class="calendar-body">
-                                                                <div class="add-bookmark">
-                                                                    <button type="button" class="btn-add-bookmark"
-                                                                        data-bs-toggles="modal"
-                                                                        data-bs-targets="#modal-addBookmark"
-                                                                        onclick="scallModalBookmark()">
-                                                                        <i class="fi fi-rr-add"></i>
-                                                                        <span>کلاس جدید</span>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
+                                <div class="row-section mt-6 mb-12">
+                                    <div class="flex items-center justify-between mb-5">
+                                        <h4 class="">تقویم آموزشی</h4>
+                                        <div class="btns-action flex">
+                                            <div class="calendar-button-prev" id="swiper-calendar-btn-prev"><i
+                                                    class="fi fi-rr-angle-small-right"></i></div>
+                                            <div class="calendar-button-next" id="swiper-calendar-btn-next"><i
+                                                    class="fi fi-rr-angle-small-left"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="calendar-section">
+                                        <div class="swiper swiper-calendar">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="calendar-column">
+                                                        <div class="calendar-header">
+                                                            <div class="day">شنبه</div>
+                                                            <div class="number">1</div>
+                                                            <div class="month">اسفند 1401</div>
                                                         </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="calendar-column">
-                                                            <div class="calendar-header">
-                                                                <div class="day">یکشنبه</div>
-                                                                <div class="number">2</div>
-                                                                <div class="month">اسفند 1401</div>
-                                                            </div>
-                                                            <div class="calendar-body">
-                                                                <div class="add-bookmark">
-                                                                    <button type="button" class="btn-add-bookmark"
-                                                                        onclick="scallModalBookmark()">
-                                                                        <i class="fi fi-rr-add"></i>
-                                                                        <span>کلاس جدید</span>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="calendar-column">
-                                                            <div class="calendar-header">
-                                                                <div class="day">دوشنبه</div>
-                                                                <div class="number">3</div>
-                                                                <div class="month">اسفند 1401</div>
-                                                            </div>
-                                                            <div class="calendar-body">
-                                                                <div class="add-bookmark">
-                                                                    <button type="button" class="btn-add-bookmark"
-                                                                        onclick="scallModalBookmark()">
-                                                                        <i class="fi fi-rr-add"></i>
-                                                                        <span>کلاس جدید</span>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="calendar-column">
-                                                            <div class="calendar-header">
-                                                                <div class="day">سه‌شنبه</div>
-                                                                <div class="number">4</div>
-                                                                <div class="month">اسفند 1401</div>
-                                                            </div>
-                                                            <div class="calendar-body">
-                                                                <div class="add-bookmark">
-                                                                    <button type="button" class="btn-add-bookmark"
-                                                                        onclick="scallModalBookmark()">
-                                                                        <i class="fi fi-rr-add"></i>
-                                                                        <span>کلاس جدید</span>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="calendar-column">
-                                                            <div class="calendar-header">
-                                                                <div class="day">چهارشنبه</div>
-                                                                <div class="number">5</div>
-                                                                <div class="month">اسفند 1401</div>
-                                                            </div>
-                                                            <div class="calendar-body">
-                                                                <div class="add-bookmark">
-                                                                    <button type="button" class="btn-add-bookmark"
-                                                                        onclick="scallModalBookmark()">
-                                                                        <i class="fi fi-rr-add"></i>
-                                                                        <span>کلاس جدید</span>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="calendar-column">
-                                                            <div class="calendar-header">
-                                                                <div class="day">پنجشنبه</div>
-                                                                <div class="number">6</div>
-                                                                <div class="month">اسفند 1401</div>
-                                                            </div>
-                                                            <div class="calendar-body">
-                                                                <div class="add-bookmark">
-                                                                    <button type="button" class="btn-add-bookmark"
-                                                                        onclick="scallModalBookmark()">
-                                                                        <i class="fi fi-rr-add"></i>
-                                                                        <span>کلاس جدید</span>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="calendar-column">
-                                                            <div class="calendar-header">
-                                                                <div class="day">جمعه</div>
-                                                                <div class="number">7</div>
-                                                                <div class="month">اسفند 1401</div>
-                                                            </div>
-                                                            <div class="calendar-body">
-                                                                <div class="add-bookmark">
-                                                                    <button type="button" class="btn-add-bookmark"
-                                                                        onclick="scallModalBookmark()">
-                                                                        <i class="fi fi-rr-add"></i>
-                                                                        <span>کلاس جدید</span>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="calendar-column">
-                                                            <div class="calendar-header">
-                                                                <div class="day">شنبه</div>
-                                                                <div class="number">8</div>
-                                                                <div class="month">اسفند 1401</div>
-                                                            </div>
-                                                            <div class="calendar-body">
-                                                                <div class="add-bookmark">
-                                                                    <button type="button" class="btn-add-bookmark"
-                                                                        onclick="scallModalBookmark()">
-                                                                        <i class="fi fi-rr-add"></i>
-                                                                        <span>کلاس جدید</span>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="calendar-column">
-                                                            <div class="calendar-header">
-                                                                <div class="day">یکشنبه</div>
-                                                                <div class="number">9</div>
-                                                                <div class="month">اسفند 1401</div>
-                                                            </div>
-                                                            <div class="calendar-body">
-                                                                <div class="add-bookmark">
-                                                                    <button type="button" class="btn-add-bookmark"
-                                                                        onclick="scallModalBookmark()">
-                                                                        <i class="fi fi-rr-add"></i>
-                                                                        <span>کلاس جدید</span>
-                                                                    </button>
-                                                                </div>
+                                                        <div class="calendar-body">
+                                                            <div class="add-bookmark">
+                                                                <button type="button" class="btn-add-bookmark">
+                                                                    <i class="fi fi-rr-add"></i>
+                                                                    <span>کلاس جدید</span>
+                                                                </button>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="swiper-button-next"></div>
-                                                <div class="swiper-button-prev"></div>
+                                                <div class="swiper-slide">
+                                                    <div class="calendar-column">
+                                                        <div class="calendar-header">
+                                                            <div class="day">یکشنبه</div>
+                                                            <div class="number">2</div>
+                                                            <div class="month">اسفند 1401</div>
+                                                        </div>
+                                                        <div class="calendar-body">
+                                                            <div class="add-bookmark">
+                                                                <button type="button" class="btn-add-bookmark">
+                                                                    <i class="fi fi-rr-add"></i>
+                                                                    <span>کلاس جدید</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="calendar-column">
+                                                        <div class="calendar-header">
+                                                            <div class="day">دوشنبه</div>
+                                                            <div class="number">3</div>
+                                                            <div class="month">اسفند 1401</div>
+                                                        </div>
+                                                        <div class="calendar-body">
+                                                            <div class="add-bookmark">
+                                                                <button type="button" class="btn-add-bookmark">
+                                                                    <i class="fi fi-rr-add"></i>
+                                                                    <span>کلاس جدید</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="calendar-column">
+                                                        <div class="calendar-header">
+                                                            <div class="day">سه‌شنبه</div>
+                                                            <div class="number">4</div>
+                                                            <div class="month">اسفند 1401</div>
+                                                        </div>
+                                                        <div class="calendar-body">
+                                                            <div class="add-bookmark">
+                                                                <button type="button" class="btn-add-bookmark">
+                                                                    <i class="fi fi-rr-add"></i>
+                                                                    <span>کلاس جدید</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="calendar-column">
+                                                        <div class="calendar-header">
+                                                            <div class="day">چهارشنبه</div>
+                                                            <div class="number">5</div>
+                                                            <div class="month">اسفند 1401</div>
+                                                        </div>
+                                                        <div class="calendar-body">
+                                                            <div class="add-bookmark">
+                                                                <button type="button" class="btn-add-bookmark">
+                                                                    <i class="fi fi-rr-add"></i>
+                                                                    <span>کلاس جدید</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="calendar-column">
+                                                        <div class="calendar-header">
+                                                            <div class="day">پنجشنبه</div>
+                                                            <div class="number">6</div>
+                                                            <div class="month">اسفند 1401</div>
+                                                        </div>
+                                                        <div class="calendar-body">
+                                                            <div class="add-bookmark">
+                                                                <button type="button" class="btn-add-bookmark">
+                                                                    <i class="fi fi-rr-add"></i>
+                                                                    <span>کلاس جدید</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="calendar-column">
+                                                        <div class="calendar-header">
+                                                            <div class="day">جمعه</div>
+                                                            <div class="number">7</div>
+                                                            <div class="month">اسفند 1401</div>
+                                                        </div>
+                                                        <div class="calendar-body">
+                                                            <div class="add-bookmark">
+                                                                <button type="button" class="btn-add-bookmark">
+                                                                    <i class="fi fi-rr-add"></i>
+                                                                    <span>کلاس جدید</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="calendar-column">
+                                                        <div class="calendar-header">
+                                                            <div class="day">شنبه</div>
+                                                            <div class="number">8</div>
+                                                            <div class="month">اسفند 1401</div>
+                                                        </div>
+                                                        <div class="calendar-body">
+                                                            <div class="add-bookmark">
+                                                                <button type="button" class="btn-add-bookmark">
+                                                                    <i class="fi fi-rr-add"></i>
+                                                                    <span>کلاس جدید</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="calendar-column">
+                                                        <div class="calendar-header">
+                                                            <div class="day">یکشنبه</div>
+                                                            <div class="number">9</div>
+                                                            <div class="month">اسفند 1401</div>
+                                                        </div>
+                                                        <div class="calendar-body">
+                                                            <div class="add-bookmark">
+                                                                <button type="button" class="btn-add-bookmark">
+                                                                    <i class="fi fi-rr-add"></i>
+                                                                    <span>کلاس جدید</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- ثبت تغییرات -->
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="apply-buttons-group">
-                                            <button type="button" class="btn btn-primary">ثبت تغییرات</button>
                                         </div>
                                     </div>
                                 </div>
@@ -538,6 +523,108 @@
         </div>
     </footer>
 
+    <!-- Modal Bookmark Add -->
+    <div id="modal-bookmark_add"
+        class="fixed left-0 top-0 opacity-0 hidden w-screen h-screen transition-opacity duration-500 flex items-center justify-center z-[9998]">
+        <div class="modal-backdrop fixed left-0 top-0 w-screen h-screen bg-gray-700/75"
+            onclick="hideModalDialog('modal-bookmark_add')"></div>
+        <div class="bg-white rounded-lg shadow-md mx-auto w-full max-h-[95%] max-w-lg z-[9999] flex flex-col">
+            <div class="modal-header p-4 flex align-center justify-between shrink-0 w-full border-b">
+                <h2 class="mb-0">تعیین زمان جلسه</h2>
+                <button class="btn-close w-8 h-8 p-2 text-gray-500 hover:text-red-500"
+                    onclick="hideModalDialog('modal-bookmark_add')"><i class="fi fi-rr-cross"></i></button>
+            </div>
+            <div class="modal-body flex-auto overflow-y-auto p-4">
+                <p class="msg mb-4">فقط زمان شروع را وارد کنید، زمان پایان با توجه به مدت زمان تعیین شده شما حساب
+                    می‌شود.</p>
+                <div class="flex items-center justify-center">
+                    <div class="w-1/2 px-2">
+                        <div class="select-group">
+                            <label>دقیقه</label>
+                            <select class="select" id="select-minutes" required>
+                                <option value="00">00</option>
+                                <option value="05">05</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="25">25</option>
+                                <option value="30">30</option>
+                                <option value="35">35</option>
+                                <option value="40">40</option>
+                                <option value="45">45</option>
+                                <option value="50">50</option>
+                                <option value="55">55</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="w-1/2 px-2">
+                        <div class="select-group">
+                            <label>ساعت</label>
+                            <select class="select" id="select-hours" required>
+                                <option value="00">00</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-end gap-3 p-4 shrink-0">
+                <button id="btn-next-bookmark" class="btn btn-secondary-outline rounded-full"
+                    onclick="hideModalDialog('modal-bookmark_add')">بستن
+                </button>
+                <button id="btn-next-bookmark"
+                    class="btn btn-secondary btn-modal-add-bookmark rounded-full text-white">تایید
+                    جلسه
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Message -->
+    <div id="modal-msg"
+        class="fixed left-0 top-0 opacity-0 hidden w-screen h-screen transition-opacity duration-500 flex items-center justify-center z-[9998]">
+        <div class="modal-backdrop fixed left-0 top-0 w-screen h-screen bg-gray-700/75"
+            onclick="hideModalDialog('modal-msg')"></div>
+        <div class="bg-white rounded-lg shadow-md mx-auto w-full max-h-[95%] max-w-lg z-[9999] flex flex-col">
+            <div class="modal-header p-4 flex align-center justify-between shrink-0 w-full border-b">
+                <h2 class="mb-0">توجه</h2>
+                <button class="btn-close w-8 h-8 p-2 text-gray-500 hover:text-red-500"
+                    onclick="hideModalDialog('modal-msg')"><i class="fi fi-rr-cross"></i></button>
+            </div>
+            <div class="modal-body flex-auto overflow-y-auto p-4">
+                <h5 class="text-lg text-red-500 text-center">لطفا مقادیر جلسات پیش فرض را کامل کنید</h5>
+            </div>
+            <div class="flex justify-end gap-3 p-4 shrink-0">
+                <button id="btn-next-bookmark" class="btn btn-secondary rounded-full"
+                    onclick="hideModalDialog('modal-msg')">متوجه شدم
+                </button>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="plugins/swiperjs/swiper-initial.js"></script>
@@ -545,6 +632,7 @@
     <script src="js/modalScript.js"></script>
     <script src="plugins/dropzone/dropzone.min.js"></script>
     <script src="plugins/dropzone/dropzone.init.js"></script>
+    <script src="js/reservation.js"></script>
 </body>
 
 </html>

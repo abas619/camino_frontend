@@ -2649,6 +2649,7 @@ input[type=number] {
 }
 .user-dashboard-section .user-menu .menu-item {
   position: relative;
+  margin: 5px 0;
 }
 .user-dashboard-section .user-menu .menu-item.active .btn-user-menu {
   color: #1a8ac9 !important;
@@ -2749,7 +2750,123 @@ input[type=number] {
   margin: 5px;
 }
 .user-dashboard-section.teacher .grid-user-menu .grid-inner {
+  border-top: 5px solid #1a8ac9;
+  border-radius: 0 0 20px 20px;
+  z-index: 10;
+}
+.user-dashboard-section.teacher .user-image {
   background: linear-gradient(180deg, #e8f4fc 5%, white 95%);
+}
+.user-dashboard-section .wallet-info {
+  background-color: #f2f2f3;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.user-dashboard-section .wallet-info .wallet {
+  display: grid;
+  grid-template-columns: 54px auto;
+  align-items: center;
+}
+.user-dashboard-section .wallet-info .wallet .thumb {
+  width: 54px;
+  height: 54px;
+  background-color: #1a8ac9;
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-dashboard-section .wallet-info .wallet .info {
+  padding-right: 20px;
+}
+.user-dashboard-section .wallet-info .wallet .info h6 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #636063;
+  margin-bottom: 10px;
+}
+.user-dashboard-section .wallet-info .wallet .info h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #3c3c3c;
+  margin-bottom: 0;
+}
+.user-dashboard-section .wallet-info .wallet .info h3 span {
+  font-size: 14px;
+  font-weight: 400;
+}
+.user-dashboard-section .wallet-info .btns-wallet {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.user-dashboard-section .wallet-info .btns-wallet .btn {
+  flex-grow: 1;
+  margin: 5px;
+  white-space: nowrap;
+}
+.user-dashboard-section .vip-info {
+  background-color: #f2f2f3;
+  border-radius: 12px;
+  padding: 15px;
+}
+.user-dashboard-section .vip-info .vip {
+  display: grid;
+  grid-template-columns: 54px auto;
+  align-items: center;
+}
+.user-dashboard-section .vip-info .vip .thumb {
+  width: 54px;
+  height: 54px;
+  background-color: #fbbf24;
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-dashboard-section .vip-info .vip .info {
+  padding-right: 20px;
+}
+.user-dashboard-section .vip-info .vip .info h6 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #636063;
+  margin-bottom: 10px;
+}
+.user-dashboard-section .vip-info .vip .info h6 span {
+  padding: 5px 10px;
+  border-radius: 50px;
+  font-size: 14px;
+}
+.user-dashboard-section .vip-info .vip .info h6 span.success {
+  background-color: #00bd79;
+  color: white;
+}
+.user-dashboard-section .vip-info .vip .info h6 span.error {
+  background-color: #ff3333;
+  color: white;
+}
+.user-dashboard-section .vip-info .vip .info h6 span.waiting {
+  background-color: #fbbf24;
+  color: white;
+}
+.user-dashboard-section .vip-info .vip .info h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #3c3c3c;
+  margin-bottom: 0;
+}
+.user-dashboard-section .vip-info .vip .info h3 span {
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .btn-usermenu {
@@ -3160,9 +3277,190 @@ input[type=number] {
   border-color: unset;
 }
 
+.calendar-column {
+  padding: 4px;
+}
+.calendar-column .calendar-header {
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  border: 1px solid #d2d2d2;
+}
+.calendar-column .calendar-header .day,
+.calendar-column .calendar-header .month {
+  font-size: 14px;
+  font-weight: 400;
+  color: #636063;
+}
+.calendar-column .calendar-header .number {
+  font-size: 18px;
+  font-weight: 800;
+  color: #1a8ac9;
+  margin: 4px 0;
+}
+.calendar-column .btn-add-bookmark {
+  background-color: #1a8ac9;
+  text-align: center;
+  width: 100%;
+  padding: 8px 5px;
+  border-radius: 0 0 10px 10px;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calendar-column .btn-add-bookmark .fi {
+  margin-left: 5px;
+  font-size: 16px;
+}
+.calendar-column .column-row-item {
+  position: relative;
+  padding: 12px 5px;
+  margin: 5px 0;
+  background-color: #f2f2f3;
+  border-radius: 10px;
+  border: 1px solid #d2d2d2;
+}
+.calendar-column .column-row-item .time {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3c3c3c;
+}
+.calendar-column .column-row-item .action {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity: 0;
+}
+.calendar-column .column-row-item .action .btn-delete {
+  width: 24px;
+  height: 24px;
+}
+.calendar-column .column-row-item:hover .action {
+  opacity: 1;
+}
+
+.swiper-calendar .swiper-wrapper {
+  padding: 5px 0;
+}
+
+.calendar-button-next,
+.calendar-button-prev {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #d2d2d2;
+  margin-right: 5px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.calendar-button-next:hover,
+.calendar-button-prev:hover {
+  border-color: #1a8ac9;
+  color: #1a8ac9;
+}
+
+.card-vip {
+  margin: 10px 0;
+}
+.card-vip .card-inner {
+  border: 1px solid #d2d2d2;
+  border-radius: 0 0 15px 15px;
+  padding: 10px;
+}
+.card-vip .title {
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 12px;
+}
+.card-vip .price {
+  margin: 15px 0;
+  text-align: center;
+}
+.card-vip .price h1 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+.card-vip .price h1 span {
+  font-size: 16px;
+  color: #3c3c3c;
+}
+.card-vip .property-list {
+  list-style: disc;
+  padding-right: 20px;
+}
+.card-vip .property-list li {
+  font-size: 14px;
+  font-weight: 400;
+  color: #3c3c3c;
+  margin: 5px 0;
+}
+.card-vip.bronze .card-inner {
+  border-top-width: 6px;
+  border-color: #c77c30;
+}
+.card-vip.bronze .title {
+  background-color: hwb(30 19% 22%);
+  color: white;
+}
+.card-vip.bronze .price h1 {
+  color: #c77c30;
+}
+.card-vip.silver .card-inner {
+  border-top-width: 6px;
+  border-color: #cecece;
+}
+.card-vip.silver .title {
+  background-color: #cecece;
+  color: #3c3c3c;
+}
+.card-vip.silver .price h1 {
+  color: #636063;
+}
+.card-vip.gold .card-inner {
+  border-top-width: 6px;
+  border-color: #edbf08;
+}
+.card-vip.gold .title {
+  background-color: #edbf08;
+  color: white;
+}
+.card-vip.gold .price h1 {
+  color: #edbf08;
+}
+.card-vip .btns-action {
+  margin-top: 30px;
+}
+.card-vip .btns-action .btn {
+  width: 100%;
+}
+
 @media (max-width: 1280px) {
   .user-dashboard-section .grid-layout {
     grid-template-columns: 280px calc(100% - 280px);
+  }
+  .user-dashboard-section .wallet-info {
+    flex-direction: column;
+  }
+  .user-dashboard-section .wallet-info .btns-wallet {
+    margin-top: 15px;
   }
   .card-reserve .c-info ul li {
     flex: 1 0 100%;
@@ -3273,6 +3571,10 @@ input[type=number] {
     display: none;
   }
   .card-ticket ul li {
+    flex: 1 0 100%;
+    width: 100%;
+  }
+  .card-transaction .list-info li {
     flex: 1 0 100%;
     width: 100%;
   }

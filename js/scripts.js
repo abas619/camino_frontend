@@ -185,6 +185,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// For Buttons Collapse
 if (document.querySelector(".btn-collapse") != null) {
   const btnsCollapseGroup = document.querySelectorAll(".btn-collapse");
   const cardCollapse = document.querySelectorAll(".card-collapse");
@@ -209,6 +210,7 @@ if (document.querySelector(".btn-collapse") != null) {
   });
 }
 
+// For Close Alert Message
 if (document.querySelector(".close-alerttMessage") != null) {
   var closetoastbtns = document.querySelectorAll(".close-alerttMessage");
   closetoastbtns.forEach((btn) => {

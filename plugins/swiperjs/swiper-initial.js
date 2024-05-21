@@ -12,8 +12,8 @@ const swiperComments = new Swiper(".swiper-comments", {
 });
 
 const swiperCalendar = new Swiper(".swiper-calendar", {
-  slidesPerView: 2,
-  spaceBetween: 10,
+  slidesPerView: 1,
+  spaceBetween: 5,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -22,23 +22,36 @@ const swiperCalendar = new Swiper(".swiper-calendar", {
     250: {
       slidesPerView: 2,
     },
-    480: {
+    640: {
       slidesPerView: 3,
     },
-    575: {
+    768: {
       slidesPerView: 4,
     },
-    768: {
-      slidesPerView: 6,
-    },
-    992: {
+    1024: {
       slidesPerView: 5,
     },
-    1200: {
+    1280: {
       slidesPerView: 7,
     },
   },
 });
+
+// 1535    1280 1024 768 640
+if (document.getElementById("swiper-calendar-btn-prev") != null) {
+  document
+    .getElementById("swiper-calendar-btn-prev")
+    .addEventListener("click", function () {
+      swiperCalendar.slidePrev();
+    });
+}
+if (document.getElementById("swiper-calendar-btn-next") != null) {
+  document
+    .getElementById("swiper-calendar-btn-next")
+    .addEventListener("click", function () {
+      swiperCalendar.slideNext();
+    });
+}
 
 // const swiper = new Swiper(".swiper", {
 //   // Optional parameters
