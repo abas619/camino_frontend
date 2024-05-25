@@ -234,5 +234,12 @@
     }
   }
 }
+@media (max-width: 640px) {
+  .navbar {
+    .nav-logo {
+      width: 140px;
+    }
+  }
+}
 
 /*#endregion -------------- Navbar */

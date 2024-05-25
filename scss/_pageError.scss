@@ -1,4 +1,25 @@
 /*#region ----------------- Page Error */
+.page-error {
+  .section-inner {
+    margin: 5rem auto;
+  }
+  .image-content {
+    width: 450px;
+    margin: 0 auto;
+    img {
+      width: 100%;
+    }
+  }
+  .text-content {
+    text-align: center;
+    h5 {
+      font-size: 18px;
+      text-align: center;
+      color: $textDark;
+      margin-bottom: 15px;
+    }
+  }
+}
 .empty-box {
   .thumb {
     width: 80px;
@@ -17,6 +38,14 @@
   }
   .btns-group {
     text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-error {
+    .image-content {
+      width: 80%;
+    }
   }
 }
 /*#endregion -------------- Page Error */

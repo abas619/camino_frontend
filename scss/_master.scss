@@ -1,0 +1,119 @@
+/*#region ----------------- Master */
+.master-section {
+  position: relative;
+  top: -90px;
+  .section-inner {
+    // width: 80%;
+    // margin: 0 auto;
+    background-color: white;
+    border-radius: 20px;
+    border: 5px solid rgba($color: $secondary, $alpha: 0.1);
+    box-shadow: $boxshadow;
+    padding: 40px;
+  }
+  .text-content {
+    p {
+      font-size: 18px;
+      font-weight: 400;
+      color: $textGrey;
+      margin-bottom: 16px;
+      line-height: 27px;
+      text-align: justify;
+    }
+  }
+  .image-content {
+    .img-inner {
+      width: 800px;
+      margin: 0 auto;
+      img {
+        width: 100%;
+        border-radius: 15px;
+      }
+    }
+  }
+  .contact-form {
+    border-right: 1px solid $borderColor;
+    padding-right: 20px;
+  }
+  .contact-info {
+    .info-list {
+      margin-top: 20px;
+      li {
+        font-size: 17px;
+        margin: 8px 0;
+        .icon {
+          color: $textGrey;
+          .fi {
+            font-size: 24px;
+            color: $textSilver;
+            margin-left: 10px;
+            position: relative;
+            top: 6px;
+          }
+        }
+        .text {
+          flex-wrap: wrap;
+          a {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+  .social-icons {
+    margin-top: 30px;
+    ul {
+      @include displayFlex(flex, center, center);
+      flex-wrap: wrap;
+      li {
+        margin: 5px;
+        a {
+          width: 48px;
+          height: 48px;
+          background-color: rgba($color: $primary, $alpha: 0.1);
+          border-radius: 50%;
+          color: $primary;
+          font-size: 24px;
+          @include displayFlex(flex, center, center);
+          &:hover {
+            background-color: $primary;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .master-section {
+    .section-inner {
+      padding: 30px;
+    }
+    .image-content {
+      .img-inner {
+        width: 100%;
+      }
+    }
+    .contact-form {
+      border-top: 1px solid $borderColor;
+      border-right: 0;
+      padding-top: 20px;
+      padding-right: 0;
+      margin-top: 30px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .master-section {
+    .section-inner {
+      padding: 20px;
+    }
+    .text-content {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+/*#endregion -------------- Master */

@@ -135,12 +135,12 @@ input[type=number] {
 }
 
 ::-moz-selection {
-  background-color: #1a8ac9;
+  background-color: rgb(26, 138, 201);
   color: white;
 }
 
 ::selection {
-  background-color: #1a8ac9;
+  background-color: rgb(26, 138, 201);
   color: white;
 }
 
@@ -239,9 +239,9 @@ input[type=number] {
 }
 
 .btn-secondary {
-  background: #1a8ac9;
+  background: rgb(26, 138, 201);
   color: white;
-  border-color: #1a8ac9;
+  border-color: rgb(26, 138, 201);
 }
 .btn-secondary:hover, .btn-secondary:focus {
   background: #1571a5;
@@ -271,11 +271,11 @@ input[type=number] {
 
 .btn-secondary-outline {
   background: transparent;
-  color: #1a8ac9;
-  border-color: #1a8ac9;
+  color: rgb(26, 138, 201);
+  border-color: rgb(26, 138, 201);
 }
 .btn-secondary-outline:hover, .btn-secondary-outline:focus {
-  background-color: #1a8ac9;
+  background-color: rgb(26, 138, 201);
   color: white;
 }
 
@@ -523,7 +523,7 @@ input[type=number] {
   text-align: left;
 }
 .navbar .nav-actions .login .btn-primary {
-  background-color: #1a8ac9 !important;
+  background-color: rgb(26, 138, 201) !important;
   color: white;
   border: none;
 }
@@ -666,6 +666,11 @@ input[type=number] {
     display: flex;
   }
 }
+@media (max-width: 640px) {
+  .navbar .nav-logo {
+    width: 140px;
+  }
+}
 /*#endregion -------------- Navbar */
 /*#region ----------------- Sidebar Mobile Menu */
 #sidebar-menu {
@@ -689,7 +694,7 @@ input[type=number] {
   justify-content: space-between;
   padding: 13px 20px;
   border-bottom: 3px solid #fda621;
-  background-color: #1a8ac9;
+  background-color: rgb(26, 138, 201);
 }
 #sidebar-menu .sidebar-header .sidebar-close .btn-close-menu {
   width: 45px;
@@ -764,7 +769,7 @@ input[type=number] {
 #sidebar-menu .category-list .item a .fi {
   position: absolute;
   left: 20px;
-  color: #1a8ac9;
+  color: rgb(26, 138, 201);
 }
 #sidebar-menu .category-list .item a:hover {
   color: #fda621;
@@ -796,8 +801,8 @@ input[type=number] {
   border: 1px solid transparent;
 }
 #sidebar-menu .socials-icon ul li a:hover {
-  border-color: #1a8ac9;
-  background-color: #1a8ac9;
+  border-color: rgb(26, 138, 201);
+  background-color: rgb(26, 138, 201);
   color: white;
 }
 
@@ -1033,7 +1038,7 @@ input[type=number] {
   bottom: -40px;
   width: 200px;
   height: 150px;
-  border: 5px solid #1a8ac9;
+  border: 5px solid rgb(26, 138, 201);
   z-index: -1;
   border-radius: 40px 0 0 0;
 }
@@ -1294,11 +1299,11 @@ input[type=number] {
   color: #3c3c3c;
 }
 .card-bookmark.active {
-  border-color: #1a8ac9;
+  border-color: rgb(26, 138, 201);
 }
 .card-bookmark.active .icon {
-  background-color: #1a8ac9;
-  border-color: #1a8ac9;
+  background-color: rgb(26, 138, 201);
+  border-color: rgb(26, 138, 201);
 }
 .card-bookmark.active .icon::before {
   display: block;
@@ -1742,7 +1747,7 @@ input[type=number] {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 5px solid #1a8ac9;
+  border: 5px solid rgb(26, 138, 201);
 }
 .card-comment .user-info .name {
   color: #3c3c3c;
@@ -1948,7 +1953,7 @@ input[type=number] {
   left: 0;
   top: 0;
   height: 100%;
-  background-color: #1a8ac9;
+  background-color: rgb(26, 138, 201);
 }
 .footer .social-icons ul {
   display: flex;
@@ -1971,7 +1976,7 @@ input[type=number] {
   color: white;
 }
 .footer .social-icons ul li a:hover {
-  background-color: #1a8ac9;
+  background-color: rgb(26, 138, 201);
 }
 .footer .copyright {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
@@ -2364,7 +2369,7 @@ input[type=number] {
   width: 38px;
   height: 38px;
   border-radius: 10px;
-  background-color: #1a8ac9;
+  background-color: rgb(26, 138, 201);
   border: none;
 }
 .input-counter .stepper button .fi {
@@ -2436,9 +2441,9 @@ input[type=number] {
   font-weight: 600;
   padding: 5px 10px;
   cursor: pointer;
-  color: #1a8ac9;
-  -webkit-text-decoration: underline 1px dashed #1a8ac9;
-          text-decoration: underline 1px dashed #1a8ac9;
+  color: rgb(26, 138, 201);
+  -webkit-text-decoration: underline 1px dashed rgb(26, 138, 201);
+          text-decoration: underline 1px dashed rgb(26, 138, 201);
 }
 .login-section .btn-change-number {
   background-color: transparent;
@@ -2652,22 +2657,22 @@ input[type=number] {
   margin: 5px 0;
 }
 .user-dashboard-section .user-menu .menu-item.active .btn-user-menu {
-  color: #1a8ac9 !important;
+  color: rgb(26, 138, 201) !important;
   background-color: rgba(26, 138, 201, 0.1);
   font-weight: 400;
 }
 .user-dashboard-section .user-menu .menu-item.active .btn-user-menu::before {
-  background-color: #1a8ac9;
+  background-color: rgb(26, 138, 201);
 }
 .user-dashboard-section .user-menu .menu-item.active .btn-user-menu .fi {
-  color: #1a8ac9;
+  color: rgb(26, 138, 201);
 }
 .user-dashboard-section .user-menu .sub-btn-user-menu {
   padding-top: 6px;
   padding-bottom: 6px;
 }
 .user-dashboard-section .user-menu .sub-btn-user-menu.active {
-  color: #1a8ac9;
+  color: rgb(26, 138, 201);
 }
 .user-dashboard-section .user-menu .btn-collapse::after {
   content: "\f12d";
@@ -2727,9 +2732,9 @@ input[type=number] {
   padding-right: 2.2rem;
 }
 .user-dashboard-section .main-title .buttons-group .btn.btn-primary-outline:hover {
-  background-color: #1a8ac9 !important;
+  background-color: rgb(26, 138, 201) !important;
   color: white;
-  border-color: #1a8ac9;
+  border-color: rgb(26, 138, 201);
 }
 .user-dashboard-section .main-title .buttons-group .btn-primary-outline {
   border-color: #9e9e9e;
@@ -2750,7 +2755,7 @@ input[type=number] {
   margin: 5px;
 }
 .user-dashboard-section.teacher .grid-user-menu .grid-inner {
-  border-top: 5px solid #1a8ac9;
+  border-top: 5px solid rgb(26, 138, 201);
   border-radius: 0 0 20px 20px;
   z-index: 10;
 }
@@ -2774,7 +2779,7 @@ input[type=number] {
 .user-dashboard-section .wallet-info .wallet .thumb {
   width: 54px;
   height: 54px;
-  background-color: #1a8ac9;
+  background-color: rgb(26, 138, 201);
   color: white;
   font-size: 24px;
   border-radius: 50%;
@@ -3153,7 +3158,7 @@ input[type=number] {
 }
 .card-status.color-blue .thumb {
   background-color: rgba(26, 138, 201, 0.1);
-  color: #1a8ac9;
+  color: rgb(26, 138, 201);
 }
 
 .notifications .item {
@@ -3295,11 +3300,11 @@ input[type=number] {
 .calendar-column .calendar-header .number {
   font-size: 18px;
   font-weight: 800;
-  color: #1a8ac9;
+  color: rgb(26, 138, 201);
   margin: 4px 0;
 }
 .calendar-column .btn-add-bookmark {
-  background-color: #1a8ac9;
+  background-color: rgb(26, 138, 201);
   text-align: center;
   width: 100%;
   padding: 8px 5px;
@@ -3372,8 +3377,8 @@ input[type=number] {
 }
 .calendar-button-next:hover,
 .calendar-button-prev:hover {
-  border-color: #1a8ac9;
-  color: #1a8ac9;
+  border-color: rgb(26, 138, 201);
+  color: rgb(26, 138, 201);
 }
 
 .card-vip {
@@ -3593,6 +3598,26 @@ input[type=number] {
 }
 /*#endregion -------------- User Profile */
 /*#region ----------------- Page Error */
+.page-error .section-inner {
+  margin: 5rem auto;
+}
+.page-error .image-content {
+  width: 450px;
+  margin: 0 auto;
+}
+.page-error .image-content img {
+  width: 100%;
+}
+.page-error .text-content {
+  text-align: center;
+}
+.page-error .text-content h5 {
+  font-size: 18px;
+  text-align: center;
+  color: #3c3c3c;
+  margin-bottom: 15px;
+}
+
 .empty-box .thumb {
   width: 80px;
   height: 80px;
@@ -3614,6 +3639,11 @@ input[type=number] {
   text-align: center;
 }
 
+@media (max-width: 640px) {
+  .page-error .image-content {
+    width: 80%;
+  }
+}
 /*#endregion -------------- Page Error */
 /*#region ----------------- Table */
 .table-custom {
@@ -3714,3 +3744,110 @@ input[type=number] {
 }
 
 /*#endregion -------------- Alert */
+/*#region ----------------- Master */
+.master-section {
+  position: relative;
+  top: -90px;
+}
+.master-section .section-inner {
+  background-color: white;
+  border-radius: 20px;
+  border: 5px solid rgba(26, 138, 201, 0.1);
+  box-shadow: 0px 4px 25px rgba(5, 5, 5, 0.08);
+  padding: 40px;
+}
+.master-section .text-content p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #636063;
+  margin-bottom: 16px;
+  line-height: 27px;
+  text-align: justify;
+}
+.master-section .image-content .img-inner {
+  width: 800px;
+  margin: 0 auto;
+}
+.master-section .image-content .img-inner img {
+  width: 100%;
+  border-radius: 15px;
+}
+.master-section .contact-form {
+  border-right: 1px solid #d2d2d2;
+  padding-right: 20px;
+}
+.master-section .contact-info .info-list {
+  margin-top: 20px;
+}
+.master-section .contact-info .info-list li {
+  font-size: 17px;
+  margin: 8px 0;
+}
+.master-section .contact-info .info-list li .icon {
+  color: #636063;
+}
+.master-section .contact-info .info-list li .icon .fi {
+  font-size: 24px;
+  color: #9e9e9e;
+  margin-left: 10px;
+  position: relative;
+  top: 6px;
+}
+.master-section .contact-info .info-list li .text {
+  flex-wrap: wrap;
+}
+.master-section .contact-info .info-list li .text a {
+  display: inline-block;
+}
+.master-section .social-icons {
+  margin-top: 30px;
+}
+.master-section .social-icons ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.master-section .social-icons ul li {
+  margin: 5px;
+}
+.master-section .social-icons ul li a {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(253, 166, 33, 0.1);
+  border-radius: 50%;
+  color: #fda621;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.master-section .social-icons ul li a:hover {
+  background-color: #fda621;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .master-section .section-inner {
+    padding: 30px;
+  }
+  .master-section .image-content .img-inner {
+    width: 100%;
+  }
+  .master-section .contact-form {
+    border-top: 1px solid #d2d2d2;
+    border-right: 0;
+    padding-top: 20px;
+    padding-right: 0;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .master-section .section-inner {
+    padding: 20px;
+  }
+  .master-section .text-content p {
+    font-size: 16px;
+  }
+}
+/*#endregion -------------- Master */
